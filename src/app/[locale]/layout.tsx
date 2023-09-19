@@ -1,5 +1,8 @@
+import React from "react";
+import './globals.css';
 import {useLocale} from 'next-intl';
 import {notFound} from 'next/navigation';
+import Navbar from "@/app/components/navbar";
 
 export const metadata = {
     title: 'Run for Ukraine',
@@ -25,7 +28,10 @@ export default function RootLayout({
             <link rel="icon" href="/src/app/favicon.ico" sizes="any"/>
         </head>
         <body>
-        {children}
+        <Navbar/>
+        <main>
+            {children}
+        </main>
         </body>
         </html>
     )
