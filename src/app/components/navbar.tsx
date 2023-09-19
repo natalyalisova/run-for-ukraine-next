@@ -6,6 +6,7 @@ import {useLocale, useTranslations} from "next-intl";
 import Button from "@/app/components/Button";
 import {IconProp} from "@fortawesome/fontawesome-svg-core";
 import {faCircleDollarToSlot} from "@fortawesome/free-solid-svg-icons/faCircleDollarToSlot";
+import {faRocket} from "@fortawesome/free-solid-svg-icons";
 
 
 const Navbar = () => {
@@ -50,15 +51,7 @@ const Navbar = () => {
             </div>
 
 
-            <div className="block top-25">
-                <div className="flex">
-                    <Button
-                        leftIcon={faCircleDollarToSlot as IconProp}
-                        title={t('button-donate-title')}
-                    />
-                </div>
-
-                <div className="flex flex-row items-center mt-9 text-white">
+            <div className="block top-25 flex lg:flex-row items-center sm:flex-col">
                     {locale === "ua" && (<Link href="/" locale="en">
                             <Image
                                 src="/images/ca.png"
@@ -78,6 +71,17 @@ const Navbar = () => {
                             />
                         </Link>
                     )}
+                <div className="flex ml-3">
+                    <Button
+                        leftIcon={faRocket as IconProp}
+                        title={t('button-ambassador-title')}
+                    />
+                </div>
+                <div className="flex ml-3">
+                    <Button
+                        leftIcon={faCircleDollarToSlot as IconProp}
+                        title={t('button-donate-title')}
+                    />
                 </div>
             </div>
         </nav>
