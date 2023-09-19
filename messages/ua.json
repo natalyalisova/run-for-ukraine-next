@@ -1,5 +1,14 @@
 {
   "Home": {
     "title": "Привіт!"
+  },
+  "NavBar": {
+    "button-donate-title": "Допомогти",
+    "fundraiser": "Збір",
+    "about": "Про проект",
+    "events": "Події",
+    "join-us": "Долучайся",
+    "reporting": "Звіт",
+    "shop": "Mерч"
   }
 }

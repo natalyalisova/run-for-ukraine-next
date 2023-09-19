@@ -1,13 +1,16 @@
-'use client'
 import React from "react";
 import Link from "next-intl/link";
 import Image from "next/image";
 import {NavLinks} from "@/app/constants";
-import {useLocale} from "next-intl";
+import {useLocale, useTranslations} from "next-intl";
+import Button from "@/app/components/Button";
+import {IconProp} from "@fortawesome/fontawesome-svg-core";
+import {faCircleDollarToSlot} from "@fortawesome/free-solid-svg-icons/faCircleDollarToSlot";
 
 
 const Navbar = () => {
     const locale = useLocale();
+    const t = useTranslations('NavBar');
     return (
         <nav className="flex  justify-between flex-wrap bg-strong-azure p-6">
             <div className="flex items-center justify-between flex-wrap  relative">
@@ -36,9 +39,9 @@ const Navbar = () => {
                     <ul className="list-style-none uppercase text-semibold mr-auto flex flex-col pl-0 lg:flex-row">
                         {NavLinks.map((link) => (
                             <li className="mb-4 lg:mb-0 lg:pr-2" key={link.key}>
-                                <Link href={link.href} key={link.key}
+                                <Link href={link.href}
                                       className="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-cyan-100 mr-4">
-                                    {link.text}
+                                    {t(link.text)}
                                 </Link>
                             </li>
                         ))}
@@ -48,18 +51,25 @@ const Navbar = () => {
 
 
             <div className="block top-25">
+                <div className="flex">
+                    <Button
+                        leftIcon={faCircleDollarToSlot as IconProp}
+                        title={t('button-donate-title')}
+                    />
+                </div>
+
                 <div className="flex flex-row items-center mt-9 text-white">
-                    {locale === "ua" && ( <Link href="/" locale="en" className="mr-3 ">
-                        <Image
-                            src="/images/ca.png"
-                            alt="Flag of Canada"
-                            width={35}
-                            height={22}
-                        />
-                    </Link>
+                    {locale === "ua" && (<Link href="/" locale="en">
+                            <Image
+                                src="/images/ca.png"
+                                alt="Flag of Canada"
+                                width={35}
+                                height={22}
+                            />
+                        </Link>
                     )}
                     {locale === "en" && (
-                        <Link href="/" locale="ua" className="ml-1">
+                        <Link href="/" locale="ua">
                             <Image
                                 src="/images/ua.png"
                                 alt="Flag of Ukraine"

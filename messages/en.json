@@ -1,5 +1,14 @@
 {
   "Home": {
     "title": "Hello world!"
+  },
+  "NavBar": {
+    "button-donate-title": "Donate",
+    "fundraiser": "Fundraiser",
+    "about": "About",
+    "events":"Events",
+    "join-us": "Join us",
+    "reporting": "Reporting",
+    "shop": "Shop"
   }
 }
