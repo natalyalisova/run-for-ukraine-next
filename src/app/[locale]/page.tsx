@@ -5,15 +5,6 @@ const Home = () => {
     const t = useTranslations('Home');
     return (
         <div>
-            {/*<div>*/}
-            {/*    <Link href="/" locale="en">*/}
-            {/*        En*/}
-            {/*    </Link>{" "}| {" "}*/}
-            {/*    <Link href="/" locale="ua">*/}
-            {/*        Ua*/}
-            {/*    </Link>*/}
-            {/*    <br/>*/}
-            {/*</div>*/}
             <h1>RUN FOR UKRAINE!</h1>
             <p>{t('title')}</p>
         </div>
