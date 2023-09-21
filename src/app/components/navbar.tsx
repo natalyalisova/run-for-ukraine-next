@@ -50,8 +50,7 @@ const Navbar = () => {
                 </div>
             </div>
 
-
-            <div className="block top-25 flex lg:flex-row items-center sm:flex-col">
+            <div className="top-25 flex lg:flex-row lg:items-center">
                     {locale === "ua" && (<Link href="/" locale="en">
                             <Image
                                 src="/images/ca.png"
@@ -71,13 +70,13 @@ const Navbar = () => {
                             />
                         </Link>
                     )}
-                <div className="flex ml-3">
+                <div className="flex ml-3 max-h-10">
                     <Button
                         leftIcon={faRocket as IconProp}
                         title={t('button-ambassador-title')}
                     />
                 </div>
-                <div className="flex ml-3">
+                <div className="flex ml-3 max-h-10">
                     <Button
                         leftIcon={faCircleDollarToSlot as IconProp}
                         title={t('button-donate-title')}
@@ -85,6 +84,7 @@ const Navbar = () => {
                 </div>
             </div>
         </nav>
+
     );
 };
 
