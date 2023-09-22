@@ -4,7 +4,7 @@ import {useTranslations} from 'next-intl';
 const Home = () => {
     const t = useTranslations('Home');
     return (
-        <div>
+        <div className="mt-20">
             <h1>RUN FOR UKRAINE!</h1>
             <p>{t('title')}</p>
         </div>

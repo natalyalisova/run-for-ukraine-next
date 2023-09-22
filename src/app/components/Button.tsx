@@ -11,17 +11,19 @@ type Props = {
     isSubmitting?: boolean;
     type?: "button" | "submit";
     bgColor?: string;
+    margin?: string;
     textColor?: string;
 }
 
-const Button = ({title, leftIcon, rightIcon, handleClick, isSubmitting: isSubmitting, type, bgColor, textColor}: Props) => {
+const Button = ({title, leftIcon, rightIcon, handleClick, isSubmitting: isSubmitting, type, bgColor, textColor,margin }: Props) => {
 
     return(
         <button
             type={type || "button"}
             disabled={isSubmitting}
             className={`flexCenter gap-3 px-4 py-3 uppercase
-            ${textColor ||"text-strong-azure"}
+            ${textColor ||"text-strong-azure"} 
+             ${margin || "mh-1"} 
             ${isSubmitting ? "bg-black/50": bgColor || "bg-yellow-gold"}
              rounded=xl text-sm font-medium max-md:w-full`}
             onClick={handleClick}
