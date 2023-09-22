@@ -26,12 +26,14 @@ export default function RootLayout({
         <html lang={locale}>
         <head>
             <link rel="icon" href="/src/app/favicon.ico" sizes="any"/>
+            <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.css" rel="stylesheet"/>
         </head>
         <body>
         <Navbar/>
         <main>
             {children}
         </main>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.js"></script>
         </body>
         </html>
     )
