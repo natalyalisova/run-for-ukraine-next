@@ -28,12 +28,12 @@ export default function RootLayout({
             <link rel="icon" href="/src/app/favicon.ico" sizes="any"/>
             <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.css" rel="stylesheet"/>
         </head>
-        <body>
+        <body className="h-full">
         <Navbar/>
         <main>
             {children}
         </main>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.js" async></script>
         </body>
         </html>
     )

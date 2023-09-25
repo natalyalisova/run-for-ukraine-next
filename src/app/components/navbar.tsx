@@ -17,11 +17,11 @@ const Navbar = () => {
     const locale = useLocale();
     const t = useTranslations('NavBar');
     return (
-        <nav className="bg-strong-azure fixed w-full z-20 top-0 left-0 border-b border-gray-200">
+        <nav className="bg-strong-azure fixed w-full z-20 top-0 left-0 ">
 
             <div className="max-w-screen-2xl flex flex-wrap items-center justify-between mx-auto p-4">
                 <a href="https://flowbite.com/" className="flex items-center">
-                    <img src="/images/Run-for-Ukraine-logo.svg" className="h-10 mr-3 md:h-15"
+                    <Image src="/images/Run-for-Ukraine-logo.svg" className="mr-3 w-10 h-10 md:w-86 md:h-86" width={94} height={94}
                          alt="Run for Ukraine Logo"/>
                     <span
                         className="self-center text-2xl font-semibold whitespace-nowrap text-white hidden md:block">#RunForUkraine</span>
