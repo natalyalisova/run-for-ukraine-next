@@ -13,7 +13,7 @@ const Home = () => {
                 <div className="flex-grow"></div>
                 <div className="flex flex-row self-center pb-1 items-center ">
                     <p className="text-white text-2xl md:text-5xl">1212.8</p>
-                    <p className="text-white  text-base md:text-lg opacity-50 ml-2">/ 6992 km</p>
+                    <p className="text-white  text-base     md:text-lg opacity-50 ml-2">/ 6992 km</p>
                 </div>
 
             </div>

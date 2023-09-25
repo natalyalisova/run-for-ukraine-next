@@ -11,18 +11,19 @@ import {faRocket} from "@fortawesome/free-solid-svg-icons";
 import {NavLinks} from "@/app/constants";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import ButtonNav from "@/app/components/ButtonNav";
+import ResponsiveImage from "@/app/components/ResponsiveImage";
 
 
 const Navbar = () => {
     const locale = useLocale();
     const t = useTranslations('NavBar');
     return (
-        <nav className="bg-strong-azure fixed w-full z-20 top-0 left-0 ">
+        <nav className="bg-strong-azure fixed w-full z-30 top-0 left-0 ">
 
             <div className="max-w-screen-2xl flex flex-wrap items-center justify-between mx-auto p-4">
                 <a href="https://flowbite.com/" className="flex items-center">
-                    <Image src="/images/Run-for-Ukraine-logo.svg" className="mr-3 w-10 h-10 md:w-86 md:h-86" width={94} height={94}
-                         alt="Run for Ukraine Logo"/>
+                    <ResponsiveImage src={"/images/Run-for-Ukraine-logo.svg"} width={94} height={94}
+                         alt={"Run for Ukraine Logo"}/>
                     <span
                         className="self-center text-2xl font-semibold whitespace-nowrap text-white hidden md:block">#RunForUkraine</span>
                 </a>
