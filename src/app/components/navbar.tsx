@@ -4,12 +4,10 @@ import Image from "next/image";
 import 'flowbite';
 
 import {useLocale, useTranslations} from "next-intl";
-import Button from "@/app/components/Button";
 import {IconProp} from "@fortawesome/fontawesome-svg-core";
 import {faCircleDollarToSlot} from "@fortawesome/free-solid-svg-icons/faCircleDollarToSlot";
 import {faRocket} from "@fortawesome/free-solid-svg-icons";
 import {NavLinks} from "@/app/constants";
-import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import ButtonNav from "@/app/components/ButtonNav";
 import ResponsiveImage from "@/app/components/ResponsiveImage";
 
@@ -23,7 +21,7 @@ const Navbar = () => {
             <div className="max-w-screen-2xl flex flex-wrap items-center justify-between mx-auto p-4">
                 <a href="https://flowbite.com/" className="flex items-center">
                     <ResponsiveImage src={"/images/Run-for-Ukraine-logo.svg"} width={94} height={94}
-                         alt={"Run for Ukraine Logo"}/>
+                                     alt={"Run for Ukraine Logo"}/>
                     <span
                         className="self-center text-2xl font-semibold whitespace-nowrap text-white hidden md:block">#RunForUkraine</span>
                 </a>

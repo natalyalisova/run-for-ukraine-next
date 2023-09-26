@@ -29,7 +29,7 @@ const Button = ({title, leftIcon, rightIcon, handleClick, isSubmitting: isSubmit
             onClick={handleClick}
         >
             {leftIcon && <FontAwesomeIcon icon={leftIcon} width={22} height={22}/>}
-            <span className="hidden sm:block">{title}</span>
+            <span>{title}</span>
             {rightIcon && <FontAwesomeIcon icon={rightIcon} width={22} height={22}/>}
         </button>
     )

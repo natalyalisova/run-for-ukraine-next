@@ -1,13 +1,17 @@
 {
   "Home": {
-    "title": "Hello world!"
+    "our-goal": "Our goal is to collectively run 6992km and raise funds for the purchase of tactical radios for our defenders in Ukraine.",
+    "register": "Register",
+    "new-global-season-title": "#RunForUkraine — 2023 — a new global season!",
+    "new-global-season-description-1": "In the new 2023 running season, #RunForUkraine is becoming a truly international running initiative. This year we have a global mission - #RunForUkraine Around Ukraine, that was created to unite the whole world around Ukraine and its integrity! The idea is to run anywhere in the world, make a donation at",
+    "new-global-season-description-2": "and see your contributions being converted into kilometers on our website so at some point all together we can reach the goal of running 6992 km in total!"
   },
   "NavBar": {
     "button-donate-title": "Donate",
     "button-ambassador-title": "Become an ambassador",
     "fundraiser": "Fundraiser",
     "about": "About",
-    "events":"Events",
+    "events": "Events",
     "join-us": "Join us",
     "reporting": "Reporting",
     "shop": "Shop"
