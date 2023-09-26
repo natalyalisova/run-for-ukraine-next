@@ -4,7 +4,13 @@
     "register": "Register",
     "new-global-season-title": "#RunForUkraine — 2023 — a new global season!",
     "new-global-season-description-1": "In the new 2023 running season, #RunForUkraine is becoming a truly international running initiative. This year we have a global mission - #RunForUkraine Around Ukraine, that was created to unite the whole world around Ukraine and its integrity! The idea is to run anywhere in the world, make a donation at",
-    "new-global-season-description-2": "and see your contributions being converted into kilometers on our website so at some point all together we can reach the goal of running 6992 km in total!"
+    "new-global-season-description-2": "and see your contributions being converted into kilometers on our website so at some point all together we can reach the goal of running 6992 km in total!",
+    "why-6992-km-title": "Why exactly 6992 km?",
+    "why-6992-km-description": "— is the total length of Ukraine’s state border officially recognized in 1991 when Ukraine gained its Independence. The length of the land border line is 5,618 km, and the length of the sea border line is 1,355 km. And now because of the war that Russia insidiously unleashed against us, we must defend every centimeter of our land.",
+    "length-number": "6992,982 km",
+    "how-count-title": "How will the total running distance be calculated?",
+    "how-count-description": "It’s simple! Each of 10 CAD donated = 1 km of the state border of Ukraine.",
+    "fundraised": "Fundraised:"
   },
   "NavBar": {
     "button-donate-title": "Donate",
