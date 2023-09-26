@@ -9,8 +9,7 @@
     "why-6992-km-description": "— is the total length of Ukraine’s state border officially recognized in 1991 when Ukraine gained its Independence. The length of the land border line is 5,618 km, and the length of the sea border line is 1,355 km. And now because of the war that Russia insidiously unleashed against us, we must defend every centimeter of our land.",
     "length-number": "6992,982 km",
     "how-count-title": "How will the total running distance be calculated?",
-    "how-count-description": "It’s simple! Each of 10 CAD donated = 1 km of the state border of Ukraine.",
-    "fundraised": "Fundraised:"
+    "how-count-description": "It’s simple! Each of 10 CAD donated = 1 km of the state border of Ukraine."
   },
   "NavBar": {
     "button-donate-title": "Donate",
@@ -21,5 +20,8 @@
     "join-us": "Join us",
     "reporting": "Reporting",
     "shop": "Shop"
+  },
+  "Ambassadors": {
+    "fundraised": "Fundraised:"
   }
 }

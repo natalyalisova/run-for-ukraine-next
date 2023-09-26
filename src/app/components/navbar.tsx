@@ -17,7 +17,7 @@ const Navbar = () => {
   return (
     <nav className="bg-strong-azure fixed w-full z-30 top-0 left-0 ">
       <div className="max-w-screen-2xl flex flex-wrap items-center justify-between mx-auto p-4">
-        <a href="https://flowbite.com/" className="flex items-center">
+        <a href="/" className="flex items-center">
           <ResponsiveImage
             src={"/images/Run-for-Ukraine-logo.svg"}
             width={94}
