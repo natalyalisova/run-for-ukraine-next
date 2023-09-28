@@ -3,6 +3,7 @@ import "./globals.css";
 import { useLocale } from "next-intl";
 import { notFound } from "next/navigation";
 import Navbar from "@/app/components/navbar";
+import Footer from "@/app/components/Footer";
 
 export const metadata = {
   title: "Run for Ukraine",
@@ -35,6 +36,7 @@ export default function RootLayout({
       <body className="h-full">
         <Navbar />
         <main>{children}</main>
+        <Footer />
         <script
           src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.js"
           async
