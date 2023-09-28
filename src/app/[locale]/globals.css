@@ -26,6 +26,14 @@ body {
     @apply flex items-center justify-start;
 }
 
+.title {
+    @apply text-2xl font-semibold mb-1;
+}
+
+.title-secondary {
+    @apply text-xl font-semibold my-2 ;
+}
+
 .text-small {
     @apply text-sm font-medium;
 }
@@ -52,8 +60,26 @@ body {
     @apply w-full text-center my-10 px-2;
 }
 
-/* Project Details */
 
+.animate-gradient {
+    background-size: 300%;
+    -webkit-animation: animatedgradient 6s ease infinite alternate;
+    -moz-animation: animatedgradient 6s ease infinite alternate;
+    animation: animatedgradient 6s ease infinite alternate;
+}
+
+
+@keyframes animatedgradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
 
 /* Home */
 .projects-grid {

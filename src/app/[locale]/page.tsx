@@ -6,6 +6,7 @@ import Link from "next-intl/link";
 import { faCircleDollarToSlot } from "@fortawesome/free-solid-svg-icons/faCircleDollarToSlot";
 import { IconProp } from "@fortawesome/fontawesome-svg-core";
 import Ambassadors from "@/app/components/Ambassadors";
+import TextGradient from "@/app/components/AnimatedTextGradient";
 
 const MockedAmbassadors = [
   {
@@ -73,10 +74,12 @@ const Home = () => {
           ))}
         </div>
 
-        <div className="max-w-4xl mx-auto grid grid-cols-1 text-center p-4 gap-y-6 md:mt-12">
-          <h2 className="text-xl md:text-4xl text-strong-azure font-semibold">
-            {t("new-global-season-title")}
-          </h2>
+        <div className="max-w-4xl mx-auto grid grid-cols-1 text-center p-4 gap-y-6 md:mt-12 mt-10">
+          <div>
+            <TextGradient text={t("new-global-season-title")} />
+            <div className="mt-4 h-1 w-64 bg-yellow-gold mx-auto mb-3"></div>
+          </div>
+
           <div className="text-center place-self-center">
             <p className="inline text-bace md:text-lg">
               {t("new-global-season-description-1")}
@@ -93,10 +96,8 @@ const Home = () => {
             </p>
           </div>
 
-          <h2 className="text-xl md:text-2xl mt-6 font-semibold">
-            {t("why-6992-km-title")}
-          </h2>
-          <div className="text-center place-self-center">
+          <h2 className="title mt-4">{t("why-6992-km-title")}</h2>
+          <div className="text-center place-self-center mb-1">
             <p className="inline mr-3 text-xl font-semibold text-strong-azure">
               {t("length-number")}
             </p>
@@ -105,9 +106,7 @@ const Home = () => {
             </p>
           </div>
 
-          <h2 className="text-xl md:text-2xl mt-6 font-semibold">
-            {t("how-count-title")}
-          </h2>
+          <h2 className="title mt-4">{t("how-count-title")}</h2>
           <p className="text-center inline text-bace md:text-lg">
             {t("how-count-description")}
           </p>
@@ -127,20 +126,17 @@ const Home = () => {
           </div>
         </div>
       </div>
-      "
       <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-5 justify-center p-10">
         <div className="flexCenter mb-6">
           <Image
             src="/images/walkie-talkie.png"
-            alt={"walkie-talkie img"}
+            alt={"walkie-talkie image"}
             width={300}
             height={300}
           />
         </div>
-        <div className="flex justify-center flex-col ">
-          <h2 className="text-xl md:text-2xl my-6 font-semibold ">
-            What is the fundraising goal?
-          </h2>
+        <div className="flex justify-center flex-col">
+          <h2 className="title">What is the fundraising goal?</h2>
           <p className="inline text-bace md:text-lg">
             What is the fundraising goal? The goal is to raise $CAD 69,920 to
             purchase tactical radios for our defenders in Ukraine. Together with
@@ -159,7 +155,7 @@ const Home = () => {
             operations which also means the victory of Ukraine coming sooner!
           </p>
         </div>
-        <div>
+        <div className="flex justify-center flex-col mb-1">
           <p className="text-base md:text-lg">
             <span className="font-semibold">
               “Second Front Ukraine Foundation”
@@ -177,14 +173,74 @@ const Home = () => {
             the integrity of Ukraine’s state border and celebrate the VICTORY!
           </p>
         </div>
-        <div>GOAL CAD $69,920 widget</div>
-
-        <div
-          id="donate-widget"
-          data-campaign="2FUA-RFUA2023"
-          data-target-collections="69920"
-          className="secondfront-donate-widget"
-        ></div>
+        <div className="flex justify-center flex-col text-2xl text-center">
+          <p>GOAL CAD $69,920</p>
+          <p>Widget</p>
+        </div>
+        <div className="flexCenter my-6">
+          <Image
+            src="/images/amelina-olga.png"
+            alt={"Amelina Olga image"}
+            width={500}
+            height={700}
+          />
+        </div>
+        <div className="flex justify-center flex-col">
+          <h2 className="title">HOW EVERYTHING STARTED</h2>
+          <h3 className="title-secondary">Hello everyone!</h3>
+          <p>
+            My name is Amelina Olga, and I am a marathon runner, an ideological
+            inspirer and the leader of the #RunForUkraine project. Together with
+            the volunteer team of Second Front Ukraine Foundation @secondfrontua
+            we launched the #RunForUkraine project in the spring of 2022, which
+            quickly grew into an international initiative and united the global
+            running community around Ukraine.
+            <br />
+            <br />
+            The main idea was to call the running community to the topic of a
+            full-scale war in Ukraine, unite as many goal-oriented achievers as
+            possible to #RunForUkraine together, raise money and help defenders
+            of Ukraine. The most important goal for us is to make Ukraine's
+            VICTORY happen as soon as possible by organizing all kinds of
+            running initiatives!
+            <br />
+            <br />
+            For the first time, #RunForUkraine showcased itself loudly at the
+            Toronto Marathon in May 2022, where hundreds of athletes and
+            amateurs were running in special #RunForUkraine yellow t-shirts.
+            Then there were the Ottawa Tamarack Marathon, the Chicago Marathon,
+            the Toronto Waterfront Marathon, the Tel Aviv Marathon, as well as a
+            huge fundraising initiative for winter military boots for defenders,
+            19 charity runs across Canada and the world, Ambassadors of
+            different countries supporting us, politicians, stars, musicians...
+            And all of that for our beloved Ukraine!
+            <br />
+            <br />
+            We do not plan to stop! We plan to continue running for Ukraine,
+            raise money to make the victory of Ukraine happen as soon as
+            possible!
+          </p>
+        </div>
+        <div className="flexCenter my-6 text-2xl font-bold">
+          <TextGradient
+            text={"RUN - EAT - DONATE - REPEAT!"}
+            fontStyle={"text-3xl"}
+          />
+        </div>
+        <div className="flexCenter my-6 hero-video">
+          <div className="relative">
+            <video
+              autoPlay
+              loop
+              playsInline
+              muted
+              src="https://secondfront-cdn.nyc3.cdn.digitaloceanspaces.com/runforukraine2023%2FBD995476-9DBA-4300-BA04-7775CBD40D60.MOV"
+            ></video>
+            <p className="absolute  bg-black opacity-60 font-bold text-4xl text-white top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+              #RunForUkraine
+            </p>
+          </div>
+        </div>
       </div>
     </div>
   );
