@@ -41,8 +41,6 @@ export default function RootLayout({
           content="https://secondfront-cdn.nyc3.cdn.digitaloceanspaces.com/runforukraine2023%2Fgallery%2Frsz_a7408348.jpg"
         />
 
-        <script src="https://kit.fontawesome.com/5721daa4dc.js"></script>
-
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" />
         <link
@@ -62,6 +60,7 @@ export default function RootLayout({
           href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.css"
           rel="stylesheet"
         />
+        <link rel="stylesheet" href="/style_v6.css" />
         <title>Run For Ukraine</title>
       </head>
       <body className="h-full">
@@ -72,6 +71,7 @@ export default function RootLayout({
           src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.js"
           async
         ></script>
+        <script src="https://kit.fontawesome.com/5721daa4dc.js"></script>
       </body>
     </html>
   );

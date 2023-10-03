@@ -52,6 +52,7 @@ const Gather = () => {
         <p>GOAL CAD $69,920</p>
         <p>Widget</p>
       </div>
+
       <div className="flexCenter my-6">
         <Image
           src="/images/amelina-olga.png"
