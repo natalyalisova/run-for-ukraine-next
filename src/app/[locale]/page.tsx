@@ -1,10 +1,7 @@
 import { useTranslations } from "next-intl";
 import Image from "next/image";
 import React from "react";
-import Button from "@/app/components/Button";
 import Link from "next-intl/link";
-import { faCircleDollarToSlot } from "@fortawesome/free-solid-svg-icons/faCircleDollarToSlot";
-import { IconProp } from "@fortawesome/fontawesome-svg-core";
 import Ambassadors from "@/app/components/Ambassadors";
 import TextGradient from "@/app/components/AnimatedTextGradient";
 import HomeTop from "@/app/components/HomeTop";
@@ -109,7 +106,7 @@ const Home = () => {
             height={300}
           />
         </div>
-        <div className="flex justify-center flex-col">
+        <div className="flex justify-center flex-col" id="gather">
           <h2 className="title">What is the fundraising goal?</h2>
           <p className="inline text-bace md:text-lg">
             What is the fundraising goal? The goal is to raise $CAD 69,920 to
@@ -147,7 +144,10 @@ const Home = () => {
             the integrity of Ukraine’s state border and celebrate the VICTORY!
           </p>
         </div>
-        <div className="flex justify-center flex-col text-2xl text-center">
+        <div
+          className="flex justify-center flex-col text-2xl text-center"
+          id="donate"
+        >
           <p>GOAL CAD $69,920</p>
           <p>Widget</p>
         </div>
@@ -159,8 +159,8 @@ const Home = () => {
             height={700}
           />
         </div>
-        <div className="flex justify-center flex-col">
-          <h2 className="title">HOW EVERYTHING STARTED</h2>
+        <div className="flex justify-center flex-col" id="about">
+          <h2 className="title uppercase">HOW EVERYTHING STARTED</h2>
           <h3 className="title-secondary">Hello everyone!</h3>
           <p>
             My name is Amelina Olga, and I am a marathon runner, an ideological
@@ -216,6 +216,162 @@ const Home = () => {
           </div>
         </div>
       </div>
+      <div className="bg-img flexCenter flex-col py-16">
+        <Image
+          src={"/images/run-for-ukraine-logo-blue.svg"}
+          width={150}
+          height={150}
+          alt={"Run for Ukraine Logo"}
+        />
+        <h2 className="uppercase text-strong-azure max-w-[550px] font-semibold text-center md:text-2xl leading-relaxed px-3 pt-10">
+          #RunForUkraine is a global community that unites runners and athletes
+          from all over the world to support and help Ukraine and the Ukrainian
+          military.
+        </h2>
+      </div>
+
+      <div
+        className="flex justify-center flex-col md:flex-row  mt-10"
+        id="social"
+      >
+        <div className="p-3" id="strava">
+          <h2 className="font-semibold text-2xl py-3">
+            Join our run club on
+            <a
+              href="https://strava.app.link/GAROuCXupyb"
+              className="text-strong-azure hover:underline hover:underline-offset-2 ml-2"
+            >
+              Strava
+            </a>
+          </h2>
+          <div className="strava-container">
+            <iframe
+              allowTransparency
+              frameBorder="0"
+              height="160"
+              scrolling="no"
+              src="https://www.strava.com/clubs/1123141/latest-rides/214252ff5b5c952649075a008151320e8d2b11b8?show_rides=false"
+              width="100%"
+            ></iframe>
+            <iframe
+              allowTransparency
+              frameBorder="0"
+              height="454"
+              scrolling="no"
+              src="https://www.strava.com/clubs/1123141/latest-rides/214252ff5b5c952649075a008151320e8d2b11b8?show_rides=true"
+              width="100%"
+            ></iframe>
+          </div>
+        </div>
+        <div className="p-3" id="telegram">
+          <h2 className="font-semibold text-2xl py-3">
+            Join our Telegram channels
+          </h2>
+          <ul className="text-strong-azure ml-3 text-base flex flex-col space-y-3 mt-3 ">
+            <li>
+              <a
+                href="https://t.me/runforukrainetoronto"
+                className="hover:underline hover:underline-offset-2"
+              >
+                <Image
+                  src={"/images/telegram.svg"}
+                  alt={"telegram icon"}
+                  width={25}
+                  height={25}
+                  className="inline mr-2"
+                />
+                Toronto, Canada
+              </a>
+            </li>
+
+            <li>
+              <a
+                href="https://t.me/runforukrainelondon"
+                className="hover:underline hover:underline-offset-2"
+              >
+                <Image
+                  src={"/images/telegram.svg"}
+                  alt={"telegram icon"}
+                  width={25}
+                  height={25}
+                  className="inline mr-2"
+                />
+                London, UK
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://t.me/runforukrainetelaviv"
+                className="hover:underline hover:underline-offset-2"
+              >
+                <Image
+                  src={"/images/telegram.svg"}
+                  alt={"telegram icon"}
+                  width={25}
+                  height={25}
+                  className="inline mr-2"
+                />
+                Tel-Aviv, Israel
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <section className="flex flex-col text-center my-10 md:my-24" id="report">
+        <h1 className="uppercase text-2xl md:text-5xl font-semibold">
+          PREVIOUS FUNDRAISERS
+        </h1>
+        <div className="mt-4 h-1 w-24 bg-yellow-gold mx-auto mb-3"></div>
+
+        <div className="flex justify-center flex-col md:flex-row md:space-x-24 mt-10">
+          <div>
+            <img src="/images/fundraiser-img-fall.png" />
+            <p className="mt-3 mb-10 md:text-2xl font-semibold">Fall 2022</p>
+          </div>
+          <div>
+            <img src="/images/fundraiser-img-may.png" />
+            <p className="mt-3  mb-10  md:text-2xl font-semibold">May 2022</p>
+          </div>
+        </div>
+      </section>
+
+      <section
+        className="flex flex-col text-center my-6 md:my-24 "
+        id="gallery"
+      >
+        <h1 className="uppercase text-2xl md:text-5xl font-semibold">
+          GALLERY
+        </h1>
+        <div className="mt-4 h-1 w-24 bg-yellow-gold mx-auto mb-3"></div>
+
+        <div className="gallery-container flex flex-wrap gap-3 p-5 justify-center ">
+          <img src="https://secondfront-cdn.nyc3.cdn.digitaloceanspaces.com/runforukraine2023%2Fgallery%2Frsz_20220529ukrainiansatottawarw_ta271.jpg" />
+          <img src="https://secondfront-cdn.nyc3.cdn.digitaloceanspaces.com/runforukraine2023%2Fgallery%2Frsz_120220529ukrainiansatottawarw_ta312.jpg" />
+          <img src="https://secondfront-cdn.nyc3.cdn.digitaloceanspaces.com/runforukraine2023%2Fgallery%2Frsz_120220529ukrainiansatottawarw_ta317.jpg" />
+          <img src="https://secondfront-cdn.nyc3.cdn.digitaloceanspaces.com/runforukraine2023%2Fgallery%2Frsz_20220529ukrainiansatottawarw_ta349.jpg" />
+          <img src="https://secondfront-cdn.nyc3.cdn.digitaloceanspaces.com/runforukraine2023%2Fgallery%2Frsz_a7408348.jpg" />
+          <img src="https://secondfront-cdn.nyc3.cdn.digitaloceanspaces.com/runforukraine2023%2Fgallery%2Frsz_a7408350.jpg" />
+          <img src="https://secondfront-cdn.nyc3.cdn.digitaloceanspaces.com/runforukraine2023%2Fgallery%2Frsz_1dsc_3522.jpg" />
+          <img src="https://secondfront-cdn.nyc3.cdn.digitaloceanspaces.com/runforukraine2023%2Fgallery%2Frsz_1cm2_8662.jpg" />
+          <img src="https://secondfront-cdn.nyc3.cdn.digitaloceanspaces.com/runforukraine2023%2Fgallery%2Frsz_a7408354-edit.jpg" />
+          <img
+            className="flex self-start"
+            src="https://secondfront-cdn.nyc3.cdn.digitaloceanspaces.com/runforukraine2023%2Fgallery%2Frsz_dsc_3502-long.jpg"
+          />
+          <img src="https://secondfront-cdn.nyc3.cdn.digitaloceanspaces.com/runforukraine2023%2Fgallery%2Frsz_1ava_3468-long.jpg" />
+          <img
+            className="flex self-start"
+            src="https://secondfront-cdn.nyc3.cdn.digitaloceanspaces.com/runforukraine2023%2Fgallery%2Frsz_1dsc_3511-long.jpg"
+          />
+          <img src="https://secondfront-cdn.nyc3.cdn.digitaloceanspaces.com/runforukraine2023%2Fgallery%2Frsz_dsc_3547.jpg" />
+          <img src="https://secondfront-cdn.nyc3.cdn.digitaloceanspaces.com/runforukraine2023%2Fgallery%2Frsz_dsc_3534.jpg" />
+          <img src="https://secondfront-cdn.nyc3.cdn.digitaloceanspaces.com/runforukraine2023%2Fgallery%2Frsz_120220529ukrainiansatottawarw_ta312.jpg" />
+          <img src="https://secondfront-cdn.nyc3.cdn.digitaloceanspaces.com/runforukraine2023%2Fgallery%2Frsz_img_2707.jpg" />
+          <img src="https://secondfront-cdn.nyc3.cdn.digitaloceanspaces.com/runforukraine2023%2Fgallery%2Frsz_img_2706.jpg" />
+          <img src="https://secondfront-cdn.nyc3.cdn.digitaloceanspaces.com/runforukraine2023%2Fgallery%2Frsz_img_2708.jpg" />
+        </div>
+      </section>
     </div>
   );
 };

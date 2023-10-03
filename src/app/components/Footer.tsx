@@ -24,17 +24,23 @@ const Footer = () => {
         <div className="flex items-center justify-end">
           <ul className="uppercase space-x-10 flex text-white font-semibold">
             <li>
-              <Link href="/" title="Who are we">
+              <Link
+                href="https://secondfrontukraine.com/team"
+                title="Who are we"
+              >
                 Who are we
               </Link>
             </li>
             <li>
-              <Link href="/" title="Donate">
+              <Link href="#donate" title="Donate">
                 Donate
               </Link>
             </li>
             <li>
-              <Link href="/" title="Contacts">
+              <Link
+                href="https://secondfrontukraine.com/contact-us"
+                title="Contacts"
+              >
                 Contacts
               </Link>
             </li>

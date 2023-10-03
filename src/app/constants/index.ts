@@ -1,11 +1,18 @@
 export const NavLinks = [
-    {href: '/', key: 'fundraiser', text: 'fundraiser'},
-    {href: '/', key: 'about', text: 'about'},
-    {href: '/', key: 'events', text: 'events'},
-    {href: '/', key: 'join-us', text: 'join-us'},
-    {href: '/', key: 'reporting', text: 'reporting'},
-    {href: '/', key: 'shop', text: 'shop'},
+  { href: "#gather", key: "fundraiser", text: "fundraiser" },
+  { href: "#about", key: "about", text: "about" },
+  {
+    href: "https://secondfrontukraine.com/events/runs",
+    key: "events",
+    text: "events",
+  },
+  { href: "#telegram", key: "join-us", text: "join-us" },
+  { href: "#report", key: "reporting", text: "reporting" },
+  {
+    href: "https://shop.secondfrontukraine.com/products/run-for-ukraine-unisex-tee",
+    key: "shop",
+    text: "shop",
+  },
 ];
-
 
 export const footerLinks = [];

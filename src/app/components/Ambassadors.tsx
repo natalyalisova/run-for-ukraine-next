@@ -28,7 +28,7 @@ const Ambassadors = ({ name, fundraised, goal, profileImgUrl }: Props) => {
           <p className="text-strong-azure text-base font-semibold ">
             {fundraised}
             <span className="text-strong-azure text-sm opacity-50 ml-2">
-              {goal}
+              /{goal} $
             </span>
           </p>
         </div>
