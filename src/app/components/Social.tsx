@@ -1,7 +1,9 @@
 import Image from "next/image";
 import React from "react";
+import { useTranslations } from "next-intl";
 
 const Social = () => {
+  const t = useTranslations("Social");
   return (
     <div
       className="flex justify-center flex-col md:flex-row  mt-10"
@@ -9,7 +11,7 @@ const Social = () => {
     >
       <div className="p-3" id="strava">
         <h2 className="font-semibold text-2xl py-3">
-          Join our run club on
+          {t("join-our-run-club")}
           <a
             href="https://strava.app.link/GAROuCXupyb"
             className="text-strong-azure hover:underline hover:underline-offset-2 ml-2"
@@ -38,7 +40,7 @@ const Social = () => {
       </div>
       <div className="p-3" id="telegram">
         <h2 className="font-semibold text-2xl py-3">
-          Join our Telegram channels
+          {t("join-telegram-title")}
         </h2>
         <ul className="text-strong-azure ml-3 text-base flex flex-col space-y-3 mt-3 ">
           <li>
@@ -53,7 +55,7 @@ const Social = () => {
                 height={25}
                 className="inline mr-2"
               />
-              Toronto, Canada
+              {t("join-telegram-canada")}
             </a>
           </li>
 
@@ -69,7 +71,7 @@ const Social = () => {
                 height={25}
                 className="inline mr-2"
               />
-              London, UK
+              {t("join-telegram-uk")}
             </a>
           </li>
           <li>
@@ -84,7 +86,7 @@ const Social = () => {
                 height={25}
                 className="inline mr-2"
               />
-              Tel-Aviv, Israel
+              {t("join-telegram-israel")}
             </a>
           </li>
         </ul>

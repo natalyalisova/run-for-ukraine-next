@@ -65,7 +65,7 @@ const Gather = () => {
 
       <div className="flexCenter my-6 text-2xl font-bold">
         <TextGradient
-          text={"RUN - EAT - DONATE - REPEAT!"}
+          text={t("RUN - EAT - DONATE - REPEAT!")}
           fontStyle={"text-3xl"}
         />
       </div>

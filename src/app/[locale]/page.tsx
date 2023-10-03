@@ -58,9 +58,7 @@ const Home = () => {
           alt={"Run for Ukraine Logo"}
         />
         <h2 className="uppercase text-strong-azure max-w-[550px] font-semibold text-center md:text-2xl leading-relaxed px-3 pt-10">
-          #RunForUkraine is a global community that unites runners and athletes
-          from all over the world to support and help Ukraine and the Ukrainian
-          military.
+          {t("home-on-yellow-bg-title")}
         </h2>
       </div>
 

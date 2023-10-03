@@ -1,7 +1,6 @@
 {
   "Home": {
-
-
+    "home-on-yellow-bg-title": "#RunForUkraine is a global community that unites runners and athletes from all over the world to support and help Ukraine and the Ukrainian military."
   },
   "HomeTop": {
     "our-goal": "Our goal is to collectively run 6992km and raise funds for the purchase of tactical radios for our defenders in Ukraine.",
@@ -30,13 +29,44 @@
     "how-count-title": "How will the total running distance be calculated?",
     "how-count-description": "It’s simple! Each of 10 CAD donated = 1 km of the state border of Ukraine."
   },
-"Gather": {
-"fundraising-goal-title": "What is the fundraising goal?",
-"fundraising-goal-description-1": "The goal is to raise $CAD 69,920 to purchase tactical radios for our defenders in Ukraine. Together with the",
-"second-front-name":"Second Front Ukraine Foundation",
-"fundraising-goal-description-2": ", we launched this fundraising initiative because reliable communication is the key to successful completion of military operations which also means the victory of Ukraine coming sooner!",
-"second-front-foundation-title": "Second Front Ukraine Foundation",
-"second-front-foundation-description-1": " — is an officially registered Canadian not-for-profit corporation. We work with trusted partners across North America and in Ukraine to deliver goods necessary to protect the lives of Ukrainians in the face of Russian aggression.",
-"second-front-foundation-description-2": " As of the beginning of March 2023, volunteers of Second Front Ukraine already collected and delivered aid to Ukraine (for defenders, paramedics and firefighters) for more than 850,000 CAD. Let’s run together! Let’s #RunForUkraine Around Ukraine to restore the integrity of Ukraine’s state border and celebrate the VICTORY!"
+  "Gather": {
+    "fundraising-goal-title": "What is the fundraising goal?",
+    "fundraising-goal-description-1": "The goal is to raise $CAD 69,920 to purchase tactical radios for our defenders in Ukraine. Together with the",
+    "second-front-name": "Second Front Ukraine Foundation",
+    "fundraising-goal-description-2": ", we launched this fundraising initiative because reliable communication is the key to successful completion of military operations which also means the victory of Ukraine coming sooner!",
+    "second-front-foundation-title": "Second Front Ukraine Foundation",
+    "second-front-foundation-description-1": " — is an officially registered Canadian not-for-profit corporation. We work with trusted partners across North America and in Ukraine to deliver goods necessary to protect the lives of Ukrainians in the face of Russian aggression.",
+    "second-front-foundation-description-2": " As of the beginning of March 2023, volunteers of Second Front Ukraine already collected and delivered aid to Ukraine (for defenders, paramedics and firefighters) for more than 850,000 CAD. Let’s run together! Let’s #RunForUkraine Around Ukraine to restore the integrity of Ukraine’s state border and celebrate the VICTORY!",
+    "RUN - EAT - DONATE - REPEAT!": "RUN - EAT - DONATE - REPEAT!"
+  },
+  "About": {
+    "about-title": "HOW EVERYTHING STARTED",
+    "about-subtitle": "Hello everyone!",
+    "about-description-1": "My name is Amelina Olga, and I am a marathon runner, an ideological inspirer and the leader of the #RunForUkraine project. Together with the volunteer team of Second Front Ukraine Foundation @secondfrontua we launched the #RunForUkraine project in the spring of 2022, which quickly grew into an international initiative and united the global running community around Ukraine.",
+    "about-description-2": "The main idea was to call the running community to the topic of a full-scale war in Ukraine, unite as many goal-oriented achievers as possible to #RunForUkraine together, raise money and help defenders of Ukraine. The most important goal for us is to make Ukraine's VICTORY happen as soon as possible by organizing all kinds of running initiatives!",
+    "about-description-3": "For the first time, #RunForUkraine showcased itself loudly at the Toronto Marathon in May 2022, where hundreds of athletes and amateurs were running in special #RunForUkraine yellow t-shirts. Then there were the Ottawa Tamarack Marathon, the Chicago Marathon, the Toronto Waterfront Marathon, the Tel Aviv Marathon, as well as a huge fundraising initiative for winter military boots for defenders, 19 charity runs across Canada and the world, Ambassadors of different countries supporting us, politicians, stars, musicians... And all of that for our beloved Ukraine!",
+    "about-description-4": "We do not plan to stop! We plan to continue running for Ukraine, raise money to make the victory of Ukraine happen as soon as possible!"
+  },
+  "Social": {
+    "join-our-run-club": "Join our run club on",
+    "join-telegram-title": "Join our Telegram channels",
+    "join-telegram-canada": "Toronto, Canada",
+    "join-telegram-uk": "London, UK",
+    "join-telegram-israel": "Tel-Aviv, Israel"
+  },
+  "Report": {
+    "PREVIOUS-FUNDRAISERS": "PREVIOUS FUNDRAISERS",
+    "fall-2022": "Fall 2022",
+    "may-2022": "May 2022"
+  },
+  "Gallery": {
+    "gallery-title": "GALLERY"
+  },
+  "Footer": {
+    "who-are-we": "Who are we",
+    "donate": "Donate",
+    "contacts": "Contacts",
+    "copyright": "©2022-2023 Second Front Ukraine Foundation. All Rights Reserved.",
+    "copyright-description": "Second Front Ukraine Foundation is registered organization under The Canada Not-for-profit Corporations Act."
   }
 }

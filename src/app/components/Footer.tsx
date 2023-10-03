@@ -2,8 +2,11 @@ import Image from "next/image";
 import React from "react";
 import ResponsiveImage from "@/app/components/ResponsiveImage";
 import Link from "next-intl/link";
+import { useTranslations } from "next-intl";
 
 const Footer = () => {
+  const t = useTranslations("Footer");
+
   return (
     <div className="bg-strong-azure">
       <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-5 p-3 text-white">
@@ -28,12 +31,12 @@ const Footer = () => {
                 href="https://secondfrontukraine.com/team"
                 title="Who are we"
               >
-                Who are we
+                {t("who-are-we")}
               </Link>
             </li>
             <li>
               <Link href="#donate" title="Donate">
-                Donate
+                {t("donate")}
               </Link>
             </li>
             <li>
@@ -41,19 +44,14 @@ const Footer = () => {
                 href="https://secondfrontukraine.com/contact-us"
                 title="Contacts"
               >
-                Contacts
+                {t("contacts")}
               </Link>
             </li>
           </ul>
         </div>
         <div className="text-[0.75rem] ">
-          <p>
-            ©2022-2023 Second Front Ukraine Foundation. All Rights Reserved.
-          </p>
-          <p>
-            Second Front Ukraine Foundation is registered organization under The
-            Canada Not-for-profit Corporations Act.
-          </p>
+          <p>{t("copyright")}</p>
+          <p>{t("copyright-description")}</p>
         </div>
         <div className="flex flex-end items-center space-x-10 justify-end">
           <Image
