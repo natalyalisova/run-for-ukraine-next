@@ -8,7 +8,7 @@
   },
   "NavBar": {
     "button-donate-title": "Допомогти",
-    "button-ambassador-title": "Стати амбасадором",
+    "button-fundraiser-title": "Стати фандрайзером",
     "fundraiser": "Збір",
     "about": "Про проект",
     "events": "Події",
@@ -16,7 +16,7 @@
     "reporting": "Звіт",
     "shop": "Mерч"
   },
-  "Ambassadors": {
+  "Fundraisers": {
     "fundraised": "Зібрано:"
   },
   "Goals": {

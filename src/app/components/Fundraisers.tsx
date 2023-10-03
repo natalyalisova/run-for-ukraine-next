@@ -10,8 +10,8 @@ type Props = {
   profileImgUrl: string;
 };
 
-const Ambassadors = ({ name, fundraised, goal, profileImgUrl }: Props) => {
-  const t = useTranslations("Ambassadors");
+const Fundraisers = ({ name, fundraised, goal, profileImgUrl }: Props) => {
+  const t = useTranslations("Fundraisers");
   return (
     <Link href="">
       <div className="flex gap-2 ml-6 md:ml-1">
@@ -37,4 +37,4 @@ const Ambassadors = ({ name, fundraised, goal, profileImgUrl }: Props) => {
   );
 };
 
-export default Ambassadors;
+export default Fundraisers;

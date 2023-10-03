@@ -13,6 +13,7 @@ type Props = {
   bgColor?: string;
   margin?: string;
   textColor?: string;
+  link?: string;
 };
 
 const ButtonNav = ({
@@ -20,6 +21,7 @@ const ButtonNav = ({
   leftIcon,
   rightIcon,
   handleClick,
+  link,
   isSubmitting: isSubmitting,
   type,
   bgColor,
@@ -28,7 +30,7 @@ const ButtonNav = ({
 }: Props) => {
   return (
     <Link
-      href="/"
+      href={`${link || "/"}`}
       className={`flexCenter gap-3 px-4 py-3 uppercase bg-yellow-gold
             ${textColor || "text-strong-azure"}
              ${margin || "mh-1"}

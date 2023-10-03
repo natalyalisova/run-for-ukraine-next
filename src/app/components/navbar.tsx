@@ -55,12 +55,13 @@ const Navbar = () => {
           <ButtonNav
             leftIcon={faRocket as IconProp}
             margin={"ml-3 visible"}
-            title={t("button-ambassador-title")}
+            title={t("button-fundraiser-title")}
           />
           <ButtonNav
             leftIcon={faCircleDollarToSlot as IconProp}
             margin={"ml-3 visible"}
             title={t("button-donate-title")}
+            link={"#donate"}
           />
 
           <button

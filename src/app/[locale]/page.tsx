@@ -1,7 +1,7 @@
 import { useTranslations } from "next-intl";
 import Image from "next/image";
 import React from "react";
-import Ambassadors from "@/app/components/Ambassadors";
+import Fundraisers from "@/app/components/Fundraisers";
 import HomeTop from "@/app/components/HomeTop";
 import Goals from "@/app/components/Goals";
 import Gather from "@/app/components/Gather";
@@ -38,7 +38,7 @@ const Home = () => {
       <div className="w-full">
         <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-4  justify-center mt-10">
           {MockedAmbassadors.map((ambassador) => (
-            <Ambassadors
+            <Fundraisers
               name={ambassador.name}
               key={ambassador.name}
               fundraised={ambassador.fundraised}
