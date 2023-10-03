@@ -101,7 +101,7 @@ const Navbar = () => {
                   className=" block py-2 pl-1  pr-4 text-white rounded md:bg-transparent md:text-white md:p-0  mt-4 lg:inline-block lg:mt-0 hover:text-cyan-100 mr-4"
                   aria-current="page"
                 >
-                  {t(link.text)}
+                  {t(link.text)} ghgh
                 </Link>
               </li>
             ))}
