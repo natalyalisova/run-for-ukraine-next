@@ -10,9 +10,22 @@
     box-sizing: border-box;
 }
 
-body {
-    font-family: Inter;
+html {
+    scroll-behavior: smooth;
 }
+/*body {*/
+/*    font-family: Inter;*/
+/*}*/
+
+
+
+body {
+    font-family: 'Raleway', sans-serif;
+    width: 100vw;
+
+}
+
+
 
 .flexCenter {
     @apply flex justify-center items-center;

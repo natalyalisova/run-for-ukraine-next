@@ -5,7 +5,10 @@ const About = () => {
   const t = useTranslations("About");
 
   return (
-    <div className="flex justify-center flex-col" id="about">
+    <div
+      className="flex justify-center flex-col text-base md:text-lg"
+      id="about"
+    >
       <h2 className="title uppercase">{t("about-title")}</h2>
       <h3 className="title-secondary">{t("about-subtitle")}</h3>
       <p>
