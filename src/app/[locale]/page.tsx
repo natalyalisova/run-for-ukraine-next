@@ -1,6 +1,5 @@
 import { useTranslations } from "next-intl";
 import { gql } from "@apollo/client";
-// import { addApolloState, initializeApollo } from "../../lib/apolloClient";
 import { getClient } from "@/lib/apolloClient";
 import Image from "next/image";
 import React from "react";
@@ -126,20 +125,5 @@ const Home = (props: { loading: boolean, data: any, error: any }) => {
     </div>
   );
 };
-
-// export async function getServerSideProps(context: {
-//   params: { };
-// }) {
-//   const apolloClient = initializeApollo();
-
-//   await apolloClient.query({
-//     query: GET_AMBASSADORS,
-//     variables: {},
-//   });
-
-//   return addApolloState(apolloClient, {
-//     props: {},
-//   });
-// }
 
 export default App;
