@@ -4,6 +4,8 @@ import TextGradient from "@/app/components/AnimatedTextGradient";
 import React from "react";
 import { useTranslations } from "next-intl";
 import About from "@/app/components/About";
+import DonateWidget from './donate/DonateWidget';
+import {campaignCode} from '../constants';
 
 const Gather = () => {
   const t = useTranslations("Gather");
@@ -50,7 +52,7 @@ const Gather = () => {
         id="donate"
       >
         <p>GOAL CAD $69,920</p>
-        <p>Widget</p>
+        <DonateWidget campaign={campaignCode} showCollections></DonateWidget>
       </div>
 
       <div className="flexCenter my-6">

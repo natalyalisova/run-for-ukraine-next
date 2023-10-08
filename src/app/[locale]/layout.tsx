@@ -1,6 +1,7 @@
 import React from "react";
 import "./globals.css";
 import { useLocale } from "next-intl";
+import Script from 'next/script'
 import { notFound } from "next/navigation";
 import Navbar from "@/app/components/navbar";
 import Footer from "@/app/components/Footer";
@@ -11,18 +12,18 @@ export const metadata = {
     "Charity organization, created to support Ukraine and help stop russian aggression against Ukraine",
 };
 
+const locales = ['en', 'ua'];
+
 export default function RootLayout({
   children,
-  params,
+  params: { locale },
 }: {
   children: React.ReactNode;
   params: any;
 }) {
-  const locale = useLocale();
-
-  if (params.locale !== locale) {
-    notFound();
-  }
+  // Validate that the incoming `locale` parameter is valid
+  const isValidLocale = locales.some((cur) => cur === locale);
+  if (!isValidLocale) notFound();
 
   return (
     <html lang={locale}>
@@ -60,18 +61,18 @@ export default function RootLayout({
           href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.css"
           rel="stylesheet"
         />
-        <link rel="stylesheet" href="/style_v6.css" />
         <title>Run For Ukraine</title>
       </head>
       <body className="h-full">
         <Navbar />
         <main>{children}</main>
         <Footer />
-        <script
+
+        <Script
           src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.js"
           async
-        ></script>
-        <script src="https://kit.fontawesome.com/5721daa4dc.js" async></script>
+        ></Script>
+        <Script src="https://kit.fontawesome.com/5721daa4dc.js" async></Script>
       </body>
     </html>
   );

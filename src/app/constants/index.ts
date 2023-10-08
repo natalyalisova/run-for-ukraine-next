@@ -16,3 +16,5 @@ export const NavLinks = [
 ];
 
 export const footerLinks = [];
+
+export const campaignCode = "2FUA-RFUA2023";

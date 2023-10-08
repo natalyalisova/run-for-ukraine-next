@@ -1,4 +1,7 @@
 import { useTranslations } from "next-intl";
+import { gql } from "@apollo/client";
+// import { addApolloState, initializeApollo } from "../../lib/apolloClient";
+import { getClient } from "@/lib/apolloClient";
 import Image from "next/image";
 import React from "react";
 import Fundraisers from "@/app/components/Fundraisers";
@@ -8,6 +11,7 @@ import Gather from "@/app/components/Gather";
 import Social from "@/app/components/Social";
 import Report from "@/app/components/Report";
 import Gallery from "@/app/components/Gallery";
+import {campaignCode} from '../constants';
 
 const MockedAmbassadors = [
   {
@@ -30,8 +34,62 @@ const MockedAmbassadors = [
   },
 ];
 
-const Home = () => {
+const GET_AMBASSADORS = gql`
+query GetAmbassador($campaignId: String!) {
+  ambassadors(where: {
+    AND: [
+      {project: {campaignID: {equals: $campaignId}}},
+      {status: {equals: "published"}}
+    ]
+  }, take: 100, skip: 0) {
+    id
+    name
+    slug
+    campaignIdInfix
+    campaignIdFull
+    blurb
+    content {
+          document(hydrateRelationships: true)
+      }
+    project {
+      id
+      name
+      campaignID
+      blurb
+      goal
+      logo {
+          url
+      }
+      status
+    }
+    goal
+    goalOffset
+    avatar {
+          url
+      }
+    status
+    shearableUrl
+  }
+}
+`;
+
+const App = async () => {
+  const { data, error, loading } = await getClient().query({ query: GET_AMBASSADORS, variables: { campaignId: campaignCode } });
+
+  return <Home data={data} error={error} loading={loading} />
+}
+
+
+const Home = (props: { loading: boolean, data: any, error: any }) => {
   const t = useTranslations("Home");
+
+  if (props.loading) {
+    return <div>Loading...</div>;
+  } else if (props.error) {
+    return <div>{JSON.stringify(props.error)}</div>;
+  }
+  console.log(props.data);  // TODO: Use data
+
   return (
     <div className="flex flex-col">
       <HomeTop />
@@ -69,4 +127,19 @@ const Home = () => {
   );
 };
 
-export default Home;
+// export async function getServerSideProps(context: {
+//   params: { };
+// }) {
+//   const apolloClient = initializeApollo();
+
+//   await apolloClient.query({
+//     query: GET_AMBASSADORS,
+//     variables: {},
+//   });
+
+//   return addApolloState(apolloClient, {
+//     props: {},
+//   });
+// }
+
+export default App;
