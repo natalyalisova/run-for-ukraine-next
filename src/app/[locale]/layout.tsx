@@ -71,7 +71,7 @@ export default function RootLayout({
           src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.js"
           async
         ></script>
-        <script src="https://kit.fontawesome.com/5721daa4dc.js"></script>
+        <script src="https://kit.fontawesome.com/5721daa4dc.js" async></script>
       </body>
     </html>
   );

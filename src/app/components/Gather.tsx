@@ -28,7 +28,7 @@ const Gather = () => {
                 "https://www.instagram.com/p/CpDcpkMud_l/?igshid=YmMyMTA2M2Y%3D"
               }
             >
-              "{t("second-front-name")}"
+              &quot;{t("second-front-name")}&quot;
             </Link>
           </span>
           {t("fundraising-goal-description-2")}
@@ -37,7 +37,7 @@ const Gather = () => {
       <div className="flex justify-center flex-col mb-1">
         <p className="text-base md:text-lg">
           <span className="font-semibold">
-            "{t("second-front-foundation-title")}"
+          &quot;{t("second-front-foundation-title")}&quot;
           </span>
           {t("second-front-foundation-description-1")}
         </p>
