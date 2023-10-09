@@ -19,6 +19,7 @@ export interface DonateWidgetProps {
   campaign: string;
   showCollections: boolean;
   targetCollections?: number;
+  donateType?: string;
 }
 
 function DonateWidget(props: DonateWidgetProps) {
@@ -197,7 +198,11 @@ function DonateWidget(props: DonateWidgetProps) {
         )
       ) : (
         <div>
-          <DonateForm campaign={props.campaign} onTabCreated={onTabCreated} />
+          <DonateForm
+            campaign={props.campaign}
+            onTabCreated={onTabCreated}
+            donateType={props.donateType}
+          />
         </div>
       )}
     </div>

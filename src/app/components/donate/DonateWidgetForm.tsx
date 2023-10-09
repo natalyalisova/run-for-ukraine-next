@@ -1,14 +1,15 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { wave } from "@/lib/axiosInstances";
 import {
-  StackedTextAmountSelector,
   StackedBoxAmountSelector,
+  StackedTextAmountSelector,
 } from "./DonateWidgetAmountSelector";
 
 export interface WidgetDonateFormProps {
   campaign: string;
   onTabCreated: (tab: any) => void;
   useBoxSelector?: boolean;
+  donateType?: string;
 }
 
 function WidgetDonateForm(props: WidgetDonateFormProps) {
@@ -17,7 +18,11 @@ function WidgetDonateForm(props: WidgetDonateFormProps) {
   const [fullName, setFullname] = useState("");
   const [memo, setMemo] = useState("");
   const [addNote, setAddNote] = useState(false);
-  const [addIdentity, setAddIdentity] = useState(false);
+
+  const isRegister = () => {
+    return props.donateType === "register";
+  };
+  const [addIdentity, setAddIdentity] = useState(isRegister);
 
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
@@ -82,25 +87,25 @@ function WidgetDonateForm(props: WidgetDonateFormProps) {
                 Include email to receive updates
               </a>
             ) : null}
-            {addIdentity === addNote ? " | " : null}
-            {!addNote ? (
-              <a href="#" onClick={handleAddNote}>
-                Add a note
-              </a>
-            ) : null}
+            {/*{addIdentity === addNote ? " | " : null}*/}
+            {/*{!addNote ? (*/}
+            {/*  <a href="#" onClick={handleAddNote}>*/}
+            {/*    Add a note*/}
+            {/*  </a>*/}
+            {/*) : null}*/}
           </div>
         ) : null}
-        {addIdentity ? (
-          <div className="sfua-donate-form__input-box">
-            <input
-              type="text"
-              name="email"
-              value={email}
-              placeholder="Email (optional)"
-              onChange={(e) => setEmail(e.target.value)}
-            />
-          </div>
-        ) : null}
+
+        <div className="sfua-donate-form__input-box">
+          <input
+            type="text"
+            name="email"
+            value={email}
+            placeholder="Email (optional)"
+            onChange={(e) => setEmail(e.target.value)}
+          />
+        </div>
+
         {addIdentity ? (
           <div className="sfua-donate-form__input-box">
             <input
@@ -131,7 +136,11 @@ function WidgetDonateForm(props: WidgetDonateFormProps) {
             <div className="icon-override wv-icon--payment-method--small wv-icon--payment-method--cc-visa"></div>
           </div>
           <div className="sfua-donate-form__submit-alt ">
-            <input className="" type="submit" value="Donate" />
+            <input
+              className=""
+              type="submit"
+              value={props.donateType === "register" ? "Register" : "Donate"}
+            />
           </div>
         </div>
       </form>

@@ -113,16 +113,19 @@ const Home = (props: { loading: boolean; data: any; error: any }) => {
           ))}
         </div>
         <Goals />
-        <div className="text-center mt-10" id="register">
-          <TextGradient text={"Register for a run"} />
-          <div className="mt-4 h-1 w-64 bg-yellow-gold mx-auto mb-3"></div>
-        </div>
-        <div className="w-[350px] mx-auto">
-          <DonateWidget
-            campaign={campaignCode}
-            showCollections
-            targetCollections={69920}
-          ></DonateWidget>
+        <div className="bg-yellow-200 pt-6 pb-12" id="register">
+          <div className="text-center mt-10">
+            <TextGradient text={"Register for a run"} />
+            <div className="mt-4 h-1 w-64 bg-yellow-gold mx-auto mb-3"></div>
+          </div>
+          <div className="w-[340px] md:w-[360px] mx-auto">
+            <DonateWidget
+              campaign={campaignCode}
+              showCollections
+              targetCollections={69920}
+              donateType={"register"}
+            ></DonateWidget>
+          </div>
         </div>
       </div>
       <Gather />
@@ -137,7 +140,6 @@ const Home = (props: { loading: boolean; data: any; error: any }) => {
           {t("home-on-yellow-bg-title")}
         </h2>
       </div>
-
       <Social />
       <Report />
       <Gallery />

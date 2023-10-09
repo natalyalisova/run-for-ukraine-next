@@ -27,7 +27,7 @@ export function StackedTextAmountSelector(props: AmountSelectorProps) {
     return (
       <a
         key={`option-${amount}`}
-        className="border border-strong-azure hover:bg-strong-azure p-6 mr-[-1px] w-24 text-strong-azure hover:text-white"
+        className="border border-strong-azure hover:bg-strong-azure p-5 md:p-6 mr-[-1px] w-10 md:w-24 text-strong-azure hover:text-white"
         onClick={onClickHandler}
       >
         ${amount.toLocaleString("en-CA")}

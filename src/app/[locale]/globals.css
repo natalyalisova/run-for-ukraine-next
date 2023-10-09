@@ -117,6 +117,14 @@ body {
     background-size: cover;
 }
 
+.bg-img-run{
+    background: url("https://secondfront-cdn.nyc3.cdn.digitaloceanspaces.com/runforukraine2023%2Fgallery%2Frsz_120220529ukrainiansatottawarw_ta312.jpg");
+    background-size: cover;
+}
+
+
+
+
 /* Navbar */
 .navbar {
     @apply p-8 border-b gap-4;
