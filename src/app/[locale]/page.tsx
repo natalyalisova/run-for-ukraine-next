@@ -83,13 +83,12 @@ const App = async () => {
     query: GET_AMBASSADORS,
     variables: { campaignId: campaignCode },
   });
-
+  console.log("render App", { data, error, loading });
   return <Home data={data} error={error} loading={loading} />;
 };
 
 const Home = (props: { loading: boolean; data: any; error: any }) => {
   const t = useTranslations("Home");
-
   if (props.loading) {
     return <div>Loading...</div>;
   } else if (props.error) {
@@ -102,20 +101,21 @@ const Home = (props: { loading: boolean; data: any; error: any }) => {
       <HomeTop />
       <div className="w-full">
         <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-4  justify-center mt-10">
-          {MockedAmbassadors.map((ambassador) => (
+          {props.data.ambassadors.map((ambassador) => (
             <Fundraisers
               name={ambassador.name}
-              key={ambassador.name}
+              key={ambassador.id}
               fundraised={ambassador.fundraised}
               goal={ambassador.goal}
-              profileImgUrl={ambassador.profileImgUrl}
+              profileImgUrl={ambassador.avatar.url}
+              fundraiserLink={ambassador.shearableUrl}
             />
           ))}
         </div>
         <Goals />
-        <div className="bg-yellow-200 pt-6 pb-12" id="register">
+        <div className="bg-yellow-100 pt-6 pb-12" id="register">
           <div className="text-center mt-10">
-            <TextGradient text={"Register for a run"} />
+            <TextGradient text={t("Register for a run")} />
             <div className="mt-4 h-1 w-64 bg-yellow-gold mx-auto mb-3"></div>
           </div>
           <div className="w-[340px] md:w-[360px] mx-auto">

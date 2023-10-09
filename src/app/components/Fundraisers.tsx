@@ -8,12 +8,19 @@ type Props = {
   fundraised: number | null;
   goal: number;
   profileImgUrl: string;
+  fundraiserLink: string;
 };
 
-const Fundraisers = ({ name, fundraised, goal, profileImgUrl }: Props) => {
+const Fundraisers = ({
+  name,
+  fundraised,
+  goal,
+  profileImgUrl,
+  fundraiserLink,
+}: Props) => {
   const t = useTranslations("Fundraisers");
   return (
-    <Link href="">
+    <Link href={fundraiserLink}>
       <div className="flex gap-2 ml-6 md:ml-1">
         <Image
           src={profileImgUrl}

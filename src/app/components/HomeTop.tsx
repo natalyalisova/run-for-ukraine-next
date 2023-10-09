@@ -1,7 +1,4 @@
-import Image from "next/image";
-import Link from "next-intl/link";
 import Button from "@/app/components/Button";
-import { faCircleDollarToSlot } from "@fortawesome/free-solid-svg-icons/faCircleDollarToSlot";
 import { IconProp } from "@fortawesome/fontawesome-svg-core";
 import React from "react";
 import { useTranslations } from "next-intl";
