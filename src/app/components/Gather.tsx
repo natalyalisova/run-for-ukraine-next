@@ -6,6 +6,7 @@ import { useTranslations } from "next-intl";
 import About from "@/app/components/About";
 import DonateWidget from "./donate/DonateWidget";
 import { campaignCode } from "../constants";
+import { auto } from "@popperjs/core";
 
 const Gather = () => {
   const t = useTranslations("Gather");
@@ -13,11 +14,11 @@ const Gather = () => {
   return (
     <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-5 justify-center p-10">
       <div className="flexCenter mb-6">
-        <Image
+        <img
           src="/images/walkie-talkie.png"
           alt={"walkie-talkie image"}
           width={300}
-          height={300}
+          height={auto}
         />
       </div>
       <div className="flex justify-center flex-col" id="gather">
@@ -59,11 +60,11 @@ const Gather = () => {
       </div>
 
       <div className="flexCenter my-6">
-        <Image
+        <img
           src="/images/amelina-olga.png"
           alt={"Amelina Olga image"}
           width={500}
-          height={700}
+          height={auto}
         />
       </div>
 

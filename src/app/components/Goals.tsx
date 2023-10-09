@@ -3,6 +3,7 @@ import Link from "next-intl/link";
 import Image from "next/image";
 import React from "react";
 import { useTranslations } from "next-intl";
+import { auto } from "@popperjs/core";
 
 const Goals = () => {
   const t = useTranslations("Goals");
@@ -50,10 +51,10 @@ const Goals = () => {
           href={"https://secondfrontukraine.com/#"}
           className="flex justify-center mt-6"
         >
-          <Image
+          <img
             src="/images/2nd-front-logo-full-color.svg"
             width={236}
-            height={90}
+            height={auto}
             alt="Second front logo"
           />
         </Link>

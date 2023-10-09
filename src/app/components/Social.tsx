@@ -1,6 +1,7 @@
 import Image from "next/image";
 import React from "react";
 import { useTranslations } from "next-intl";
+import { auto } from "@popperjs/core";
 
 const Social = () => {
   const t = useTranslations("Social");
@@ -21,7 +22,6 @@ const Social = () => {
         </h2>
         <div className="strava-container">
           <iframe
-            allowTransparency
             frameBorder="0"
             height="160"
             scrolling="no"
@@ -29,7 +29,6 @@ const Social = () => {
             width="100%"
           ></iframe>
           <iframe
-            allowTransparency
             frameBorder="0"
             height="454"
             scrolling="no"
@@ -64,11 +63,11 @@ const Social = () => {
               href="https://t.me/runforukrainelondon"
               className="hover:underline hover:underline-offset-2"
             >
-              <Image
+              <img
                 src={"/images/telegram.svg"}
                 alt={"telegram icon"}
                 width={25}
-                height={25}
+                height={auto}
                 className="inline mr-2"
               />
               {t("join-telegram-uk")}
