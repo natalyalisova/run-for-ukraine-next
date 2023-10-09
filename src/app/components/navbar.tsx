@@ -11,6 +11,13 @@ import { NavLinks } from "@/app/constants";
 import ButtonNav from "@/app/components/ButtonNav";
 import ResponsiveImage from "@/app/components/ResponsiveImage";
 
+// const openLink = () => {
+//   window.open(
+//     "https://docs.google.com/forms/d/e/1FAIpQLSckR5nOZLGdWLlzahw-GsaPbbVaS7bUHz14KPC1VUIrSjC5Eg/viewform",
+//     "_blank",
+//   );
+// };
+
 const Navbar = () => {
   const locale = useLocale();
   const t = useTranslations("NavBar");
@@ -56,6 +63,9 @@ const Navbar = () => {
             leftIcon={faRocket as IconProp}
             margin={"ml-3 visible"}
             title={t("button-fundraiser-title")}
+            link={
+              "https://docs.google.com/forms/d/e/1FAIpQLSckR5nOZLGdWLlzahw-GsaPbbVaS7bUHz14KPC1VUIrSjC5Eg/viewform"
+            }
           />
           <ButtonNav
             leftIcon={faCircleDollarToSlot as IconProp}

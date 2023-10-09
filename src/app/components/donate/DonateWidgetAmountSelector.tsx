@@ -1,40 +1,42 @@
-import React from 'react';
-
+import React from "react";
 
 export interface AmountSelectorProps {
-    onSelect: (amount: number) => void;
+  onSelect: (amount: number) => void;
 }
 
 export function StackedBoxAmountSelector(props: AmountSelectorProps) {
-    return (
-        <div className="sfua-donate-subheader">
-            <h3>Select amount to donate</h3>
-            <div className="sfua-donate-amount-selector">
-                <button onClick={() => props.onSelect(50.00)}>$50</button>
-                <button onClick={() => props.onSelect(100.00)}>$100</button>
-                <button onClick={() => props.onSelect(200.00)}>$200</button>
-                <button onClick={() => props.onSelect(500.00)}>$500</button>
-            </div>
-        </div>
-    )
+  return (
+    <div className="sfua-donate-subheader">
+      <h3>Select amount to donate</h3>
+      <div className="sfua-donate-amount-selector">
+        <button onClick={() => props.onSelect(50.0)}>$50</button>
+        <button onClick={() => props.onSelect(100.0)}>$100</button>
+        <button onClick={() => props.onSelect(200.0)}>$200</button>
+        <button onClick={() => props.onSelect(500.0)}>$500</button>
+      </div>
+    </div>
+  );
 }
 
 export function StackedTextAmountSelector(props: AmountSelectorProps) {
-    const amountOptions = [50.00, null, 100.00, null, 200.00, null, 500.00].map(amount => {
-        if (!amount) {
-            return ' | '
-        }
-        const onClickHandler = (e: React.MouseEvent<HTMLAnchorElement>) => {
-            e.preventDefault();
-            props.onSelect(amount);
-        }
-        return (
-            <a href="#" onClick={onClickHandler} key={`option-${amount}`}>${amount.toLocaleString('en-CA')}</a>
-        )
-    });
+  const amountOptions = [50.0, 100.0, 200.0, 500.0].map((amount) => {
+    const onClickHandler = (e: React.MouseEvent<HTMLAnchorElement>) => {
+      e.preventDefault();
+      props.onSelect(amount);
+    };
     return (
-        <div className='sfua-donate-form__amount-select'>
-            <span>{amountOptions}</span>
-        </div>
-    )
+      <a
+        key={`option-${amount}`}
+        className="border border-strong-azure hover:bg-strong-azure p-6 mr-[-1px] w-24 text-strong-azure hover:text-white"
+        onClick={onClickHandler}
+      >
+        ${amount.toLocaleString("en-CA")}
+      </a>
+    );
+  });
+  return (
+    <div className="sfua-donate-form__amount-select my-10">
+      <span>{amountOptions}</span>
+    </div>
+  );
 }

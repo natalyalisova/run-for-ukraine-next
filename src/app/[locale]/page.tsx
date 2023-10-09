@@ -10,7 +10,9 @@ import Gather from "@/app/components/Gather";
 import Social from "@/app/components/Social";
 import Report from "@/app/components/Report";
 import Gallery from "@/app/components/Gallery";
-import {campaignCode} from '../constants';
+import { campaignCode } from "../constants";
+import DonateWidget from "@/app/components/donate/DonateWidget";
+import TextGradient from "@/app/components/AnimatedTextGradient";
 
 const MockedAmbassadors = [
   {
@@ -34,52 +36,58 @@ const MockedAmbassadors = [
 ];
 
 const GET_AMBASSADORS = gql`
-query GetAmbassador($campaignId: String!) {
-  ambassadors(where: {
-    AND: [
-      {project: {campaignID: {equals: $campaignId}}},
-      {status: {equals: "published"}}
-    ]
-  }, take: 100, skip: 0) {
-    id
-    name
-    slug
-    campaignIdInfix
-    campaignIdFull
-    blurb
-    content {
-          document(hydrateRelationships: true)
+  query GetAmbassador($campaignId: String!) {
+    ambassadors(
+      where: {
+        AND: [
+          { project: { campaignID: { equals: $campaignId } } }
+          { status: { equals: "published" } }
+        ]
       }
-    project {
+      take: 100
+      skip: 0
+    ) {
       id
       name
-      campaignID
+      slug
+      campaignIdInfix
+      campaignIdFull
       blurb
-      goal
-      logo {
+      content {
+        document(hydrateRelationships: true)
+      }
+      project {
+        id
+        name
+        campaignID
+        blurb
+        goal
+        logo {
           url
+        }
+        status
+      }
+      goal
+      goalOffset
+      avatar {
+        url
       }
       status
+      shearableUrl
     }
-    goal
-    goalOffset
-    avatar {
-          url
-      }
-    status
-    shearableUrl
   }
-}
 `;
 
 const App = async () => {
-  const { data, error, loading } = await getClient().query({ query: GET_AMBASSADORS, variables: { campaignId: campaignCode } });
+  const { data, error, loading } = await getClient().query({
+    query: GET_AMBASSADORS,
+    variables: { campaignId: campaignCode },
+  });
 
-  return <Home data={data} error={error} loading={loading} />
-}
+  return <Home data={data} error={error} loading={loading} />;
+};
 
-
-const Home = (props: { loading: boolean, data: any, error: any }) => {
+const Home = (props: { loading: boolean; data: any; error: any }) => {
   const t = useTranslations("Home");
 
   if (props.loading) {
@@ -87,7 +95,7 @@ const Home = (props: { loading: boolean, data: any, error: any }) => {
   } else if (props.error) {
     return <div>{JSON.stringify(props.error)}</div>;
   }
-  console.log(props.data);  // TODO: Use data
+  console.log(props.data); // TODO: Use data
 
   return (
     <div className="flex flex-col">
@@ -105,6 +113,17 @@ const Home = (props: { loading: boolean, data: any, error: any }) => {
           ))}
         </div>
         <Goals />
+        <div className="text-center mt-10" id="register">
+          <TextGradient text={"Register for a run"} />
+          <div className="mt-4 h-1 w-64 bg-yellow-gold mx-auto mb-3"></div>
+        </div>
+        <div className="w-[350px] mx-auto">
+          <DonateWidget
+            campaign={campaignCode}
+            showCollections
+            targetCollections={69920}
+          ></DonateWidget>
+        </div>
       </div>
       <Gather />
       <div className="bg-img flexCenter flex-col py-16">

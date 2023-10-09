@@ -4,8 +4,8 @@ import TextGradient from "@/app/components/AnimatedTextGradient";
 import React from "react";
 import { useTranslations } from "next-intl";
 import About from "@/app/components/About";
-import DonateWidget from './donate/DonateWidget';
-import {campaignCode} from '../constants';
+import DonateWidget from "./donate/DonateWidget";
+import { campaignCode } from "../constants";
 
 const Gather = () => {
   const t = useTranslations("Gather");
@@ -39,7 +39,7 @@ const Gather = () => {
       <div className="flex justify-center flex-col mb-1">
         <p className="text-base md:text-lg">
           <span className="font-semibold">
-          &quot;{t("second-front-foundation-title")}&quot;
+            &quot;{t("second-front-foundation-title")}&quot;
           </span>
           {t("second-front-foundation-description-1")}
         </p>
@@ -51,8 +51,11 @@ const Gather = () => {
         className="flex justify-center flex-col text-2xl text-center"
         id="donate"
       >
-        <p>GOAL CAD $69,920</p>
-        <DonateWidget campaign={campaignCode} showCollections></DonateWidget>
+        <DonateWidget
+          campaign={campaignCode}
+          showCollections
+          targetCollections={69920}
+        ></DonateWidget>
       </div>
 
       <div className="flexCenter my-6">

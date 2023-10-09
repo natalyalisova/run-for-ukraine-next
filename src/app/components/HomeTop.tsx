@@ -30,7 +30,7 @@ const HomeTop = () => {
       <div className="h-full md:h-1/2 bg-yellow-gold flex justify-center items-end">
         <div className="flexCenter flex-col bg-white m-3 px-6 py-3 max-w-md text-center">
           <p className="text-sm md:text-xl font-semibold">{t("our-goal")}</p>
-          <Link href="" className="bg-yellow-gold mt-2">
+          <Link href="#register" className="bg-yellow-gold mt-2">
             <Button
               title={t("register")}
               leftIcon={faCircleDollarToSlot as IconProp}
