@@ -54,7 +54,7 @@ function DonateWidget(props: DonateWidgetProps) {
       window.open(tabToOpen.url, "", "width=1024, height=768");
     });
   };
-  console.log("props.includeEmailTranslation:", props.includeEmailTranslation);
+
   const pollForPayment = (tabAsArgument?: DonateWidgetTab, counter = 1) => {
     wave.get(`/tab/${tabAsArgument?.tab_id}`).then((result) => {
       if (!result.data.paid && counter <= 120) {

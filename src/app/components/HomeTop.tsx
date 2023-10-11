@@ -4,6 +4,8 @@ import React from "react";
 import { useTranslations } from "next-intl";
 import { faPersonRunning } from "@fortawesome/free-solid-svg-icons";
 import { auto } from "@popperjs/core";
+import DonateWidgetInfo from "@/app/components/donate/DonateWidgetInfo";
+import { campaignCode } from "@/app/constants";
 
 const HomeTop = () => {
   const t = useTranslations("HomeTop");
@@ -18,12 +20,11 @@ const HomeTop = () => {
       />
       <div className="h-full md:h-1/2 mt-8 md:mt-10 flex flex-col">
         <div className="flex-grow"></div>
-        <div className="flex flex-row self-center pb-1 items-center ">
-          <p className="text-white text-2xl md:text-5xl">1212.8</p>
-          <p className="text-white  text-base md:text-lg opacity-50 ml-2">
-            / 6992 km
-          </p>
-        </div>
+        <DonateWidgetInfo
+          campaign={campaignCode}
+          showCollections
+          targetCollections={69920}
+        />
       </div>
 
       <div className="h-full md:h-1/2 bg-yellow-gold flex justify-center items-end">
