@@ -14,27 +14,6 @@ import { campaignCode } from "../constants";
 import DonateWidget from "@/app/components/donate/DonateWidget";
 import TextGradient from "@/app/components/AnimatedTextGradient";
 
-const MockedAmbassadors = [
-  {
-    name: "Amelina Olga",
-    fundraised: 120,
-    goal: 500,
-    profileImgUrl: "/images/olga-avatar.png",
-  },
-  {
-    name: "Sergey Ostapenko",
-    fundraised: 100,
-    goal: 400,
-    profileImgUrl: "/images/sergey-avatar.png",
-  },
-  {
-    name: "Mark Lisovyi",
-    fundraised: 310,
-    goal: 1500,
-    profileImgUrl: "/images/avatar-default.svg",
-  },
-];
-
 const GET_AMBASSADORS = gql`
   query GetAmbassador($campaignId: String!) {
     ambassadors(

@@ -12,13 +12,6 @@ import ButtonNav from "@/app/components/ButtonNav";
 import ResponsiveImage from "@/app/components/ResponsiveImage";
 import { auto } from "@popperjs/core";
 
-// const openLink = () => {
-//   window.open(
-//     "https://docs.google.com/forms/d/e/1FAIpQLSckR5nOZLGdWLlzahw-GsaPbbVaS7bUHz14KPC1VUIrSjC5Eg/viewform",
-//     "_blank",
-//   );
-// };
-
 const Navbar = () => {
   const locale = useLocale();
   const t = useTranslations("NavBar");

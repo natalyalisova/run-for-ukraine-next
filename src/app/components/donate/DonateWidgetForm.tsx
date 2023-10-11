@@ -138,7 +138,7 @@ function WidgetDonateForm(props: WidgetDonateFormProps) {
             <textarea
               name="memo"
               value={memo}
-              placeholder="Note (optional)"
+              placeholder={props.addNoteTranslation ?? "Add a note"}
               rows={7}
               onChange={(e) => setMemo(e.target.value)}
             />
