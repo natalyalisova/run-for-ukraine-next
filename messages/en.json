@@ -17,9 +17,12 @@
     "reporting": "Reporting",
     "shop": "Shop"
   },
-"DonateWidget": {
-  "goal": "Goal"
-},
+  "DonateWidget": {
+    "goal": "Goal"
+  },
+  "WidgetDonateForm": {
+    "SELECT-AMOUNT-TO-DONATE": "SELECT AMOUNT TO DONATE"
+  },
   "Fundraisers": {
     "fundraised": "Fundraised:"
   },

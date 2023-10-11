@@ -53,7 +53,7 @@ function WidgetDonateForm(props: WidgetDonateFormProps) {
     e.preventDefault();
     setAddNote(true);
   };
-
+  // const t = useTranslations("WidgetDonateForm");
   return (
     <div className="2fua-donate-form">
       <p className="text-base uppercase font-semibold">

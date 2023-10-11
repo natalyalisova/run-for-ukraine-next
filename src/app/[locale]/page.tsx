@@ -105,15 +105,16 @@ const Home = (props: { loading: boolean; data: any; error: any }) => {
             <Fundraisers
               name={ambassador.name}
               key={ambassador.id}
-              fundraised={ambassador.fundraised}
-              goal={ambassador.goal}
               profileImgUrl={ambassador.avatar.url}
+              about={ambassador.blurb}
+              fundraised={ambassador.goalOffset}
+              goal={ambassador.goal}
               fundraiserLink={ambassador.shearableUrl}
             />
           ))}
         </div>
         <Goals />
-        <div className="bg-yellow-100 pt-6 pb-12" id="register">
+        <div className="pt-6 pb-12" id="register">
           <div className="text-center mt-10">
             <TextGradient text={t("Register for a run")} />
             <div className="mt-4 h-1 w-64 bg-yellow-gold mx-auto mb-3"></div>

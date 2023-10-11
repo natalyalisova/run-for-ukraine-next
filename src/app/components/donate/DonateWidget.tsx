@@ -119,7 +119,7 @@ function DonateWidget(props: DonateWidgetProps) {
     <div className="sfua-widget">
       {props.showCollections && !props.targetCollections ? (
         <>
-          <h2 className="text-xl uppercase text-left"> Collect to date:</h2>
+          <h2 className="text-xl uppercase text-left">Collect to date:</h2>
           <h1 className="text-6xl font-semibold">
             ${campaignData.collected / 100}
           </h1>
@@ -127,7 +127,7 @@ function DonateWidget(props: DonateWidgetProps) {
       ) : null}
       {props.targetCollections ? (
         <div className="my-6">
-          <h2 className="text-xl uppercase text-left"> Goal</h2>
+          <h2 className="text-xl uppercase text-left">Goal</h2>
           <h1 className="text-6xl font-semibold">
             CAD ${props.targetCollections}
           </h1>
@@ -158,17 +158,16 @@ function DonateWidget(props: DonateWidgetProps) {
             className="bg-gray-900/5 "
           />
         </div>
-      ) : // <div className="sfua-widget-progress-container">
-      //   <div>
-      //     <p>
-      //       Raised: <strong>${campaignData.collected / 100}</strong>
-      //     </p>
-      //     <p>
-      //       Goal: <strong>${props.targetCollections}</strong>
-      //     </p>
-      //   </div>
-      //
-      // </div>
+      ) : //     (<div className="sfua-widget-progress-container">
+      //     <div>
+      //         <p>
+      //             Raised: <strong>${campaignData.collected / 100}</strong>
+      //         </p>
+      //         <p>
+      //             Goal: <strong>${props.targetCollections}</strong>
+      //         </p>
+      //     </div>
+      // </div>)
       null}
       {tab ? (
         tab.paid ? (
