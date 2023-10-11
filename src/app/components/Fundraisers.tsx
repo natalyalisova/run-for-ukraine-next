@@ -3,7 +3,7 @@ import Link from "next-intl/link";
 import { useTranslations } from "next-intl";
 import { UrlObject } from "url";
 
-type Props = {
+type AmbasadorProps = {
   name: string;
   fundraised: number | null;
   about?: string;
@@ -19,7 +19,7 @@ const Fundraisers = ({
   goal,
   profileImgUrl,
   fundraiserLink,
-}: Props) => {
+}: AmbasadorProps) => {
   const t = useTranslations("Fundraisers");
   return (
     <Link href={fundraiserLink}>

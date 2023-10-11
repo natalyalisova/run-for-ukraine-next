@@ -1,7 +1,24 @@
 {
   "Home": {
     "home-on-yellow-bg-title": "#RunForUkraine is a global community that unites runners and athletes from all over the world to support and help Ukraine and the Ukrainian military.",
-    "Register for a run": "Register for a run"
+    "Register for a run": "Register for a run",
+    "goal": "Goal",
+    "Collect-to-date": "Collect to date:",
+    "raised": "raised",
+    "thank-you": "Thank you for supporting Ukraine!",
+    "another-contribution": "Click here to make another contribution",
+    "processing": "Processing",
+    "your-donation": "your donation",
+    "another-window.": "in another window.",
+    "cancel": "Click here to cancel",
+    "select-amount": "SELECT AMOUNT TO DONATE",
+    "include-email": "Include email to receive updates",
+    "enter-amount": "Enter amount",
+    "email-optional": "Email (optional)",
+    "full-name-optional": "Full name (optional)",
+    "add-note": "Add a note",
+    "register": "Register",
+    "donate": "Donate"
   },
   "HomeTop": {
     "our-goal": "Our goal is to collectively run 6992km and raise funds for the purchase of tactical radios for our defenders in Ukraine.",
@@ -18,7 +35,6 @@
     "shop": "Shop"
   },
   "DonateWidget": {
-    "goal": "Goal"
   },
   "WidgetDonateForm": {
     "SELECT-AMOUNT-TO-DONATE": "SELECT AMOUNT TO DONATE"

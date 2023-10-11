@@ -3,7 +3,7 @@ import { gql } from "@apollo/client";
 import { getClient } from "@/lib/apolloClient";
 import Image from "next/image";
 import React from "react";
-import Fundraisers from "@/app/components/Fundraisers";
+import Fundraisers, { AmbasadorProps } from "@/app/components/Fundraisers";
 import HomeTop from "@/app/components/HomeTop";
 import Goals from "@/app/components/Goals";
 import Gather from "@/app/components/Gather";
@@ -125,6 +125,23 @@ const Home = (props: { loading: boolean; data: any; error: any }) => {
               showCollections
               targetCollections={69920}
               donateType={"register"}
+              goalTranslation={t("goal")}
+              collectDateTranslation={t("Collect-to-date")}
+              raisedTranslation={t("raised")}
+              thankYouTranslation={t("thank - you")}
+              anotherContributionTranslation={t("another-contribution")}
+              processingTranslation={t("processing")}
+              yourDonationTranslation={t("your-donation")}
+              anotherWindowTranslation={t("another-window")}
+              cancelTranslation={t("cancel")}
+              selectAmountTranslation={t("select-amount")}
+              includeEmailTranslation={t("include-email")}
+              enterAmountTranslation={t("enter-amount")}
+              emailOptionalTranslation={t("email-optional")}
+              fullNameOptionalTranslation={t("full-name-optional")}
+              addNoteTranslation={t("add-note")}
+              registerTranslation={t("register")}
+              donateTranslation={t("donate")}
             ></DonateWidget>
           </div>
         </div>

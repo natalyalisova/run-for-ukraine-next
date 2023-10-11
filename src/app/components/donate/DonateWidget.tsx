@@ -20,6 +20,23 @@ export interface DonateWidgetProps {
   showCollections: boolean;
   targetCollections?: number;
   donateType?: string;
+  goalTranslation?: string;
+  collectDateTranslation?: string;
+  raisedTranslation?: string;
+  thankYouTranslation?: string;
+  anotherContributionTranslation?: string;
+  processingTranslation?: string;
+  yourDonationTranslation?: string;
+  anotherWindowTranslation?: string;
+  cancelTranslation?: string;
+  selectAmountTranslation?: string;
+  includeEmailTranslation: string;
+  enterAmountTranslation?: string;
+  emailOptionalTranslation?: string;
+  fullNameOptionalTranslation?: string;
+  addNoteTranslation: string;
+  registerTranslation?: string;
+  donateTranslation?: string;
 }
 
 function DonateWidget(props: DonateWidgetProps) {
@@ -37,7 +54,7 @@ function DonateWidget(props: DonateWidgetProps) {
       window.open(tabToOpen.url, "", "width=1024, height=768");
     });
   };
-
+  console.log("props.includeEmailTranslation:", props.includeEmailTranslation);
   const pollForPayment = (tabAsArgument?: DonateWidgetTab, counter = 1) => {
     wave.get(`/tab/${tabAsArgument?.tab_id}`).then((result) => {
       if (!result.data.paid && counter <= 120) {
@@ -119,7 +136,9 @@ function DonateWidget(props: DonateWidgetProps) {
     <div className="sfua-widget">
       {props.showCollections && !props.targetCollections ? (
         <>
-          <h2 className="text-xl uppercase text-left">Collect to date:</h2>
+          <h2 className="text-xl uppercase text-left">
+            {props.collectDateTranslation}
+          </h2>
           <h1 className="text-6xl font-semibold">
             ${campaignData.collected / 100}
           </h1>
@@ -127,30 +146,27 @@ function DonateWidget(props: DonateWidgetProps) {
       ) : null}
       {props.targetCollections ? (
         <div className="my-6">
-          <h2 className="text-xl uppercase text-left">Goal</h2>
+          <h2 className="text-xl uppercase text-left">
+            {props.goalTranslation ?? "Goal"}
+          </h2>
           <h1 className="text-6xl font-semibold">
             CAD ${props.targetCollections}
           </h1>
 
           <div className="flex justify-between mt-3">
             <div className="text-left uppercase text-small">
-              raised
+              {props.raisedTranslation ?? "Raised"}
               <h2 className="text-xl font-semibold">
                 ${campaignData.collected / 100}
               </h2>
             </div>
             <div className="text-right uppercase text-small">
-              Goal
+              {props.goalTranslation ?? "Goal"}
               <h2 className="text-xl font-semibold">
                 ${props.targetCollections}
               </h2>
             </div>
           </div>
-          {/*<progress*/}
-          {/*  max={props.targetCollections}*/}
-          {/*  value={campaignData.collected / 100}*/}
-          {/*  className="w-full h-2 mt-[-10px]"*/}
-          {/*></progress>*/}
           <Progress
             value={campaignData.collected / props.targetCollections}
             size="sm"
@@ -158,38 +174,29 @@ function DonateWidget(props: DonateWidgetProps) {
             className="bg-gray-900/5 "
           />
         </div>
-      ) : //     (<div className="sfua-widget-progress-container">
-      //     <div>
-      //         <p>
-      //             Raised: <strong>${campaignData.collected / 100}</strong>
-      //         </p>
-      //         <p>
-      //             Goal: <strong>${props.targetCollections}</strong>
-      //         </p>
-      //     </div>
-      // </div>)
-      null}
+      ) : null}
       {tab ? (
         tab.paid ? (
           <div>
             <p>
-              Thank you for supporting Ukraine! <br />
+              {props.thankYouTranslation ?? "Thank you for supporting Ukraine!"}{" "}
+              <br />
               💙&nbsp;💛 <br />
               <a href="#" onClick={handleDonationCancel}>
-                Click here to make another contribution
+                {props.anotherContributionTranslation}
               </a>
             </p>
           </div>
         ) : (
           <div>
             <p>
-              Processing
+              {props.processingTranslation ?? "Processing"}
               <a href="#" onClick={handleClickDonation}>
-                your donation
+                {props.yourDonationTranslation ?? "your donation"}
               </a>
-              in another window. <br />
+              {props.anotherWindowTranslation ?? "in another window."} <br />
               <a href="#" onClick={handleDonationCancel}>
-                Click here to cancel
+                {props.cancelTranslation ?? "Click here to cancel"}
               </a>
               .
             </p>
@@ -201,6 +208,14 @@ function DonateWidget(props: DonateWidgetProps) {
             campaign={props.campaign}
             onTabCreated={onTabCreated}
             donateType={props.donateType}
+            selectAmountTranslation={props.selectAmountTranslation}
+            includeEmailTranslation={props.includeEmailTranslation}
+            enterAmountTranslation={props.enterAmountTranslation}
+            emailOptionalTranslation={props.emailOptionalTranslation}
+            fullNameOptionalTranslation={props.fullNameOptionalTranslation}
+            addNoteTranslation={props.addNoteTranslation}
+            registerTranslation={props.registerTranslation}
+            donateTranslation={props.donateTranslation}
           />
         </div>
       )}

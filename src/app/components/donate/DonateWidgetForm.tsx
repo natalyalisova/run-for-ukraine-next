@@ -10,6 +10,14 @@ export interface WidgetDonateFormProps {
   onTabCreated: (tab: any) => void;
   useBoxSelector?: boolean;
   donateType?: string;
+  selectAmountTranslation?: string;
+  includeEmailTranslation: string;
+  enterAmountTranslation?: string;
+  emailOptionalTranslation?: string;
+  fullNameOptionalTranslation?: string;
+  addNoteTranslation: string;
+  registerTranslation?: string;
+  donateTranslation?: string;
 }
 
 function WidgetDonateForm(props: WidgetDonateFormProps) {
@@ -53,11 +61,11 @@ function WidgetDonateForm(props: WidgetDonateFormProps) {
     e.preventDefault();
     setAddNote(true);
   };
-  // const t = useTranslations("WidgetDonateForm");
+
   return (
     <div className="2fua-donate-form">
       <p className="text-base uppercase font-semibold">
-        SELECT AMOUNT TO DONATE
+        {props.selectAmountTranslation ?? "Select amount to donate"}
       </p>
       {props.useBoxSelector ? (
         <StackedBoxAmountSelector
@@ -77,22 +85,17 @@ function WidgetDonateForm(props: WidgetDonateFormProps) {
             value={amount}
             className="sfua-donate-form__input-box__large"
             onChange={(e) => setAmount(e.target.value)}
-            placeholder="Enter amount"
+            placeholder={props.enterAmountTranslation ?? "Enter amount"}
           />
         </div>
-        {!addIdentity || !addNote ? (
+        {isRegister() || !addNote ? (
           <div className="sfua-donate-form__add">
-            {!addIdentity ? (
+            {isRegister() ? (
               <a href="#" onClick={handleAddIdentity}>
-                Include email to receive updates
+                {props.includeEmailTranslation ??
+                  "Include email to receive updates"}
               </a>
             ) : null}
-            {/*{addIdentity === addNote ? " | " : null}*/}
-            {/*{!addNote ? (*/}
-            {/*  <a href="#" onClick={handleAddNote}>*/}
-            {/*    Add a note*/}
-            {/*  </a>*/}
-            {/*) : null}*/}
           </div>
         ) : null}
 
@@ -101,7 +104,7 @@ function WidgetDonateForm(props: WidgetDonateFormProps) {
             type="text"
             name="email"
             value={email}
-            placeholder="Email (optional)"
+            placeholder={props.emailOptionalTranslation ?? "Email (optional)"}
             onChange={(e) => setEmail(e.target.value)}
           />
         </div>
@@ -112,10 +115,23 @@ function WidgetDonateForm(props: WidgetDonateFormProps) {
               type="text"
               name="fullName"
               value={fullName}
-              placeholder="Full name (optional)"
+              placeholder={
+                props.fullNameOptionalTranslation ?? "Full name (optional)"
+              }
               onChange={(e) => setFullname(e.target.value)}
             />
           </div>
+        ) : null}
+        {!addNote ? (
+          <p>
+            <a
+              href="#"
+              onClick={handleAddNote}
+              className="underline underline-offset-2 text-strong-azure"
+            >
+              {props.addNoteTranslation ?? "Add a note"}
+            </a>
+          </p>
         ) : null}
         {addNote ? (
           <div className="sfua-donate-form__input-box">
@@ -139,7 +155,11 @@ function WidgetDonateForm(props: WidgetDonateFormProps) {
             <input
               className=""
               type="submit"
-              value={props.donateType === "register" ? "Register" : "Donate"}
+              value={
+                props.donateType === "register"
+                  ? props.registerTranslation
+                  : props.donateTranslation ?? "Donate"
+              }
             />
           </div>
         </div>
