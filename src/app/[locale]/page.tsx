@@ -94,7 +94,6 @@ const Home = (props: { loading: boolean; data: any; error: any }) => {
   } else if (props.error) {
     return <div>{JSON.stringify(props.error)}</div>;
   }
-  console.log(props.data); // TODO: Use data
 
   return (
     <div className="flex flex-col">

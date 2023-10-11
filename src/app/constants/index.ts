@@ -1,5 +1,9 @@
+import Link from "next-intl/link";
+import React from "react";
+
 export const NavLinks = [
   { href: "#gather", key: "fundraiser", text: "fundraiser" },
+  { href: "/donate", key: "donate", text: "donate" },
   { href: "#about", key: "about", text: "about" },
   {
     href: "https://secondfrontukraine.com/events/runs",

@@ -195,7 +195,11 @@ function DonateWidget(props: DonateWidgetProps) {
                 {props.yourDonationTranslation ?? "your donation"}
               </a>
               {props.anotherWindowTranslation ?? "in another window."} <br />
-              <a href="#" onClick={handleDonationCancel}>
+              <a
+                href="#"
+                onClick={handleDonationCancel}
+                className="underline underline-offset-2 text-strong-azure"
+              >
                 {props.cancelTranslation ?? "Click here to cancel"}
               </a>
               .

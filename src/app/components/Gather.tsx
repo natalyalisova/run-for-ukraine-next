@@ -56,6 +56,23 @@ const Gather = () => {
           campaign={campaignCode}
           showCollections
           targetCollections={69920}
+          goalTranslation={t("goal")}
+          collectDateTranslation={t("Collect-to-date")}
+          raisedTranslation={t("raised")}
+          thankYouTranslation={t("thank - you")}
+          anotherContributionTranslation={t("another-contribution")}
+          processingTranslation={t("processing")}
+          yourDonationTranslation={t("your-donation")}
+          anotherWindowTranslation={t("another-window")}
+          cancelTranslation={t("cancel")}
+          selectAmountTranslation={t("select-amount")}
+          includeEmailTranslation={t("include-email")}
+          enterAmountTranslation={t("enter-amount")}
+          emailOptionalTranslation={t("email-optional")}
+          fullNameOptionalTranslation={t("full-name-optional")}
+          addNoteTranslation={t("add-note")}
+          registerTranslation={t("register")}
+          donateTranslation={t("donate")}
         ></DonateWidget>
       </div>
 
