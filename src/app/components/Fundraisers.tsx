@@ -42,7 +42,7 @@ const Fundraisers = ({
           </p>
         </div>
       </div>
-      <p className="text-sm mt-3">{about}</p>
+      <p className="text-sm m-3">{about}</p>
     </Link>
   );
 };
