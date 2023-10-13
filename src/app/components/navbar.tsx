@@ -10,6 +10,7 @@ import { faRocket } from "@fortawesome/free-solid-svg-icons";
 import { NavLinks } from "@/app/constants";
 import ButtonNav from "@/app/components/ButtonNav";
 import ResponsiveImage from "@/app/components/ResponsiveImage";
+import { auto } from "@popperjs/core";
 
 const Navbar = () => {
   const locale = useLocale();
@@ -31,23 +32,23 @@ const Navbar = () => {
         <div className="flex md:order-2 items-center ml-3 visible">
           {locale === "ua" && (
             <Link href="/" locale="en">
-              <Image
+              <img
                 src="/images/ca.png"
                 alt="Flag of Canada"
                 className="h-auto max-w-xl"
                 width={35}
-                height={22}
+                height={auto}
               />
             </Link>
           )}
           {locale === "en" && (
             <Link href="/" locale="ua">
-              <Image
+              <img
                 src="/images/ua.png"
                 alt="Flag of Ukraine"
                 className="h-auto max-w-xl"
                 width={35}
-                height={22}
+                height={auto}
               />
             </Link>
           )}
@@ -56,6 +57,9 @@ const Navbar = () => {
             leftIcon={faRocket as IconProp}
             margin={"ml-3 visible"}
             title={t("button-fundraiser-title")}
+            link={
+              "https://docs.google.com/forms/d/e/1FAIpQLSckR5nOZLGdWLlzahw-GsaPbbVaS7bUHz14KPC1VUIrSjC5Eg/viewform"
+            }
           />
           <ButtonNav
             leftIcon={faCircleDollarToSlot as IconProp}
@@ -81,9 +85,9 @@ const Navbar = () => {
             >
               <path
                 stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
                 d="M1 1h15M1 7h15M1 13h15"
               />
             </svg>

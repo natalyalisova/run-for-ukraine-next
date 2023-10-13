@@ -4,6 +4,9 @@ import TextGradient from "@/app/components/AnimatedTextGradient";
 import React from "react";
 import { useTranslations } from "next-intl";
 import About from "@/app/components/About";
+import DonateWidget from "./donate/DonateWidget";
+import { campaignCode } from "../constants";
+import { auto } from "@popperjs/core";
 
 const Gather = () => {
   const t = useTranslations("Gather");
@@ -11,11 +14,11 @@ const Gather = () => {
   return (
     <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-5 justify-center p-10">
       <div className="flexCenter mb-6">
-        <Image
+        <img
           src="/images/walkie-talkie.png"
           alt={"walkie-talkie image"}
           width={300}
-          height={300}
+          height={auto}
         />
       </div>
       <div className="flex justify-center flex-col" id="gather">
@@ -37,7 +40,7 @@ const Gather = () => {
       <div className="flex justify-center flex-col mb-1">
         <p className="text-base md:text-lg">
           <span className="font-semibold">
-          &quot;{t("second-front-foundation-title")}&quot;
+            &quot;{t("second-front-foundation-title")}&quot;
           </span>
           {t("second-front-foundation-description-1")}
         </p>
@@ -49,16 +52,36 @@ const Gather = () => {
         className="flex justify-center flex-col text-2xl text-center"
         id="donate"
       >
-        <p>GOAL CAD $69,920</p>
-        <p>Widget</p>
+        <DonateWidget
+          campaign={campaignCode}
+          showCollections
+          targetCollections={69920}
+          goalTranslation={t("goal")}
+          collectDateTranslation={t("Collect-to-date")}
+          raisedTranslation={t("raised")}
+          thankYouTranslation={t("thank - you")}
+          anotherContributionTranslation={t("another-contribution")}
+          processingTranslation={t("processing")}
+          yourDonationTranslation={t("your-donation")}
+          anotherWindowTranslation={t("another-window")}
+          cancelTranslation={t("cancel")}
+          selectAmountTranslation={t("select-amount")}
+          includeEmailTranslation={t("include-email")}
+          enterAmountTranslation={t("enter-amount")}
+          emailOptionalTranslation={t("email-optional")}
+          fullNameOptionalTranslation={t("full-name-optional")}
+          addNoteTranslation={t("add-note")}
+          registerTranslation={t("register")}
+          donateTranslation={t("donate")}
+        ></DonateWidget>
       </div>
 
       <div className="flexCenter my-6">
-        <Image
+        <img
           src="/images/amelina-olga.png"
           alt={"Amelina Olga image"}
           width={500}
-          height={700}
+          height={auto}
         />
       </div>
 
