@@ -6,7 +6,7 @@ import { Progress } from "@material-tailwind/react";
 
 interface DonateWidgetCampaign {
   slug: string;
-  collected: number;
+  collected: number | null;
 }
 
 interface DonateWidgetTab {
@@ -42,7 +42,7 @@ export interface DonateWidgetProps {
 function DonateWidget(props: DonateWidgetProps) {
   const [campaignData, setCampaignData] = useState({
     slug: props.campaign,
-    collected: 0,
+    collected: null,
   } as DonateWidgetCampaign);
   const [tab, setTab] = useState(undefined as DonateWidgetTab | undefined);
   const [trackConv, setTrackConv] = useState(true);
@@ -140,7 +140,10 @@ function DonateWidget(props: DonateWidgetProps) {
             {props.collectDateTranslation}
           </h2>
           <h1 className="text-6xl font-semibold">
-            ${campaignData.collected / 100}
+            $
+            {campaignData.collected !== null
+              ? campaignData.collected / 100
+              : "…"}
           </h1>
         </>
       ) : null}
@@ -149,7 +152,7 @@ function DonateWidget(props: DonateWidgetProps) {
           <h2 className="text-xl uppercase text-left">
             {props.goalTranslation ?? "Goal"}
           </h2>
-          <h1 className="text-6xl font-semibold">
+          <h1 className="md:text-6xl font-semibold text-left">
             CAD ${props.targetCollections}
           </h1>
 
@@ -157,7 +160,10 @@ function DonateWidget(props: DonateWidgetProps) {
             <div className="text-left uppercase text-small">
               {props.raisedTranslation ?? "Raised"}
               <h2 className="text-xl font-semibold">
-                ${campaignData.collected / 100}
+                $
+                {campaignData.collected !== null
+                  ? campaignData.collected / 100
+                  : "…"}
               </h2>
             </div>
             <div className="text-right uppercase text-small">

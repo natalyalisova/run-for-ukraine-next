@@ -9,6 +9,7 @@ type Props = {
   handleClick?: MouseEventHandler;
   isSubmitting?: boolean;
   type?: "button" | "submit";
+  icon?: string;
   bgColor?: string;
   margin?: string;
   textColor?: string;
@@ -21,6 +22,7 @@ const Button = ({
   handleClick,
   isSubmitting: isSubmitting,
   type,
+  icon,
   bgColor,
   textColor,
   margin,
@@ -37,6 +39,7 @@ const Button = ({
       onClick={handleClick}
     >
       {leftIcon && <FontAwesomeIcon icon={leftIcon} width={22} height={22} />}
+      {icon && <img src={icon} width={22} height={22} />}
       <span>{title}</span>
       {rightIcon && <FontAwesomeIcon icon={rightIcon} width={22} height={22} />}
     </button>

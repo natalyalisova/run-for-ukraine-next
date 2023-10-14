@@ -4,7 +4,7 @@ import { wave } from "@/lib/axiosInstances";
 
 interface DonateWidgetCampaign {
   slug: string;
-  collected: number;
+  collected: number | null;
 }
 
 interface DonateWidgetTab {
@@ -22,7 +22,7 @@ export interface DonateWidgetProps {
 function DonateWidgetInfo(props: DonateWidgetProps) {
   const [campaignData, setCampaignData] = useState({
     slug: props.campaign,
-    collected: 0,
+    collected: null,
   } as DonateWidgetCampaign);
 
   const today = new Date().toISOString().slice(0, 10);
@@ -52,7 +52,7 @@ function DonateWidgetInfo(props: DonateWidgetProps) {
     <div className="sfua-widget">
       <div className="flex flex-row self-center pb-1 items-center ">
         <p className="text-white text-2xl md:text-5xl">
-          {campaignData.collected / 100}
+          {campaignData.collected !== null ? campaignData.collected / 100 : "…"}
         </p>
         <p className="text-white  text-base md:text-lg opacity-50 ml-2">
           / {props.targetCollections} km

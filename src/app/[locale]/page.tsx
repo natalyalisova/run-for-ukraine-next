@@ -13,6 +13,9 @@ import Gallery from "@/app/components/Gallery";
 import { campaignCode } from "../constants";
 import DonateWidget from "@/app/components/donate/DonateWidget";
 import TextGradient from "@/app/components/AnimatedTextGradient";
+import { faRocket } from "@fortawesome/free-solid-svg-icons";
+import { IconProp } from "@fortawesome/fontawesome-svg-core";
+import Button from "@/app/components/Button";
 
 const GET_AMBASSADORS = gql`
   query GetAmbassador($campaignId: String!) {
@@ -90,6 +93,22 @@ const Home = (props: { loading: boolean; data: any; error: any }) => {
               fundraiserLink={ambassador.shearableUrl}
             />
           ))}
+          <div className="my-auto mx-12 md:mx-10 bg-yellow-gold">
+            <a
+              href={
+                "https://docs.google.com/forms/d/e/1FAIpQLSckR5nOZLGdWLlzahw-GsaPbbVaS7bUHz14KPC1VUIrSjC5Eg/viewform"
+              }
+            >
+              <Button
+                leftIcon={faRocket as IconProp}
+                margin={"ml-3 visible"}
+                title={t("button-fundraiser-title")}
+                link={
+                  "https://docs.google.com/forms/d/e/1FAIpQLSckR5nOZLGdWLlzahw-GsaPbbVaS7bUHz14KPC1VUIrSjC5Eg/viewform"
+                }
+              />
+            </a>
+          </div>
         </div>
         <Goals />
         <div className="pt-6 pb-12" id="register">

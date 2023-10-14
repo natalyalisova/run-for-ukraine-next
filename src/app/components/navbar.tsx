@@ -1,6 +1,5 @@
 import React from "react";
 import Link from "next-intl/link";
-import Image from "next/image";
 import "flowbite";
 
 import { useLocale, useTranslations } from "next-intl";
@@ -35,7 +34,7 @@ const Navbar = () => {
               <img
                 src="/images/ca.png"
                 alt="Flag of Canada"
-                className="h-auto max-w-xl"
+                className="h-auto max-w-xl shadow-sm"
                 width={35}
                 height={auto}
               />
@@ -46,7 +45,7 @@ const Navbar = () => {
               <img
                 src="/images/ua.png"
                 alt="Flag of Ukraine"
-                className="h-auto max-w-xl"
+                className="h-auto max-w-xl shadow-sm border border-blue-700"
                 width={35}
                 height={auto}
               />
