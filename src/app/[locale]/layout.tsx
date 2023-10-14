@@ -1,20 +1,14 @@
 import React from "react";
 import "./globals.css";
-import { useLocale } from "next-intl";
-import Script from 'next/script'
+import Script from "next/script";
 import { notFound } from "next/navigation";
 import Navbar from "@/app/components/navbar";
 import Footer from "@/app/components/Footer";
+import { generateMetadata } from "@/app/components/Metadata";
 
-export const metadata = {
-  title: "Run for Ukraine",
-  description:
-    "Charity organization, created to support Ukraine and help stop russian aggression against Ukraine",
-};
+const locales = ["en", "ua"];
 
-const locales = ['en', 'ua'];
-
-export default function RootLayout({
+export default async function RootLayout({
   children,
   params: { locale },
 }: {
@@ -25,17 +19,26 @@ export default function RootLayout({
   const isValidLocale = locales.some((cur) => cur === locale);
   if (!isValidLocale) notFound();
 
+  const metadata = await generateMetadata({ params: { locale } });
+
   return (
     <html lang={locale}>
       <head>
+        <meta property="og:site_name" content="run for Ukraine" />
+        <meta property="og:url" content="https://runforukraine.ca/" />
+        <meta property="title" content={metadata.title} />
+        <meta property="og:title" content={metadata.title} />
+        <meta property="content" content={metadata.content} />
+        <meta property="og:content" content={metadata.content} />
+        <meta property="description" content={metadata.description} />
+        <meta property="og:description" content={metadata.description} />
         <meta
-          name="description"
-          content="#RunForUkraine - Our goal is to collectively run 6992km and raise funds for radios that will help Ukrainian Army to reach their goals."
+          property="og:instagram"
+          content="https://www.instagram.com/runforukraine/?igshid=YmMyMTA2M2Y%3D"
         />
-        <meta property="og:title" content="#RunForUkraine" />
         <meta
-          property="og:description"
-          content="#RunForUkraine - Our goal is to collectively run 6992km and raise funds for radios that will help Ukrainian Army to reach their goals."
+          property="og:facebook"
+          content="https://www.facebook.com/runforukraine.united?mibextid=LQQJ4d"
         />
         <meta
           property="og:image"
