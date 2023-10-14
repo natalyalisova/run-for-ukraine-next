@@ -1,6 +1,5 @@
 import TextGradient from "@/app/components/AnimatedTextGradient";
 import Link from "next-intl/link";
-import Image from "next/image";
 import React from "react";
 import { useTranslations } from "next-intl";
 import { auto } from "@popperjs/core";
@@ -24,10 +23,14 @@ const Goals = () => {
           title="www.runforukraine.ca"
           className="inline mx-2 text-strong-azure text-bace md:text-lg underline underline-offset-2"
         >
-          www.runforukraine.ca
+          runforukraine.ca
         </Link>
         <p className="inline text-bace md:text-lg">
           {t("new-global-season-description-2")}
+          <span className="font-bold text-strong-azure mr-2">
+            {t("length")}
+          </span>
+          <span>{t("new-global-season-description-3")}</span>
         </p>
       </div>
 
@@ -43,7 +46,11 @@ const Goals = () => {
 
       <h2 className="title mt-4">{t("how-count-title")}</h2>
       <p className="text-center inline text-bace md:text-lg">
-        {t("how-count-description")}
+        {t("how-count-description-1")}
+        <span className="font-bold text-strong-azure mr-2 text-xl">
+          {t("how-count-description-2")}
+        </span>
+        <span>{t("how-count-description-3")}</span>
       </p>
       <div className="flex justify-center flex-col">
         <p className="text-center text-bace md:text-lg mt-6">Project by</p>

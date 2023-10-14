@@ -31,7 +31,7 @@ const ButtonNav = ({
   return (
     <Link
       href={`${link || "/"}`}
-      className={`flexCenter gap-3 px-4 py-3 uppercase bg-yellow-gold
+      className={`flexCenter gap-3 px-4 py-3 uppercase bg-yellow-gold h-[40px]
             ${textColor || "text-strong-azure"}
              ${margin || "mh-1"}
              rounded=xl text-sm font-medium max-md:w-full`}
