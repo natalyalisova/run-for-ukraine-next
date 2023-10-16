@@ -8,7 +8,7 @@ type AmbasadorProps = {
   fundraised: number | null;
   about?: string;
   goal: number;
-  profileImgUrl?: string | UrlObject;
+  profileImgUrl?: string;
   fundraiserLink: string | UrlObject;
 };
 

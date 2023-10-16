@@ -115,8 +115,8 @@ const Home = (props: { loading: boolean; data: any; error: any }) => {
                 leftIcon={faRocket as IconProp}
                 margin={"ml-3 visible"}
                 title={t("button-fundraiser-title")}
-                link={
-                  "https://docs.google.com/forms/d/e/1FAIpQLSckR5nOZLGdWLlzahw-GsaPbbVaS7bUHz14KPC1VUIrSjC5Eg/viewform"
+                handleClick={
+                  () => window.location.href = "https://docs.google.com/forms/d/e/1FAIpQLSckR5nOZLGdWLlzahw-GsaPbbVaS7bUHz14KPC1VUIrSjC5Eg/viewform"
                 }
               />
             </a>

@@ -45,7 +45,6 @@ function DonateWidget(props: DonateWidgetProps) {
     collected: null,
   } as DonateWidgetCampaign);
   const [tab, setTab] = useState(undefined as DonateWidgetTab | undefined);
-  const [trackConv, setTrackConv] = useState(true);
   const breakPoll = useRef(false);
   const today = new Date().toISOString().slice(0, 10);
 
@@ -86,11 +85,10 @@ function DonateWidget(props: DonateWidgetProps) {
     e.preventDefault();
     setTab(undefined);
     breakPoll.current = true;
-    setTrackConv(true);
   };
 
   const fetchCampaign = () => {
-    wave.get(`/campaign/${props.campaign}`).then((result) => {
+    wave.get(`/campaign/${props.campaign}`).then((result: any) => {
       setCampaignData(result.data.campaign);
     });
   };
@@ -111,19 +109,6 @@ function DonateWidget(props: DonateWidgetProps) {
       pollForPayment(parsedTab);
     }
   }, []);
-
-  useEffect(() => {
-    if (tab && tab.paid && trackConv) {
-      fbq.event("Donate", { tabId: tab.tab_id, tabUrl: tab.url });
-      gtag.event({
-        action: "donate",
-        category: "donations",
-        label: "Donation",
-        value: 1,
-      });
-      setTrackConv(false);
-    }
-  }, [tab]);
 
   const handleClickDonation = (e: React.MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault();
@@ -174,7 +159,7 @@ function DonateWidget(props: DonateWidgetProps) {
             </div>
           </div>
           <Progress
-            value={campaignData.collected / props.targetCollections}
+            value={campaignData.collected !== null ? campaignData.collected / props.targetCollections : 0}
             size="sm"
             color="blue"
             className="bg-gray-900/5 "
