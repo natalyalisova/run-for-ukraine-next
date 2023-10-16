@@ -60,6 +60,18 @@ const GET_AMBASSADORS = gql`
   }
 `;
 
+export type Ambassador = {
+  name: string;
+  id: string;
+  avatar: {
+    url: string;
+  };
+  blurb: string;
+  goalOffset: number;
+  goal: number;
+  shearableUrl: string;
+};
+
 const App = async () => {
   const { data, error, loading } = await getClient().query({
     query: GET_AMBASSADORS,
@@ -82,7 +94,7 @@ const Home = (props: { loading: boolean; data: any; error: any }) => {
       <HomeTop />
       <div className="w-full">
         <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-4  justify-center mt-10">
-          {props.data.ambassadors.map((ambassador) => (
+          {props.data.ambassadors.map((ambassador: Ambassador) => (
             <Fundraisers
               name={ambassador.name}
               key={ambassador.id}
