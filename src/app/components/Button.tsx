@@ -6,7 +6,7 @@ type Props = {
   title: string;
   leftIcon?: IconProp | null;
   rightIcon?: IconProp | null;
-  handleClick?: MouseEventHandler;
+  href?: string | null;
   isSubmitting?: boolean;
   type?: "button" | "submit";
   icon?: string;
@@ -19,7 +19,7 @@ const Button = ({
   title,
   leftIcon,
   rightIcon,
-  handleClick,
+  href,
   isSubmitting: isSubmitting,
   type,
   icon,
@@ -36,7 +36,7 @@ const Button = ({
              ${margin || "mh-1"} 
             ${isSubmitting ? "bg-black/50" : bgColor || "bg-yellow-gold"}
              rounded=xl text-sm font-medium max-md:w-full`}
-      onClick={handleClick}
+      onClick={!!href ? () => window.location.href = href : undefined}
     >
       {leftIcon && <FontAwesomeIcon icon={leftIcon} width={22} height={22} />}
       {icon && <img src={icon} width={22} height={22} />}
