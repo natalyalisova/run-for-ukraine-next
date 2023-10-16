@@ -3,7 +3,7 @@ import { gql } from "@apollo/client";
 import { getClient } from "@/lib/apolloClient";
 import Image from "next/image";
 import React from "react";
-import Fundraisers, { AmbasadorProps } from "@/app/components/Fundraisers";
+import Fundraisers from "@/app/components/Fundraisers";
 import HomeTop from "@/app/components/HomeTop";
 import Goals from "@/app/components/Goals";
 import Gather from "@/app/components/Gather";
