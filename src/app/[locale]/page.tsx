@@ -94,7 +94,7 @@ const Home = (props: { loading: boolean; data: any; error: any }) => {
     <div className="flex flex-col">
       <HomeTop />
       <div className="w-full">
-        <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-2  justify-center mt-10 mr-6">
+        <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-2 justify-center mt-10">
           {props.data.ambassadors.map((ambassador: Ambassador) => (
             <Fundraisers
               name={ambassador.name}
