@@ -16,6 +16,7 @@ import TextGradient from "@/app/components/AnimatedTextGradient";
 import { faRocket } from "@fortawesome/free-solid-svg-icons";
 import { IconProp } from "@fortawesome/fontawesome-svg-core";
 import Button from "@/app/components/Button";
+import Link from "next-intl/link";
 
 const GET_AMBASSADORS = gql`
   query GetAmbassador($campaignId: String!) {
@@ -106,7 +107,7 @@ const Home = (props: { loading: boolean; data: any; error: any }) => {
             />
           ))}
           <div className="my-auto mx-12 md:mx-10 bg-yellow-gold">
-            <a
+            <Link
               href={
                 "https://docs.google.com/forms/d/e/1FAIpQLSckR5nOZLGdWLlzahw-GsaPbbVaS7bUHz14KPC1VUIrSjC5Eg/viewform"
               }
@@ -115,9 +116,8 @@ const Home = (props: { loading: boolean; data: any; error: any }) => {
                 leftIcon={faRocket as IconProp}
                 margin={"ml-3 visible"}
                 title={t("button-fundraiser-title")}
-                href={"https://docs.google.com/forms/d/e/1FAIpQLSckR5nOZLGdWLlzahw-GsaPbbVaS7bUHz14KPC1VUIrSjC5Eg/viewform"}
               />
-            </a>
+            </Link>
           </div>
         </div>
         <Goals />
