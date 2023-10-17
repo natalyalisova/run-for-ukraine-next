@@ -94,7 +94,7 @@ const Home = (props: { loading: boolean; data: any; error: any }) => {
     <div className="flex flex-col">
       <HomeTop />
       <div className="w-full">
-        <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-4  justify-center mt-10">
+        <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-2  justify-center mt-10 mr-6">
           {props.data.ambassadors.map((ambassador: Ambassador) => (
             <Fundraisers
               name={ambassador.name}
@@ -122,35 +122,36 @@ const Home = (props: { loading: boolean; data: any; error: any }) => {
         </div>
         <Goals />
         <div className="pt-6 pb-12" id="register">
-          <div className="text-center mt-10">
-            <TextGradient text={t("Register for a run")} />
-            <div className="mt-4 h-1 w-64 bg-yellow-gold mx-auto mb-3"></div>
-          </div>
-          <div className="w-[340px] md:w-[360px] mx-auto">
-            <DonateWidget
-              campaign={campaignCode}
-              showCollections
-              targetCollections={69920}
-              donateType={"register"}
-              goalTranslation={t("goal")}
-              collectDateTranslation={t("Collect-to-date")}
-              raisedTranslation={t("raised")}
-              thankYouTranslation={t("thank - you")}
-              anotherContributionTranslation={t("another-contribution")}
-              processingTranslation={t("processing")}
-              yourDonationTranslation={t("your-donation")}
-              anotherWindowTranslation={t("another-window")}
-              cancelTranslation={t("cancel")}
-              selectAmountTranslation={t("select-amount")}
-              includeEmailTranslation={t("include-email")}
-              enterAmountTranslation={t("enter-amount")}
-              emailOptionalTranslation={t("email-optional")}
-              fullNameOptionalTranslation={t("full-name-optional")}
-              addNoteTranslation={t("add-note")}
-              registerTranslation={t("register")}
-              donateTranslation={t("donate")}
-            ></DonateWidget>
-          </div>
+          {/* ------ Will be shown when running company will be open ------*/}
+          {/*<div className="text-center mt-10">*/}
+          {/*  <TextGradient text={t("Register for a run")} />*/}
+          {/*  <div className="mt-4 h-1 w-64 bg-yellow-gold mx-auto mb-3"></div>*/}
+          {/*</div>*/}
+          {/*<div className="w-[340px] md:w-[360px] mx-auto">*/}
+          {/*  <DonateWidget*/}
+          {/*    campaign={campaignCode}*/}
+          {/*    showCollections*/}
+          {/*    targetCollections={69920}*/}
+          {/*    donateType={"register"}*/}
+          {/*    goalTranslation={t("goal")}*/}
+          {/*    collectDateTranslation={t("Collect-to-date")}*/}
+          {/*    raisedTranslation={t("raised")}*/}
+          {/*    thankYouTranslation={t("thank - you")}*/}
+          {/*    anotherContributionTranslation={t("another-contribution")}*/}
+          {/*    processingTranslation={t("processing")}*/}
+          {/*    yourDonationTranslation={t("your-donation")}*/}
+          {/*    anotherWindowTranslation={t("another-window")}*/}
+          {/*    cancelTranslation={t("cancel")}*/}
+          {/*    selectAmountTranslation={t("select-amount")}*/}
+          {/*    includeEmailTranslation={t("include-email")}*/}
+          {/*    enterAmountTranslation={t("enter-amount")}*/}
+          {/*    emailOptionalTranslation={t("email-optional")}*/}
+          {/*    fullNameOptionalTranslation={t("full-name-optional")}*/}
+          {/*    addNoteTranslation={t("add-note")}*/}
+          {/*    registerTranslation={t("register")}*/}
+          {/*    donateTranslation={t("donate")}*/}
+          {/*  ></DonateWidget>*/}
+          {/*</div>*/}
         </div>
       </div>
       <Gather />

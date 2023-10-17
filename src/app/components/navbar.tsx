@@ -15,7 +15,7 @@ const Navbar = () => {
   const locale = useLocale();
   const t = useTranslations("NavBar");
   return (
-    <nav className="bg-strong-azure fixed w-full z-30 top-0 left-0 ">
+    <nav className="bg-strong-azure fixed w-full z-40 top-0 left-0 ">
       <div className="max-w-screen-2xl flex flex-wrap items-center justify-between mx-auto p-4">
         <a href="/" className="flex items-center">
           <ResponsiveImage

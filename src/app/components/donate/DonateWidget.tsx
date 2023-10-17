@@ -118,7 +118,7 @@ function DonateWidget(props: DonateWidgetProps) {
   };
 
   return (
-    <div className="sfua-widget">
+    <div className="sfua-widget mr-6">
       {props.showCollections && !props.targetCollections ? (
         <>
           <h2 className="text-xl uppercase text-left">
@@ -159,7 +159,11 @@ function DonateWidget(props: DonateWidgetProps) {
             </div>
           </div>
           <Progress
-            value={campaignData.collected !== null ? campaignData.collected / props.targetCollections : 0}
+            value={
+              campaignData.collected !== null
+                ? campaignData.collected / props.targetCollections
+                : 0
+            }
             size="sm"
             color="blue"
             className="bg-gray-900/5 "

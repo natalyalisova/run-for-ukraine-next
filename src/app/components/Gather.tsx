@@ -12,7 +12,7 @@ const Gather = () => {
   const t = useTranslations("Gather");
 
   return (
-    <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-5 justify-center p-10">
+    <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-2 justify-center p-6">
       <div className="flexCenter mb-6">
         <img
           src="/images/walkie-talkie.png"
@@ -49,7 +49,7 @@ const Gather = () => {
         </p>
       </div>
       <div
-        className="flex justify-center flex-col text-2xl text-center"
+        className="flex justify-center flex-col text-2xl text-center w-[340px] md:w-[360px] mx-auto"
         id="donate"
       >
         <DonateWidget

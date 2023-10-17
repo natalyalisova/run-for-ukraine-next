@@ -21,7 +21,7 @@ const HomeTop = () => {
         <DonateWidgetInfo
           campaign={campaignCode}
           showCollections
-          targetCollections={69920}
+          targetCollections={6992}
         />
       </div>
 
@@ -30,8 +30,13 @@ const HomeTop = () => {
           <p className="text-sm md:text-xl font-semibold z-30">
             {t("our-goal")}
           </p>
-          <a href="#register" className="bg-yellow-gold mt-2">
-            <Button title={t("register")} icon={"/images/runner.png"} />
+          {/*  Well be avalible durung running events*/}
+          {/*<a href="#register" className="bg-yellow-gold mt-2">*/}
+          {/*  <Button title={t("register")} icon={"/images/runner.png"} />*/}
+          {/*</a>*/}
+
+          <a href="#donate" className="bg-yellow-gold mt-2">
+            <Button title={t("donate")} />
           </a>
         </div>
       </div>

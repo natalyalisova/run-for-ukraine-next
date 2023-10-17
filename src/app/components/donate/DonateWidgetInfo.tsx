@@ -52,7 +52,9 @@ function DonateWidgetInfo(props: DonateWidgetProps) {
     <div className="sfua-widget">
       <div className="flex flex-row self-center pb-1 items-center ">
         <p className="text-white text-2xl md:text-5xl">
-          {campaignData.collected !== null ? campaignData.collected / 100 : "…"}
+          {campaignData.collected !== null
+            ? campaignData.collected / 1000
+            : "…"}
         </p>
         <p className="text-white  text-base md:text-lg opacity-50 ml-2">
           / {props.targetCollections} km
