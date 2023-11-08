@@ -78,12 +78,12 @@ function WidgetDonateForm(props: WidgetDonateFormProps) {
       )}
       <form onSubmit={handleSubmit}>
         <div className="sfua-donate-form__input-box">
-          <span className="sfua-donate-form__input-box__prefix">CAD</span>
+          <span className="sfua-donate-form__input-box__prefix mr-2 ">CAD</span>
           <input
             type="number"
             name="amount"
             value={amount}
-            className="sfua-donate-form__input-box__large"
+            className="text-base"
             onChange={(e) => setAmount(e.target.value)}
             placeholder={props.enterAmountTranslation ?? "Enter amount"}
           />

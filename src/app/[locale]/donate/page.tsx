@@ -20,28 +20,31 @@ const Donate = () => {
         <TextGradient text={t("donate-now")} />
         <div className="mt-4 h-1 w-64 bg-yellow-gold mx-auto mb-3"></div>
       </div>
-      <DonateWidget
-        campaign={campaignCode}
-        showCollections
-        targetCollections={69920}
-        goalTranslation={t("goal")}
-        collectDateTranslation={t("Collect-to-date")}
-        raisedTranslation={t("raised")}
-        thankYouTranslation={t("thank - you")}
-        anotherContributionTranslation={t("another-contribution")}
-        processingTranslation={t("processing")}
-        yourDonationTranslation={t("your-donation")}
-        anotherWindowTranslation={t("another-window")}
-        cancelTranslation={t("cancel")}
-        selectAmountTranslation={t("select-amount")}
-        includeEmailTranslation={t("include-email")}
-        enterAmountTranslation={t("enter-amount")}
-        emailOptionalTranslation={t("email-optional")}
-        fullNameOptionalTranslation={t("full-name-optional")}
-        addNoteTranslation={t("add-note")}
-        registerTranslation={t("register")}
-        donateTranslation={t("donate")}
-      ></DonateWidget>
+      <div className="mx-auto">
+        <DonateWidget
+          campaign={campaignCode}
+          showCollections
+          targetCollections={69920}
+          goalTranslation={t("goal")}
+          collectDateTranslation={t("Collect-to-date")}
+          raisedTranslation={t("raised")}
+          thankYouTranslation={t("thank - you")}
+          anotherContributionTranslation={t("another-contribution")}
+          processingTranslation={t("processing")}
+          yourDonationTranslation={t("your-donation")}
+          anotherWindowTranslation={t("another-window")}
+          cancelTranslation={t("cancel")}
+          selectAmountTranslation={t("select-amount")}
+          includeEmailTranslation={t("include-email")}
+          enterAmountTranslation={t("enter-amount")}
+          emailOptionalTranslation={t("email-optional")}
+          fullNameOptionalTranslation={t("full-name-optional")}
+          addNoteTranslation={t("add-note")}
+          registerTranslation={t("register")}
+          donateTranslation={t("donate")}
+        ></DonateWidget>
+      </div>
+
       <Goals />
       <div className="bg-img flexCenter flex-col py-16 my-24">
         <Image
