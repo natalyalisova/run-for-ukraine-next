@@ -1,0 +1,47 @@
+{
+  "items": [
+    {
+      "id": 1,
+      "title": "Amelina Olga ",
+      "body": "Founder & Team Leader",
+      "imageUrl": "https://secondfront-cdn.nyc3.cdn.digitaloceanspaces.com/IMG_1568.JPG",
+      "docs": "https://instagram.com/amelina.olya?igshid=NzZlODBkYWE4Ng=="
+    },
+    {
+      "id": 2,
+      "title": "Dmytro Lishchynskyi",
+      "body": "Runner",
+      "imageUrl": "https://secondfront-cdn.nyc3.cdn.digitaloceanspaces.com/IMG_4481.JPG",
+      "docs": "https://instagram.com/_dima.tlv"
+    },
+    {
+      "id": 3,
+      "title": "Nataliia Lisova",
+      "body": "Web development & UI/UX Design ",
+      "imageUrl": "https://secondfront-cdn.nyc3.cdn.digitaloceanspaces.com/nl-avatar.png",
+      "docs": "https://www.linkedin.com/in/nlisova/"
+    },
+
+    {
+      "id": 4,
+      "title": "Roman Dzhura",
+      "body": "Runner",
+      "imageUrl": "https://secondfront-cdn.nyc3.cdn.digitaloceanspaces.com/0Y1A2662.jpg",
+      "docs": "https://instagram.com/dzhu.rar?utm_source=qr&igshid=MzNlNGNkZWQ4Mg%3D%3D"
+    },
+    {
+      "id": 5,
+      "title": "Raif Max",
+      "body": "Merch Leader & runner",
+      "imageUrl": "https://secondfront-cdn.nyc3.cdn.digitaloceanspaces.com/photo_2023-11-09%2014.54.50.jpeg",
+      "docs": "https://www.instagram.com/mnkzzz/"
+    },
+    {
+      "id": 6,
+      "title": "Katya Fishilevich",
+      "body": "Runner",
+      "imageUrl": "https://secondfront-cdn.nyc3.cdn.digitaloceanspaces.com/IMG_1544.JPG",
+      "docs": "https://instagram.com/fishilevich.katya?igshid=MzMyNGUyNmU2YQ=="
+    }
+  ]
+}
