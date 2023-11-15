@@ -14,6 +14,7 @@ const config: Config = {
       colors: {
         "strong-azure": "#0057b8",
         "yellow-gold": "#ffd700",
+        "israel-blue": "#0000FF",
       },
       boxShadow: {
         menu: "0px 159px 95px rgba(13,12,34,0.01), 0px 71px 71px rgba(13,12,34,0.02), 0px 18px 39px rgba(13,12,34,0.02), 0px 0px 0px rgba(13,12,34,0.02)",

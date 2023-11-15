@@ -15,6 +15,10 @@ const Gallery = () => {
         <img src="https://secondfront-cdn.nyc3.cdn.digitaloceanspaces.com/IMG_1568.JPG" />
         <img src="https://secondfront-cdn.nyc3.cdn.digitaloceanspaces.com/IMG_1544.JPG" />
 
+        <img src="https://secondfront-cdn.nyc3.cdn.digitaloceanspaces.com/IMG_1558.JPG" />
+        <img src="https://secondfront-cdn.nyc3.cdn.digitaloceanspaces.com/IMG_4481.JPG" />
+        <img src="https://secondfront-cdn.nyc3.cdn.digitaloceanspaces.com/IMG_1507.JPG" />
+
         <img src="https://secondfront-cdn.nyc3.cdn.digitaloceanspaces.com/IMG_4471.JPG" />
         <img src="https://secondfront-cdn.nyc3.cdn.digitaloceanspaces.com/IMG_4517.JPG" />
         <img src="https://secondfront-cdn.nyc3.cdn.digitaloceanspaces.com/IMG_4475.JPG" />
@@ -23,9 +27,9 @@ const Gallery = () => {
         <img src="https://secondfront-cdn.nyc3.cdn.digitaloceanspaces.com/IMG_1529.JPG" />
         <img src="https://secondfront-cdn.nyc3.cdn.digitaloceanspaces.com/IMG_1530.JPG" />
 
-        <img src="https://secondfront-cdn.nyc3.cdn.digitaloceanspaces.com/IMG_1558.JPG" />
-        <img src="https://secondfront-cdn.nyc3.cdn.digitaloceanspaces.com/IMG_4481.JPG" />
-        <img src="https://secondfront-cdn.nyc3.cdn.digitaloceanspaces.com/IMG_1507.JPG" />
+        <img src="https://secondfront-cdn.nyc3.cdn.digitaloceanspaces.com/IMG_7402.JPG" />
+        <img src="https://secondfront-cdn.nyc3.cdn.digitaloceanspaces.com/IMG_7385.jpg" />
+        <img src="https://secondfront-cdn.nyc3.cdn.digitaloceanspaces.com/IMG_2627.jpg" />
 
         <img src="https://secondfront-cdn.nyc3.cdn.digitaloceanspaces.com/IMG_1503.JPG" />
         <img src="https://secondfront-cdn.nyc3.cdn.digitaloceanspaces.com/IMG_2462.JPG" />

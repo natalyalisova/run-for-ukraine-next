@@ -4,11 +4,13 @@ import { useTranslations } from "next-intl";
 import { auto } from "@popperjs/core";
 import DonateWidgetInfo from "@/app/components/donate/DonateWidgetInfo";
 import { campaignCode } from "@/app/constants";
+import BannerIsrael from "@/app/components/Banner-israel";
 
 const HomeTop = () => {
   const t = useTranslations("HomeTop");
   return (
     <div className="flex flex-col h-[500px] md:h-screen bg-strong-azure">
+      <BannerIsrael />
       <img
         src="/images/ukraine-contour.svg"
         className="pointer-events-none absolute z-15 top-1/4 md:top-1/2 left-1/4 md:left-1/2 transform -translate-y-1/4 -translate-x-1/4 md:transform md:-translate-y-1/2 md:-translate-x-1/2 opacity-50 mb-80 md:mb-1 z-20 "

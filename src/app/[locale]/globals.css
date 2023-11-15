@@ -126,8 +126,16 @@ body {
     background-size: cover;
 }
 
+.bg-img-israel{
+    background: url("/images/stend-with-israel.png");
+    background-size: cover;
+    background-repeat: no-repeat;
 
+}
 
+.bg-israeli {
+    @apply mt-[85px] min-w-full md:mt-[135px] min-h-[30px] md:min-h-[60px] outline outline-4 outline-white outline-offset-1  border-y-4 border-israel-blue;
+}
 
 /* Navbar */
 .navbar {
