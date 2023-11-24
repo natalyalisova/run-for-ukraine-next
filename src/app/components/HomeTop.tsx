@@ -37,9 +37,9 @@ const HomeTop = () => {
           {/*  <Button title={t("register")} icon={"/images/runner.png"} />*/}
           {/*</a>*/}
 
-          <a href="#donate" className="bg-yellow-gold mt-2">
+          {/* <a href="#donate" className="bg-yellow-gold mt-2">
             <Button title={t("donate")} />
-          </a>
+          </a> */}
         </div>
       </div>
     </div>

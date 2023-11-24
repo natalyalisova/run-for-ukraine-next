@@ -28,31 +28,33 @@ const Navbar = () => {
             #RunForUkraine
           </span>
         </a>
-        <div className="flex md:order-2 items-center ml-3 visible">
+        <div className="flex md:order-2 items-center ml-3 visible text-white underline underline-offset-2">
           {locale === "ua" && (
             <Link href="/" locale="en">
-              <img
+              {/* <img
                 src="/images/ca.png"
                 alt="Flag of Canada"
                 className="h-auto max-w-xl shadow-sm"
                 width={35}
                 height={auto}
-              />
+              /> */}
+              EN
             </Link>
           )}
           {locale === "en" && (
             <Link href="/" locale="ua">
-              <img
+              {/* <img
                 src="/images/ua.png"
                 alt="Flag of Ukraine"
                 className="h-auto max-w-xl shadow-sm border border-blue-700"
                 width={35}
                 height={auto}
-              />
+              /> */}
+              UA
             </Link>
           )}
 
-          <ButtonNav
+          {/* <ButtonNav
             leftIcon={faRocket as IconProp}
             margin={"ml-3 visible"}
             title={t("button-fundraiser-title")}
@@ -65,7 +67,7 @@ const Navbar = () => {
             margin={"ml-3 visible"}
             title={t("button-donate-title")}
             link={"#donate"}
-          />
+          /> */}
 
           <button
             data-collapse-toggle="navbar-sticky"

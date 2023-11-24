@@ -94,7 +94,7 @@ const Home = (props: { loading: boolean; data: any; error: any }) => {
     <div className="flex flex-col">
       <HomeTop />
       <div className="w-full">
-        <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-2 justify-center mt-10">
+        {/* <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-2 justify-center mt-10">
           {props.data.ambassadors.map((ambassador: Ambassador) => (
             <Fundraisers
               name={ambassador.name}
@@ -105,8 +105,8 @@ const Home = (props: { loading: boolean; data: any; error: any }) => {
               goal={ambassador.goal}
               fundraiserLink={ambassador.shearableUrl}
             />
-          ))}
-          <div className="my-auto mx-12 md:mx-10 bg-yellow-gold">
+          ))} */}
+          {/* <div className="my-auto mx-12 md:mx-10 bg-yellow-gold">
             <Link
               href={
                 "https://docs.google.com/forms/d/e/1FAIpQLSckR5nOZLGdWLlzahw-GsaPbbVaS7bUHz14KPC1VUIrSjC5Eg/viewform"
@@ -118,8 +118,8 @@ const Home = (props: { loading: boolean; data: any; error: any }) => {
                 title={t("button-fundraiser-title")}
               />
             </Link>
-          </div>
-        </div>
+          </div> */}
+        {/* </div> */}
         <Goals />
         <div className="pt-6 pb-12" id="register">
           {/* ------ Will be shown when running company will be open ------*/}
