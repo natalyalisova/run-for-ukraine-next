@@ -52,20 +52,6 @@ const Goals = () => {
         </span>
         <span>{t("how-count-description-3")}</span>
       </p>
-      <div className="flex justify-center flex-col">
-        <p className="text-center text-bace md:text-lg mt-6">Project by</p>
-        <Link
-          href={"https://secondfrontukraine.com/#"}
-          className="flex justify-center mt-6"
-        >
-          <img
-            src="/images/2nd-front-logo-full-color.svg"
-            width={236}
-            height={auto}
-            alt="Second front logo"
-          />
-        </Link>
-      </div>
     </div>
   );
 };

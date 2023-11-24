@@ -17,18 +17,13 @@ const Footer = () => {
             height={94}
             alt={"Run for Ukraine Logo"}
           />
-          <Image
-            src={"/images/2F-ua-logo-white.svg"}
-            width={120}
-            height={94}
-            alt={"second front Ukraine Logo"}
-          />
+  
         </div>
         <div className="flex items-center justify-end">
           <ul className="uppercase space-x-10 flex text-white font-semibold">
             <li>
               <Link
-                href="https://secondfrontukraine.com/team"
+                href="https://www.instagram.com/runforukraine/"
                 title="Who are we"
               >
                 {t("who-are-we")}
@@ -39,14 +34,14 @@ const Footer = () => {
                 {t("donate")}
               </Link>
             </li>
-            <li>
-              <Link
+            {/* <li> */}
+              {/* <Link
                 href="https://secondfrontukraine.com/contact-us"
                 title="Contacts"
               >
                 {t("contacts")}
-              </Link>
-            </li>
+              </Link> */}
+            {/* </li> */}
           </ul>
         </div>
         <div className="text-[0.75rem] ">

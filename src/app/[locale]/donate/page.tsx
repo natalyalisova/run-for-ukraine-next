@@ -17,10 +17,11 @@ const Donate = () => {
   return (
     <div className="flex flex-col mt-28">
       <div className="text-center md:my-12">
-        <TextGradient text={t("donate-now")} />
+        {/* <TextGradient text={t("donate-now")} /> */}
+        <p>Unfortunately this option curently unevalible.</p>
         <div className="mt-4 h-1 w-64 bg-yellow-gold mx-auto mb-3"></div>
       </div>
-      <div className="mx-auto">
+      {/* <div className="mx-auto">
         <DonateWidget
           campaign={campaignCode}
           showCollections
@@ -43,7 +44,7 @@ const Donate = () => {
           registerTranslation={t("register")}
           donateTranslation={t("donate")}
         ></DonateWidget>
-      </div>
+      </div> */}
 
       <Goals />
       <div className="bg-img flexCenter flex-col py-16 my-24">

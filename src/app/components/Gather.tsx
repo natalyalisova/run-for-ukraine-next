@@ -29,16 +29,16 @@ const Gather = () => {
             <span className="text-strong-azure text-bace md:text-lg underline underline-offset-2">
               <Link
                 href={
-                  "https://www.instagram.com/p/CpDcpkMud_l/?igshid=YmMyMTA2M2Y%3D"
+                  "https://www.instagram.com/runforukraine/"
                 }
               >
-                &quot;{t("second-front-name")}&quot;
+                &quot;RunForUkraine&quot;
               </Link>
             </span>
             {t("fundraising-goal-description-2")}
           </p>
         </div>
-        <div className="flex justify-center flex-col mb-1">
+        {/* <div className="flex justify-center flex-col mb-1">
           <p className="text-base md:text-lg">
             <span className="font-semibold">
               &quot;{t("second-front-foundation-title")}&quot;
@@ -48,8 +48,8 @@ const Gather = () => {
           <p className="font-semibold text-base md:text-lg">
             {t("second-front-foundation-description-2")}
           </p>
-        </div>
-        <div
+        </div> */}
+        {/* <div
           className="flex justify-center flex-col text-2xl text-center w-[340px] md:w-[360px] mx-auto"
           id="donate"
         >
@@ -75,7 +75,7 @@ const Gather = () => {
             registerTranslation={t("register")}
             donateTranslation={t("donate")}
           ></DonateWidget>
-        </div>
+        </div> */}
 
         <div className="flexCenter my-6">
           <img
