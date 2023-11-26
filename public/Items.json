@@ -26,22 +26,78 @@
       "id": 4,
       "title": "Roman Dzhura",
       "body": "Runner",
-      "imageUrl": "https://secondfront-cdn.nyc3.cdn.digitaloceanspaces.com/0Y1A2662.jpg",
+      "imageUrl": "/images/Roma.png",
       "docs": "https://instagram.com/dzhu.rar?utm_source=qr&igshid=MzNlNGNkZWQ4Mg%3D%3D"
     },
     {
       "id": 5,
       "title": "Raif Max",
       "body": "Merch Leader & runner",
-      "imageUrl": "https://secondfront-cdn.nyc3.cdn.digitaloceanspaces.com/image0.jpeg",
+      "imageUrl": "/images/Raif-Max.png",
       "docs": "https://www.instagram.com/mnkzzz/"
     },
     {
       "id": 6,
       "title": "Katya Fishilevich",
       "body": "Runner",
-      "imageUrl": "https://secondfront-cdn.nyc3.cdn.digitaloceanspaces.com/IMG_1544.JPG",
+      "imageUrl": "/images/Kate.png",
       "docs": "https://instagram.com/fishilevich.katya?igshid=MzMyNGUyNmU2YQ=="
+    },
+    {
+      "id": 7,
+      "title": "Dmytro Kirichevsky",
+      "body": "Runner",
+      "imageUrl": "",
+      "docs": ""
+    },
+    {
+      "id": 8,
+      "title": "Anna Luk",
+      "body": "Social media",
+      "imageUrl": "",
+      "docs": ""
+    },
+    {
+      "id": 9,
+      "title": "Semen Yuriev",
+      "body": "Runner",
+      "imageUrl": "",
+      "docs": ""
+    },
+    {
+      "id": 10,
+      "title": "Borys Mikhlin",
+      "body": "Runner",
+      "imageUrl": "",
+      "docs": ""
+    },
+    {
+      "id": 11,
+      "title": "Yevhenia Tatarenko",
+      "body": "Social media",
+      "imageUrl": "",
+      "docs": ""
+    },
+    {
+      "id": 12,
+      "title": "Alyona Novgorodskaya",
+      "body": "Media",
+      "imageUrl": "",
+      "docs": ""
+    },
+    {
+      "id": 12,
+      "title": "Kate Sench",
+      "body": "Photographer & runner",
+      "imageUrl": "",
+      "docs": ""
+    },
+    {
+      "id": 12,
+      "title": "Taras Yanchynskyy",
+      "body": "consulting web development",
+      "imageUrl": "",
+      "docs": ""
     }
   ]
 }
