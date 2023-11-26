@@ -19,7 +19,7 @@ const Navbar = () => {
       <div className="max-w-screen-2xl flex flex-wrap items-center justify-between mx-auto p-4">
         <a href="/" className="flex items-center">
           <ResponsiveImage
-            src={"/images/Run-for-Ukraine-logo.svg"}
+            src={"/images/Run-for-Ukraine-logo.png"}
             width={94}
             height={94}
             alt={"Run for Ukraine Logo"}

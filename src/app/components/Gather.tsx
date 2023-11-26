@@ -97,11 +97,11 @@ const Gather = () => {
         <div className="flexCenter my-6 hero-video">
           <div className="relative">
             <video
-              autoPlay
-              loop
-              playsInline
-              muted
-              src="https://secondfront-cdn.nyc3.cdn.digitaloceanspaces.com/runforukraine2023%2FBD995476-9DBA-4300-BA04-7775CBD40D60.MOV"
+                autoPlay
+                loop
+                playsInline
+                muted
+                src="/videos/independence-day-2023.mov"
             ></video>
             <p className="absolute  bg-black opacity-60 font-bold text-4xl text-white top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
               #RunForUkraine
