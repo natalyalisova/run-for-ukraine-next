@@ -157,7 +157,7 @@ const Home = (props: { loading: boolean; data: any; error: any }) => {
       <Gather />
       <div className="bg-img flexCenter flex-col py-16">
         <Image
-          src={"/images/run-for-ukraine-logo-blue.svg"}
+          src={"/images/run-for-ukraine-logo-blue.png"}
           width={150}
           height={150}
           alt={"Run for Ukraine Logo"}

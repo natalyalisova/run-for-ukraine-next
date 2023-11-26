@@ -49,7 +49,7 @@ const Donate = () => {
       <Goals />
       <div className="bg-img flexCenter flex-col py-16 my-24">
         <Image
-          src={"/images/run-for-ukraine-logo-blue.svg"}
+          src={"/images/run-for-ukraine-logo-blue.png"}
           width={150}
           height={150}
           alt={"Run for Ukraine Logo"}
