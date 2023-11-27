@@ -19,11 +19,11 @@ const Goals = () => {
           {t("new-global-season-description-1")}
         </p>
         <Link
-          href="https://runforukraine.ca/"
-          title="www.runforukraine.ca"
+          href="https://runforukraine.org.ua/"
+          title="https://runforukraine.org.ua"
           className="inline mx-2 text-strong-azure text-bace md:text-lg underline underline-offset-2"
         >
-          runforukraine.ca
+          runforukraine.org.ua
         </Link>
         <p className="inline text-bace md:text-lg">
           {t("new-global-season-description-2")}
