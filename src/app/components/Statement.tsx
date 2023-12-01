@@ -2,10 +2,8 @@ import TextGradient from "@/app/components/AnimatedTextGradient";
 import Link from "next-intl/link";
 import React from "react";
 import {useTranslations} from "next-intl";
-import {auto} from "@popperjs/core";
 
 const Statement = () => {
-    const t = useTranslations("Goals");
 
     return (
         <div className="max-w-4xl mx-auto grid grid-cols-1 text-center py-4 gap-y-6 mt-12 md:mt-1">

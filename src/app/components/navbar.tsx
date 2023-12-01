@@ -1,15 +1,10 @@
 import React from "react";
 import Link from "next-intl/link";
 import "flowbite";
-
 import { useLocale, useTranslations } from "next-intl";
-import { IconProp } from "@fortawesome/fontawesome-svg-core";
-import { faCircleDollarToSlot } from "@fortawesome/free-solid-svg-icons/faCircleDollarToSlot";
-import { faRocket } from "@fortawesome/free-solid-svg-icons";
 import { NavLinks } from "@/app/constants";
-import ButtonNav from "@/app/components/ButtonNav";
 import ResponsiveImage from "@/app/components/ResponsiveImage";
-import { auto } from "@popperjs/core";
+
 
 const Navbar = () => {
   const locale = useLocale();
