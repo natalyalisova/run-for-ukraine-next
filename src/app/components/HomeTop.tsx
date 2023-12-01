@@ -1,4 +1,3 @@
-import Button from "@/app/components/Button";
 import React from "react";
 import { useTranslations } from "next-intl";
 import { auto } from "@popperjs/core";

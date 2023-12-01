@@ -3,9 +3,6 @@ import TextGradient from "@/app/components/AnimatedTextGradient";
 import React from "react";
 import { useTranslations } from "next-intl";
 import About from "@/app/components/About";
-import DonateWidget from "./donate/DonateWidget";
-import { campaignCode } from "../constants";
-import { auto } from "@popperjs/core";
 import Team from "@/app/components/Team";
 
 const Gather = () => {
@@ -19,7 +16,7 @@ const Gather = () => {
             src="/images/walkie-talkie.png"
             alt={"walkie-talkie image"}
             width={300}
-            height={auto}
+            height={500}
           />
         </div>
         <div className="flex justify-center flex-col" id="gather">
@@ -82,7 +79,7 @@ const Gather = () => {
             src="https://secondfront-cdn.nyc3.cdn.digitaloceanspaces.com/IMG_1568.JPG"
             alt={"Amelina Olga image"}
             width={500}
-            height={auto}
+            height={650}
           />
         </div>
 

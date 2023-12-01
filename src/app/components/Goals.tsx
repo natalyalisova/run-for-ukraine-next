@@ -2,7 +2,6 @@ import TextGradient from "@/app/components/AnimatedTextGradient";
 import Link from "next-intl/link";
 import React from "react";
 import { useTranslations } from "next-intl";
-import { auto } from "@popperjs/core";
 
 const Goals = () => {
   const t = useTranslations("Goals");

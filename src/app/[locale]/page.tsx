@@ -156,7 +156,6 @@ const Home = (props: { loading: boolean; data: any; error: any }) => {
           {/*</div>*/}
         </div>
       </div>
-      {/*<Gather />*/}
       <div className="bg-img flexCenter flex-col py-16">
         <Image
           src={"/images/run-for-ukraine-logo-blue.png"}
