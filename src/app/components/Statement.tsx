@@ -40,7 +40,7 @@ const Statement = () => {
                     including the allocation for walkie-talkies.</p>
 
 
-                <p className="mt-3">Our official website's domain has been changed to
+                <p className="mt-3">Our official website&apos;s domain has been changed to
                     <Link
                         href="https://runforukraine.org.ua/"
                         title="https://runforukraine.org.ua"
@@ -51,7 +51,7 @@ const Statement = () => {
                 </p>
                 <p className="mt-3">
                     The rights to use the #RunForUkraine logo and other creative assets have been transferred to me,
-                    Olga Amelina, as the founder, by its author for continued use in the project's charitable
+                    Olga Amelina, as the founder, by its author for continued use in the project&apos;s charitable
                     activities.
                 </p>
                 <p className="mt-3">
