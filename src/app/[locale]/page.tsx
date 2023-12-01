@@ -17,6 +17,7 @@ import { faRocket } from "@fortawesome/free-solid-svg-icons";
 import { IconProp } from "@fortawesome/fontawesome-svg-core";
 import Button from "@/app/components/Button";
 import Link from "next-intl/link";
+import Statement from "@/app/components/Statement";
 
 const GET_AMBASSADORS = gql`
   query GetAmbassador($campaignId: String!) {
@@ -91,9 +92,9 @@ const Home = (props: { loading: boolean; data: any; error: any }) => {
   }
 
   return (
-    <div className="flex flex-col">
-      <HomeTop />
-      <div className="w-full">
+    <div className="flex flex-col mt-14">
+      {/*<HomeTop />*/}
+      <div className="w-full md:mt-36">
         {/* <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-2 justify-center mt-10">
           {props.data.ambassadors.map((ambassador: Ambassador) => (
             <Fundraisers
@@ -120,7 +121,8 @@ const Home = (props: { loading: boolean; data: any; error: any }) => {
             </Link>
           </div> */}
         {/* </div> */}
-        <Goals />
+        {/*<Goals />*/}
+        <Statement/>
         <div className="pt-6 pb-12" id="register">
           {/* ------ Will be shown when running company will be open ------*/}
           {/*<div className="text-center mt-10">*/}
@@ -154,7 +156,7 @@ const Home = (props: { loading: boolean; data: any; error: any }) => {
           {/*</div>*/}
         </div>
       </div>
-      <Gather />
+      {/*<Gather />*/}
       <div className="bg-img flexCenter flex-col py-16">
         <Image
           src={"/images/run-for-ukraine-logo-blue.png"}
