@@ -5,7 +5,6 @@ import { useLocale, useTranslations } from "next-intl";
 import { NavLinks } from "@/app/constants";
 import ResponsiveImage from "@/app/components/ResponsiveImage";
 
-
 const Navbar = () => {
   const locale = useLocale();
   const t = useTranslations("NavBar");

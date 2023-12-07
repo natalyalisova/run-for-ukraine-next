@@ -24,11 +24,7 @@ const Gather = () => {
           <p className="inline text-bace md:text-lg">
             {t("fundraising-goal-description-1")}
             <span className="text-strong-azure text-bace md:text-lg underline underline-offset-2">
-              <Link
-                href={
-                  "https://www.instagram.com/runforukraine/"
-                }
-              >
+              <Link href={"https://www.instagram.com/runforukraine/"}>
                 &quot;RunForUkraine&quot;
               </Link>
             </span>
@@ -94,11 +90,11 @@ const Gather = () => {
         <div className="flexCenter my-6 hero-video">
           <div className="relative">
             <video
-                autoPlay
-                loop
-                playsInline
-                muted
-                src="/videos/independence-day-2023.mov"
+              autoPlay
+              loop
+              playsInline
+              muted
+              src="/videos/independence-day-2023.mov"
             ></video>
             <p className="absolute  bg-black opacity-60 font-bold text-4xl text-white top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
               #RunForUkraine
