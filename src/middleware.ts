@@ -1,15 +1,33 @@
-import createMiddleware from 'next-intl/middleware';
+import { createMiddlewareClient } from "@supabase/auth-helpers-nextjs";
+import { NextRequest, NextResponse } from "next/server";
+import createIntlMiddleware from "next-intl/middleware";
+import { Database } from "@/types/supabase";
 
-export default createMiddleware({
-    // A list of all locales that are supported
-    locales: ['en', 'ua'],
+async function customMiddleware(req: NextRequest) {
+  // Handle Supabase authentication
+  const res = NextResponse.next();
+  const supabase = createMiddlewareClient<Database>({ req, res });
+  await supabase.auth.getSession(); //updating cookie
 
-    // If this locale is matched, pathnames work without a prefix (e.g. `/about`)
-    defaultLocale: 'en'
-});
+  // Internationalization logic
+  const intlMiddleware = createIntlMiddleware({
+    locales: ["en", "ua"],
+    defaultLocale: "en",
+  });
 
+  const intlResponse = await intlMiddleware(req);
+  if (intlResponse) {
+    return intlResponse;
+  }
+
+  return res;
+}
+
+export default customMiddleware;
+
+// 	Middleware Matcher: The matcher configuration is set to apply the middleware to all routes
+// 	except those starting with /api, /_next, /_vercel, or any static files.
+// 	This is a standard practice to avoid unnecessary processing on API routes and system paths.
 export const config = {
-    // Skip all paths that should not be internationalized. This example skips the
-    // folders "api", "_next" and all files with an extension (e.g. favicon.ico)
-    matcher: ['/((?!api|_next|_vercel|.*\\..*).*)']
+  matcher: ["/((?!api|_next|_vercel|.*\\..*).*)"],
 };

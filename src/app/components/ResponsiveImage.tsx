@@ -26,7 +26,6 @@ const ResponsiveImage = ({ src, alt, width, height }: Props) => {
   useEffect(() => {
     setIsMobileDevice(isMobile());
   }, []);
-  console.log(isMobileDevice);
   return (
     <Image
       src={src}

@@ -16,6 +16,9 @@ const nextConfig = {
       },
     ],
   },
+  experimental: {
+    serverActions: true,
+  },
 };
 
 const withNextIntl = require("next-intl/plugin")(

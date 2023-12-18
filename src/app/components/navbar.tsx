@@ -5,9 +5,17 @@ import { useLocale, useTranslations } from "next-intl";
 import { NavLinks } from "@/app/constants";
 import ResponsiveImage from "@/app/components/ResponsiveImage";
 
-const Navbar = () => {
+export default function Navbar() {
   const locale = useLocale();
   const t = useTranslations("NavBar");
+
+  // const cookieStore = cookies();
+  // const supabase = createServerComponentClient({ cookies });
+  //
+  // const {
+  //   data: { user },
+  // } = await supabase.auth.getUser();
+
   return (
     <nav className="bg-strong-azure fixed w-full z-40 top-0 left-0 ">
       <div className="max-w-screen-2xl flex flex-wrap items-center justify-between mx-auto p-4">
@@ -25,25 +33,11 @@ const Navbar = () => {
         <div className="flex md:order-2 items-center ml-3 visible text-white underline underline-offset-2">
           {locale === "ua" && (
             <Link href="/" locale="en">
-              {/* <img
-                src="/images/ca.png"
-                alt="Flag of Canada"
-                className="h-auto max-w-xl shadow-sm"
-                width={35}
-                height={auto}
-              /> */}
               EN
             </Link>
           )}
           {locale === "en" && (
             <Link href="/" locale="ua">
-              {/* <img
-                src="/images/ua.png"
-                alt="Flag of Ukraine"
-                className="h-auto max-w-xl shadow-sm border border-blue-700"
-                width={35}
-                height={auto}
-              /> */}
               UA
             </Link>
           )}
@@ -104,11 +98,18 @@ const Navbar = () => {
                 </Link>
               </li>
             ))}
+            <li className="mb-4 lg:mb-0 lg:pr-2">
+              <Link
+                href="/login"
+                className=" block py-2 pl-1  pr-4 text-white rounded md:bg-transparent md:text-white md:p-0  mt-4 lg:inline-block lg:mt-0 hover:text-cyan-100 mr-4"
+                aria-current="page"
+              >
+                My account
+              </Link>
+            </li>
           </ul>
         </div>
       </div>
     </nav>
   );
-};
-
-export default Navbar;
+}
