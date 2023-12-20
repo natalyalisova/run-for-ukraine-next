@@ -1,19 +1,36 @@
 import { useTranslations } from "next-intl";
 import Image from "next/image";
-import React from "react";
+import React, { FunctionComponent } from "react";
 import Social from "@/app/components/Social";
 import Report from "@/app/components/Report";
 import Gallery from "@/app/components/Gallery";
-import { campaignCode } from "../constants";
 import Statement from "@/app/components/Statement";
+import { createServerComponentClient } from "@supabase/auth-helpers-nextjs";
+import { cookies } from "next/headers";
+import { User } from "@supabase/supabase-js";
 
-const App = () => {
+const App = async () => {
+  const cookieStore = cookies();
+  const supabase = createServerComponentClient({ cookies });
+  const {
+    data: { user },
+  } = await supabase.auth.getUser();
+
+  return <Home user={user} />;
+};
+
+type HomeProps = {
+  user: User | null;
+};
+
+const Home: FunctionComponent<HomeProps> = ({ user }) => {
   const t = useTranslations("Home");
-
+  const userName = user?.email || "Guest";
   return (
     <div className="flex flex-col mt-14">
       {/*<HomeTop />*/}
       <div className="w-full md:mt-36">
+        <h1 className="text-black text-center"> Welcome, {userName}!</h1>
         {/*<Goals />*/}
         <Statement />
         <div className="pt-6 pb-12" id="register">
