@@ -1,6 +1,4 @@
 import { useTranslations } from "next-intl";
-import { gql } from "@apollo/client";
-import { getClient } from "@/lib/apolloClient";
 import Image from "next/image";
 import React from "react";
 import Social from "@/app/components/Social";
@@ -9,108 +7,13 @@ import Gallery from "@/app/components/Gallery";
 import { campaignCode } from "../constants";
 import Statement from "@/app/components/Statement";
 
-const GET_AMBASSADORS = gql`
-  query GetAmbassador($campaignId: String!) {
-    ambassadors(
-      where: {
-        AND: [
-          { project: { campaignID: { equals: $campaignId } } }
-          { status: { equals: "published" } }
-        ]
-      }
-      take: 100
-      skip: 0
-    ) {
-      id
-      name
-      slug
-      campaignIdInfix
-      campaignIdFull
-      blurb
-      content {
-        document(hydrateRelationships: true)
-      }
-      project {
-        id
-        name
-        campaignID
-        blurb
-        goal
-        logo {
-          url
-        }
-        status
-      }
-      goal
-      goalOffset
-      avatar {
-        url
-      }
-      status
-      shearableUrl
-    }
-  }
-`;
-
-export type Ambassador = {
-  name: string;
-  id: string;
-  avatar: {
-    url: string;
-  };
-  blurb: string;
-  goalOffset: number;
-  goal: number;
-  shearableUrl: string;
-};
-
-const App = async () => {
-  const { data, error, loading } = await getClient().query({
-    query: GET_AMBASSADORS,
-    variables: { campaignId: campaignCode },
-  });
-  console.log("render App", { data, error, loading });
-  return <Home data={data} error={error} loading={loading} />;
-};
-
-const Home = (props: { loading: boolean; data: any; error: any }) => {
+const App = () => {
   const t = useTranslations("Home");
-  if (props.loading) {
-    return <div>Loading...</div>;
-  } else if (props.error) {
-    return <div>{JSON.stringify(props.error)}</div>;
-  }
 
   return (
     <div className="flex flex-col mt-14">
       {/*<HomeTop />*/}
       <div className="w-full md:mt-36">
-        {/* <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-2 justify-center mt-10">
-          {props.data.ambassadors.map((ambassador: Ambassador) => (
-            <Fundraisers
-              name={ambassador.name}
-              key={ambassador.id}
-              profileImgUrl={ambassador.avatar.url}
-              about={ambassador.blurb}
-              fundraised={ambassador.goalOffset}
-              goal={ambassador.goal}
-              fundraiserLink={ambassador.shearableUrl}
-            />
-          ))} */}
-        {/* <div className="my-auto mx-12 md:mx-10 bg-yellow-gold">
-            <Link
-              href={
-                "https://docs.google.com/forms/d/e/1FAIpQLSckR5nOZLGdWLlzahw-GsaPbbVaS7bUHz14KPC1VUIrSjC5Eg/viewform"
-              }
-            >
-              <Button
-                leftIcon={faRocket as IconProp}
-                margin={"ml-3 visible"}
-                title={t("button-fundraiser-title")}
-              />
-            </Link>
-          </div> */}
-        {/* </div> */}
         {/*<Goals />*/}
         <Statement />
         <div className="pt-6 pb-12" id="register">

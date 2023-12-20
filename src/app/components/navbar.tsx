@@ -9,13 +9,6 @@ export default function Navbar() {
   const locale = useLocale();
   const t = useTranslations("NavBar");
 
-  // const cookieStore = cookies();
-  // const supabase = createServerComponentClient({ cookies });
-  //
-  // const {
-  //   data: { user },
-  // } = await supabase.auth.getUser();
-
   return (
     <nav className="bg-strong-azure fixed w-full z-40 top-0 left-0 ">
       <div className="max-w-screen-2xl flex flex-wrap items-center justify-between mx-auto p-4">
