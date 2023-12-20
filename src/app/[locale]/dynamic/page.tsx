@@ -1,6 +1,6 @@
 import supabase from "../../../../utils/supabase";
 
-export const revalidate = 60;
+export const revalidate = 0;
 export default async function Posts() {
   const { data } = await supabase.from("campaigns").select();
   return (

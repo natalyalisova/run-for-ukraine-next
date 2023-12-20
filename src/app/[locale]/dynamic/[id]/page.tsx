@@ -1,13 +1,7 @@
 import supabase from "../../../../../utils/supabase";
 import { notFound } from "next/navigation";
 
-//
-// export async function generateStaticParams() {
-//   const { data: campaigns } = await supabase.from("campaigns").select("id"); //todo investigate why it returns 500 Internal server Error
-//   return campaigns ?? [];
-// }
-
-export const revalidate = 60;
+export const revalidate = 0;
 export default async function Post({
   params: { id },
 }: {
