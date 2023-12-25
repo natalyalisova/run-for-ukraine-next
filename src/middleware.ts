@@ -29,5 +29,5 @@ export default customMiddleware;
 // 	except those starting with /api, /_next, /_vercel, or any static files.
 // 	This is a standard practice to avoid unnecessary processing on API routes and system paths.
 export const config = {
-  matcher: ["/((?!api|_next|_vercel|.*\\..*).*)"],
+  matcher: ["/((?!api|_next|_next/image|favicon.ico|_vercel|.*\\..*).*)"],
 };

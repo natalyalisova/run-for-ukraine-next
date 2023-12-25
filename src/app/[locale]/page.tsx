@@ -8,6 +8,7 @@ import Statement from "@/app/components/Statement";
 import { createServerComponentClient } from "@supabase/auth-helpers-nextjs";
 import { cookies } from "next/headers";
 import { User } from "@supabase/supabase-js";
+import Posts from "@/app/[locale]/dynamic/page";
 
 const App = async () => {
   const cookieStore = cookies();
@@ -31,6 +32,7 @@ const Home: FunctionComponent<HomeProps> = ({ user }) => {
       {/*<HomeTop />*/}
       <div className="w-full md:mt-36">
         <h1 className="text-black text-center"> Welcome, {userName}!</h1>
+        <Posts />
         {/*<Goals />*/}
         <Statement />
         <div className="pt-6 pb-12" id="register">
