@@ -1,5 +1,4 @@
 import supabase from "../../../../utils/supabase";
-import { UrlObject } from "url";
 import Fundraisers from "@/app/components/Fundraisers";
 
 export type Campaign = {

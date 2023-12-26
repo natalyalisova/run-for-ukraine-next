@@ -1,4 +1,3 @@
-import Image from "next/image";
 import React from "react";
 import ResponsiveImage from "@/app/components/ResponsiveImage";
 import Link from "next-intl/link";
@@ -8,7 +7,7 @@ const Footer = () => {
   const t = useTranslations("Footer");
 
   return (
-    <div className="bg-strong-azure">
+    <div className="bg-strong-azure bottom-0">
       <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-5 p-3 text-white">
         <div className="flex justify-start  space-x-10">
           <ResponsiveImage
@@ -17,7 +16,6 @@ const Footer = () => {
             height={94}
             alt={"Run for Ukraine Logo"}
           />
-  
         </div>
         <div className="flex items-center justify-end">
           <ul className="uppercase space-x-10 flex text-white font-semibold">
@@ -35,7 +33,7 @@ const Footer = () => {
               </Link>
             </li>
             {/* <li> */}
-              {/* <Link
+            {/* <Link
                 href="https://secondfrontukraine.com/contact-us"
                 title="Contacts"
               >
@@ -49,19 +47,19 @@ const Footer = () => {
           <p>{t("copyright-description")}</p>
         </div>
         <div className="flex flex-end items-center space-x-10 justify-end">
-          <Image
+          <img
             src={"/social-media-icons/instagram.svg"}
             width={30}
             height={30}
             alt={"Run for Ukraine instagram"}
           />
-          <Image
+          <img
             src={"/social-media-icons/facebook.svg"}
             width={30}
             height={30}
             alt={"Run for Ukraine facebook"}
           />
-          <Image
+          <img
             src={"/social-media-icons/linkedin.svg"}
             width={30}
             height={30}

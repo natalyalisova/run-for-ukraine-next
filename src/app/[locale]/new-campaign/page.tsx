@@ -7,9 +7,9 @@ import { cookies } from "next/headers";
 import { Database } from "@/types/supabase";
 import Link from "next/link";
 import React from "react";
+import { navigateToMain } from "@/app/components/OpenMain";
 
 const NewCampaign = async () => {
-  const cookieStore = cookies();
   const supabase = createServerComponentClient({ cookies });
   const {
     data: { user },
@@ -20,7 +20,7 @@ const NewCampaign = async () => {
       <div className="h-screen flex flex-col justify-center items-center">
         To have access to this page you need to
         <Link
-          href="/login"
+          href={"/login"}
           className="m-2 md:bg-transparent  md:p-0  mt-4 lg:inline-block lg:mt-0 text-strong-azure hover:text-cyan-500 mr-4 underline"
           aria-current="page"
         >
@@ -29,23 +29,25 @@ const NewCampaign = async () => {
       </div>
     );
   }
+
   const addFundraising = async (formData: FormData) => {
     "use server";
     const title = String(formData.get("title"));
-    console.log("title", title);
+    const goal = String(formData.get("goal"));
+    const user_uuid = String(user.id);
     const supabaseCamp = createServerActionClient<Database>({ cookies });
-    await supabaseCamp.from("campaigns").insert({ title });
-
-    revalidatePath("/");
+    const response = await supabaseCamp
+      .from("campaigns")
+      .insert({ title, goal, user_uuid });
+    revalidatePath("/static");
   };
-
   return (
-    <div className="h-screen flex flex-col justify-center items-center">
+    <div className="h-screen flex flex-col mt-20 items-center">
       <div>
         Return to
         <Link
-          href="/login"
-          className="m-2 md:bg-transparent  md:p-0  mt-4 lg:inline-block lg:mt-0 text-strong-azure underline hover:text-cyan-500 mr-4"
+          href={"/login"}
+          className="m-2 md:bg-transparent  md:p-0 lg:inline-block lg:mt-0 text-strong-azure underline hover:text-cyan-500 mr-4"
           aria-current="page"
         >
           My account
@@ -59,7 +61,13 @@ const NewCampaign = async () => {
           </h1>
           <input
             name="title"
+            className="border-solid border-2 rounded border-sky-500 p-2 mb-4"
+            placeholder="Title for your campaign"
+          />
+          <input
+            name="goal"
             className="border-solid border-2 rounded border-sky-500 p-2"
+            placeholder="set a goal in $"
           />
           <input
             type="submit"

@@ -66,9 +66,9 @@ export default async function RootLayout({
         />
         <title>Run For Ukraine</title>
       </head>
-      <body className="h-full">
+      <body className="flex flex-col h-screen justify-between">
         <Navbar />
-        <main className="h-screen mt-24 md:mt-[150px]">{children}</main>
+        <main className="mt-24 md:mt-[150px] mb-auto">{children}</main>
         <Footer />
 
         <Script
