@@ -68,7 +68,7 @@ export default async function RootLayout({
       </head>
       <body className="h-full">
         <Navbar />
-        <main>{children}</main>
+        <main className="h-screen mt-24 md:mt-[150px]">{children}</main>
         <Footer />
 
         <Script

@@ -8,7 +8,7 @@ import Statement from "@/app/components/Statement";
 import { createServerComponentClient } from "@supabase/auth-helpers-nextjs";
 import { cookies } from "next/headers";
 import { User } from "@supabase/supabase-js";
-import Posts from "@/app/[locale]/dynamic/page";
+import Posts from "@/app/[locale]/static/page";
 
 const App = async () => {
   const cookieStore = cookies();
@@ -30,7 +30,7 @@ const Home: FunctionComponent<HomeProps> = ({ user }) => {
   return (
     <div className="flex flex-col mt-14">
       {/*<HomeTop />*/}
-      <div className="w-full md:mt-36">
+      <div className="w-full ">
         <h1 className="text-black text-center"> Welcome, {userName}!</h1>
         <Posts />
         {/*<Goals />*/}
