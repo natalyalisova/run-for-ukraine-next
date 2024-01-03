@@ -117,17 +117,17 @@ body {
 }
 
 .bg-img {
-    background: url("/images/yellow-fabric-bg.png");
+    background-image: url("/images/yellow-fabric-bg.png");
     background-size: cover;
 }
 
 .bg-img-run{
-    background: url("https://secondfront-cdn.nyc3.cdn.digitaloceanspaces.com/runforukraine2023%2Fgallery%2Frsz_120220529ukrainiansatottawarw_ta312.jpg");
+    background-image: url("https://secondfront-cdn.nyc3.cdn.digitaloceanspaces.com/runforukraine2023%2Fgallery%2Frsz_120220529ukrainiansatottawarw_ta312.jpg");
     background-size: cover;
 }
 
 .bg-img-israel{
-    background: url("/images/stend-with-israel.png");
+    background-image: url("/images/stend-with-israel.png");
     background-size: cover;
     background-repeat: no-repeat;
 

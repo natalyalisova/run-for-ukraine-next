@@ -7,7 +7,6 @@ import { cookies } from "next/headers";
 import { Database } from "@/types/supabase";
 import Link from "next/link";
 import React from "react";
-import { navigateToMain } from "@/app/components/OpenMain";
 
 const NewCampaign = async () => {
   const supabase = createServerComponentClient({ cookies });

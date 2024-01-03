@@ -21,6 +21,7 @@ export default async function Posts() {
           <Fundraisers
             title={campaign.title}
             id={campaign.id}
+            key={campaign.id}
             goal={campaign.goal}
             created_at={campaign.created_at}
             user_uuid={campaign.user_uuid}
