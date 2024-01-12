@@ -3,6 +3,7 @@ import { createClientComponentClient } from "@supabase/auth-helpers-nextjs";
 import { useRouter } from "next/navigation";
 import React, { useEffect, useState } from "react";
 import TextGradient from "../../components/AnimatedTextGradient";
+import { RegistrationInfoPopUp } from "../../components/RegistrationInfoPopUp";
 
 export default function LoginPage() {
   const [email, setEmail] = useState("");
@@ -10,6 +11,10 @@ export default function LoginPage() {
   const router = useRouter();
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
+  const [showModal, setShowModal] = useState(false);
+  const toggleModal = () => {
+    setShowModal(!showModal);
+  };
 
   const supabase = createClientComponentClient();
 
@@ -38,7 +43,13 @@ export default function LoginPage() {
     setEmail("");
     setPassword("");
   };
-
+  const handeOpenForm = async () => {
+    window.open(
+      "https://docs.google.com/forms/d/e/1FAIpQLSemqg0SX_C817yoqGWPWz9i2iSeSohGTjU3zymXhNJNzzfYyQ/viewform",
+      "_blank",
+    );
+    toggleModal();
+  };
   const handleSignIn = async () => {
     const res = await supabase.auth.signInWithPassword({
       email,
@@ -122,7 +133,7 @@ export default function LoginPage() {
         />
         <button
           onClick={handleSignIn}
-          className="w-full p-3 rounded-md bg-strong-azure text-yellow-gold hover:bg-gray-600 focus:outline-none"
+          className="w-full p-3 rounded-md bg-strong-azure text-yellow-gold hover:bg-blue-600 focus:outline-none"
         >
           Sign In
         </button>
@@ -138,13 +149,14 @@ export default function LoginPage() {
             collection and share it with the world.
           </p>
           <button
-            onClick={handleSignIn}
-            className="w-full p-3 mt-6 rounded-md bg-strong-azure text-yellow-gold hover:bg-gray-600 focus:outline-none"
+            onClick={handeOpenForm}
+            className="w-full p-3 mt-6 rounded-md bg-strong-azure text-yellow-gold hover:bg-blue-600 focus:outline-none"
           >
             Fill the form
           </button>
         </div>
       </div>
+      {showModal && <RegistrationInfoPopUp onClick={toggleModal} />}
     </main>
   );
 }
