@@ -1,32 +1,30 @@
 import supabase from "../../../../utils/supabase";
-import Fundraisers from "@/app/components/Fundraisers";
+import Post from "@/app/components/Post";
 
-export type Campaign = {
+export type Blog = {
   id: number;
-  created_at: string;
+  created_date: string;
   title: string;
-  goal: number;
-  user_uuid: string | null;
 };
 
 export const revalidate = 60;
 export default async function Posts() {
-  const { data } = await supabase.from("campaigns").select();
+  const { data } = await supabase.from("blogs").select();
+  const renderedData = data!.map((blog: Blog) => (
+    <Post
+      title={blog.title}
+      id={blog.id}
+      created_date={blog.created_date}
+      key={blog.id}
+    />
+  ));
   return (
     <div className="flex flex-col justify-center items-center">
-      <p className="mt-6 md:mt-16">Campaigns:</p>
-      {/*<pre>{JSON.stringify(data, null, 2)}</pre>*/}
+      <p className="mt-6 md:mt-16">Posts:</p>
+
       <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-2 justify-center mt-10">
-        {data!.map((campaign: Campaign) => (
-          <Fundraisers
-            title={campaign.title}
-            id={campaign.id}
-            key={campaign.id}
-            goal={campaign.goal}
-            created_at={campaign.created_at}
-            user_uuid={campaign.user_uuid}
-          />
-        ))}
+        {/*<pre>{JSON.stringify(data, null, 2)}</pre>*/}
+        {renderedData}
       </div>
       {/* <div className="my-auto mx-12 md:mx-10 bg-yellow-gold">
             <Link

@@ -32,7 +32,6 @@ const Home: FunctionComponent<HomeProps> = ({ user }) => {
       {/*<HomeTop />*/}
       <div className="w-full ">
         <h1 className="text-black text-center"> Welcome, {userName}!</h1>
-        <Posts />
         {/*<Goals />*/}
         <Statement />
         <div className="pt-6 pb-12" id="register">

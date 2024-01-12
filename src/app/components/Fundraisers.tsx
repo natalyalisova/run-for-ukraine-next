@@ -1,19 +1,8 @@
 import React from "react";
 import Link from "next-intl/link";
 import { useTranslations } from "next-intl";
-import { UrlObject } from "url";
-import { Campaign } from "@/app/[locale]/static/page";
 
-// type AmbasadorProps = {
-//   name: string;
-//   fundraised: number | null;
-//   about?: string;
-//   goal: number;
-//   profileImgUrl?: string;
-//   fundraiserLink: string | UrlObject;
-// };
-
-const Fundraisers = ({ id, created_at, title, goal, user_uuid }: Campaign) => {
+const Fundraisers = ({ id, created_at, title, goal, user_uuid }: any) => {
   const t = useTranslations("Fundraisers");
 
   return (

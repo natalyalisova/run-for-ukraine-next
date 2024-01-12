@@ -13,19 +13,34 @@ export default async function Post({
 }: {
   params: { id: string };
 }) {
-  const { data: campaign } = await supabase
-    .from("campaigns")
+  const { data: blog } = await supabase
+    .from("blogs")
     .select()
     .match({ id })
     .single();
 
-  if (!campaign) {
+  if (!blog) {
     notFound();
   }
   return (
     <div className="h-screen flex flex-col justify-center items-center">
-      <p className="mt-[200px]">Campaign:</p>
-      <pre>{JSON.stringify(campaign, null, 2)}</pre>
+      <p className="mt-[200px]">Blog:</p>
+      <pre>{JSON.stringify(blog, null, 2)}</pre>
+      {blog}
     </div>
   );
 }
+
+// export async function getServerSideProps({ params }) {
+//   const id = { params };
+//   const blogResponse = await supabase
+//     .from("blogs")
+//     .select()
+//     .match({ id })
+//     .single();
+//   return {
+//     props: {
+//       blog: blogResponse.data,
+//     },
+//   };
+// }
