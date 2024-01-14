@@ -1,7 +1,7 @@
 import React from "react";
 import ResponsiveImage from "@/app/components/ResponsiveImage";
-import Link from "next-intl/link";
 import { useTranslations } from "next-intl";
+import Link from "next/link";
 
 const Footer = () => {
   const t = useTranslations("Footer");

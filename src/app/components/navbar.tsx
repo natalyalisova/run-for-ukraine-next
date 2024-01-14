@@ -1,9 +1,9 @@
 import React from "react";
-import Link from "next-intl/link";
 import "flowbite";
 import { useLocale, useTranslations } from "next-intl";
 import { NavLinks } from "@/app/constants";
 import ResponsiveImage from "@/app/components/ResponsiveImage";
+import Link from "next/link";
 
 export default function Navbar() {
   const locale = useLocale();

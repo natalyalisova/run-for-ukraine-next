@@ -1,6 +1,6 @@
 import TextGradient from "@/app/components/AnimatedTextGradient";
-import Link from "next-intl/link";
 import React from "react";
+import Link from "next/link";
 
 const Statement = () => {
   return (
