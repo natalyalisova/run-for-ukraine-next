@@ -1,6 +1,6 @@
 import React from "react";
-import Link from "next-intl/link";
 import { useTranslations } from "next-intl";
+import Link from "next/link";
 
 const Fundraisers = ({ id, created_at, title, goal, user_uuid }: any) => {
   const t = useTranslations("Fundraisers");

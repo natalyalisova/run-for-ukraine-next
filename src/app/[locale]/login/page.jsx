@@ -38,17 +38,11 @@ export default function LoginPage() {
         emailRedirectTo: `${location.origin}/auth/callback`,
       },
     });
+    toggleModal();
     setUser(res.data.user);
     router.refresh();
     setEmail("");
     setPassword("");
-  };
-  const handeOpenForm = async () => {
-    window.open(
-      "https://docs.google.com/forms/d/e/1FAIpQLSemqg0SX_C817yoqGWPWz9i2iSeSohGTjU3zymXhNJNzzfYyQ/viewform",
-      "_blank",
-    );
-    toggleModal();
   };
   const handleSignIn = async () => {
     const res = await supabase.auth.signInWithPassword({
@@ -135,7 +129,7 @@ export default function LoginPage() {
           onClick={handleSignIn}
           className="w-full p-3 rounded-md bg-strong-azure text-yellow-gold hover:bg-blue-600 focus:outline-none"
         >
-          Sign In
+          Sign in
         </button>
       </div>
       {/*How to register*/}
@@ -149,10 +143,10 @@ export default function LoginPage() {
             collection and share it with the world.
           </p>
           <button
-            onClick={handeOpenForm}
-            className="w-full p-3 mt-6 rounded-md bg-strong-azure text-yellow-gold hover:bg-blue-600 focus:outline-none"
+            onClick={handleSignUp}
+            className="w-full p-3 rounded-md bg-strong-azure text-yellow-gold hover:bg-blue-600 focus:outline-none mt-6"
           >
-            Fill the form
+            Sign Up
           </button>
         </div>
       </div>

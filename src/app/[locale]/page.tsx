@@ -8,7 +8,6 @@ import Statement from "@/app/components/Statement";
 import { createServerComponentClient } from "@supabase/auth-helpers-nextjs";
 import { cookies } from "next/headers";
 import { User } from "@supabase/supabase-js";
-import Posts from "@/app/[locale]/static/page";
 
 const App = async () => {
   const cookieStore = cookies();

@@ -1,6 +1,6 @@
 import React from "react";
-import Link from "next-intl/link";
 import { Blog } from "@/app/[locale]/static/page";
+import Link from "next/link";
 
 const Post = ({ created_date, title }: Blog) => {
   return (

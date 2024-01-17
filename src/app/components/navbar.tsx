@@ -24,16 +24,8 @@ export default function Navbar() {
           </span>
         </a>
         <div className="flex md:order-2 items-center ml-3 visible text-white underline underline-offset-2">
-          {locale === "ua" && (
-            <Link href="/" locale="en">
-              EN
-            </Link>
-          )}
-          {locale === "en" && (
-            <Link href="/" locale="ua">
-              UA
-            </Link>
-          )}
+          {locale === "ua" && <Link href="/en">EN</Link>}
+          {locale === "en" && <Link href="/ua">UA</Link>}
 
           {/* <ButtonNav
             leftIcon={faRocket as IconProp}

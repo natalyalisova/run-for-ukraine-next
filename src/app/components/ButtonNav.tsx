@@ -1,7 +1,7 @@
 import React, { MouseEventHandler } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { IconProp } from "@fortawesome/fontawesome-svg-core";
-import Link from "next-intl/link";
+import Link from "next/link";
 
 type Props = {
   title: string;

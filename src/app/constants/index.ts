@@ -1,6 +1,3 @@
-import Link from "next-intl/link";
-import React from "react";
-
 export const NavLinks = [
   { href: "/donate", key: "donate", text: "donate" },
   { href: "#about", key: "about", text: "about" },
