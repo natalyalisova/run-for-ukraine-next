@@ -5,9 +5,7 @@ const Gallery = () => {
   const t = useTranslations("Gallery");
   return (
     <section className="flex flex-col text-center my-6 md:my-24 " id="gallery">
-      <h1 className="uppercase text-2xl md:text-5xl font-semibold">
-        {t("gallery-title")}
-      </h1>
+      <h1 className="title-secondary">{t("gallery-title")}</h1>
       <div className="mt-4 h-1 w-24 bg-yellow-gold mx-auto mb-3"></div>
 
       <div className="gallery-container flex flex-wrap gap-3 p-5 justify-center ">

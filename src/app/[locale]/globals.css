@@ -61,7 +61,7 @@ body {
 
 
 .title-secondary {
-    @apply text-xl font-semibold my-2 ;
+    @apply text-xl md:text-4xl text-center font-semibold;
 }
 
 .text-small {
@@ -119,6 +119,7 @@ body {
 .inputStyle{
     @apply mb-4 w-full p-3 border bg-white text-black placeholder-gray-500 focus:outline-none focus:border-strong-azure;
 }
+
 
 .bg-img {
     background-image: url("/images/yellow-fabric-bg.png");
