@@ -175,7 +175,7 @@ export default function LoginPage() {
               <Link
                 href="/terms-n-conditions"
                 target="_blank"
-                className="text-gray-700 rounded underline md:bg-transparent hover:text-strong-azure mr-2"
+                className="text-gray-700 rounded underline-offset-1 underline md:bg-transparent hover:text-strong-azure mr-2"
                 aria-current="page"
               >
                 Terms and Conditions
@@ -184,7 +184,7 @@ export default function LoginPage() {
               <Link
                 href="/cookies-privacy-policy"
                 target="_blank"
-                className=" text-gray-700 underline rounded md:bg-transparent hover:text-strong-azure ml-1"
+                className=" text-gray-700 underline underline-offset-1 rounded md:bg-transparent hover:text-strong-azure ml-1"
                 aria-current="page"
               >
                 Cookies & Privacy Policy

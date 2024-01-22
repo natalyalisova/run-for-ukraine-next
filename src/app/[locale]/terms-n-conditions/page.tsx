@@ -3,7 +3,7 @@ import React from "react";
 
 const TermsNConditions = () => {
   return (
-    <div className="h-screen flex flex-col mt-12  max-w-screen-sm mx-auto">
+    <div className="flex flex-col mt-6 md:mt-12 max-w-screen-sm mx-auto p-6">
       <h1 className="title-secondary">Terms and conditions </h1>
       <div className="mt-4 h-1 w-64 bg-yellow-gold mx-auto mb-6"></div>
       <p>

@@ -27,7 +27,7 @@ const Home: FunctionComponent<HomeProps> = ({ user }) => {
   const t = useTranslations("Home");
   const userName = user?.email || "Guest";
   return (
-    <div className="flex flex-col mt-14">
+    <div className="flex-start flex-col mt-14">
       {/*<HomeTop />*/}
       <div className="w-full ">
         <h1 className="text-black text-center"> Welcome, {userName}!</h1>

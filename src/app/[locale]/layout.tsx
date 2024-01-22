@@ -68,9 +68,8 @@ export default async function RootLayout({
       </head>
       <body className="flex flex-col h-screen justify-between">
         <Navbar />
-        <main className="mt-24 md:mt-[150px] mb-auto">{children}</main>
+        <main className="mt-24 md:mt-[150px] flex-grow">{children}</main>
         <Footer />
-
         <Script
           src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.js"
           async

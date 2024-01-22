@@ -7,7 +7,7 @@ const Footer = () => {
   const t = useTranslations("Footer");
 
   return (
-    <div className="bg-strong-azure bottom-0">
+    <div className="bg-strong-azure w-full">
       <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-5 p-3 text-white">
         <div className="flex justify-start  space-x-10">
           <ResponsiveImage
