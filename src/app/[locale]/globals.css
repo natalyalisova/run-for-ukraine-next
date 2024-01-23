@@ -101,13 +101,13 @@ body {
 
 @keyframes animatedgradient {
     0% {
-        background-position: 0% 50%;
+        background-position: 0 50%;
     }
     50% {
         background-position: 100% 50%;
     }
     100% {
-        background-position: 0% 50%;
+        background-position: 0 50%;
     }
 }
 
@@ -122,14 +122,14 @@ body {
 
 
 .bg-img {
-    background-image: url("/images/yellow-fabric-bg.png");
+    background-image: url("public/images/yellow-fabric-bg.png");
     background-size: cover;
 }
 
-.bg-img-run{
-    background-image: url("https://secondfront-cdn.nyc3.cdn.digitaloceanspaces.com/runforukraine2023%2Fgallery%2Frsz_120220529ukrainiansatottawarw_ta312.jpg");
-    background-size: cover;
-}
+/*.bg-img-run{*/
+/*    background-image: url("https://secondfront-cdn.nyc3.cdn.digitaloceanspaces.com/runforukraine2023%2Fgallery%2Frsz_120220529ukrainiansatottawarw_ta312.jpg");*/
+/*    background-size: cover;*/
+/*}*/
 
 .bg-img-israel{
     background-image: url("../../../public/images/stend-with-israel.png");
