@@ -122,7 +122,7 @@ body {
 
 
 .bg-img {
-    background-image: url("public/images/yellow-fabric-bg.png");
+    background-image: url("/images/yellow-fabric-bg.png");
     background-size: cover;
 }
 
