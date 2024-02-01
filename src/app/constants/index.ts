@@ -15,6 +15,24 @@ export const NavLinks = [
   },
 ];
 
+export const userLinks = [
+  {
+    href: "/new-campaign",
+    key: "new campaign",
+    text: "New campaign",
+  },
+  {
+    href: "/my-campaigns",
+    key: "my campaigns",
+    text: "My campaigns",
+  },
+  {
+    href: "/edit-my-profile",
+    key: "edit-my-profile",
+    text: "Edit profile",
+  },
+];
+
 export const footerLinks = [];
 
 export const campaignCode = "2FUA-RFUA2023";

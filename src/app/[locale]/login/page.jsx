@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import { UserDisplay } from "../../components/UserDisplay";
+import { UserPage } from "../../components/UserPage";
 import useAuth from "../../components/useAuth";
 import { LoginForm } from "../../components/LoginForm";
 
@@ -28,7 +28,7 @@ export default function LoginPage() {
   }
 
   if (user) {
-    return <UserDisplay user={user} handleLogout={handleLogout} />;
+    return <UserPage user={user} handleLogout={handleLogout} />;
   }
 
   return (

@@ -29,8 +29,11 @@ body {
 
 }
 
-
-
+link {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
 .flexCenter {
     @apply flex justify-center items-center;
 }

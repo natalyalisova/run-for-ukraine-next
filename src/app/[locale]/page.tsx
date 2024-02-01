@@ -8,6 +8,7 @@ import Statement from "@/app/components/Statement";
 import { createServerComponentClient } from "@supabase/auth-helpers-nextjs";
 import { cookies } from "next/headers";
 import { User } from "@supabase/supabase-js";
+import Team from "@/app/components/Team";
 
 const App = async () => {
   const cookieStore = cookies();
@@ -77,6 +78,7 @@ const Home: FunctionComponent<HomeProps> = ({ user }) => {
           {t("home-on-yellow-bg-title")}
         </h2>
       </div>
+      <Team />
       <Social />
       <Report />
       <Gallery />

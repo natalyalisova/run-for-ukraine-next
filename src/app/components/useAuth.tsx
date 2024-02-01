@@ -45,12 +45,6 @@ export default function useAuth() {
         setPassword("");
       } else {
         console.error("Signup error:", res.error);
-        return (
-          <div>
-            Failed to create an account. Please check your details and try
-            again.
-          </div>
-        );
       }
     } catch (error) {
       console.error("Unexpected error during signup:", error);
