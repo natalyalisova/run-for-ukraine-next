@@ -44,7 +44,7 @@ body {
 }
 
 .title {
-    @apply text-2xl font-semibold mb-1;
+    @apply text-2xl md:text-4xl font-bold mb-1;
 }
 
 .gallery-container img {
@@ -59,6 +59,11 @@ body {
 
 }
 
+.news-gallery{
+    display: grid;
+    grid-gap: 5rem;
+    grid-template-columns: repeat(auto-fill,minmax(270px, 1fr));
+}
 
 .title-secondary {
     @apply text-xl font-semibold my-2 ;
@@ -121,6 +126,15 @@ body {
     background-size: cover;
 }
 
+.bg-img-24-feb-24 {
+    background: linear-gradient(rgba(0, 0, 0, 0.5),
+    rgba(0, 0, 0, 0.5)),url("/images/24-feb-cover.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+}
+
 .bg-img-run{
     background: url("https://secondfront-cdn.nyc3.cdn.digitaloceanspaces.com/runforukraine2023%2Fgallery%2Frsz_120220529ukrainiansatottawarw_ta312.jpg");
     background-size: cover;
@@ -143,15 +157,11 @@ body {
 }
 
 
-/* Footer */
-/*.footer {*/
-/*    @apply flex-col paddings w-full gap-20 bg-light-white;*/
-/*}*/
+.bg-svg-wrapper {
+    margin: auto;
+    margin-top: -1px;
+}
 
-/*.footer_copyright {*/
-/*    @apply max-sm:flex-col w-full text-sm font-normal;*/
-/*}*/
-
-/*.footer_column {*/
-/*    @apply flex-1 flex flex-col gap-3 text-sm min-w-max;*/
-/*}*/
+.inner-b{
+    box-shadow: inset 0px 10px 0px 0px #0057b8;
+}
