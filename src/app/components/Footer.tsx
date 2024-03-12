@@ -12,8 +12,8 @@ const Footer = () => {
   return (
     <div className="bg-strong-azure py-2">
       <div className="max-w-6xl mx-auto gap-5 p-3 text-white ">
-        <div className="flex justify-center">
-          <ResponsiveImage
+        <div className="flex justify-center my-6">
+          <Image
             src={"/images/run-for-ukraine-logo-yellow.png"}
             width={64}
             height={64}
