@@ -1,11 +1,8 @@
-import Link from "next-intl/link";
 import TextGradient from "@/app/components/AnimatedTextGradient";
 import React from "react";
 import { useTranslations } from "next-intl";
 import About from "@/app/components/About";
 import Team from "@/app/components/Team";
-import Image from "next/image";
-import SvgWave from "../../../public/images/blue-svg.svg";
 
 const Gather = () => {
   const t = useTranslations("Gather");

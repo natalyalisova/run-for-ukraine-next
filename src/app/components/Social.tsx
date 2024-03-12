@@ -1,8 +1,8 @@
 import Image from "next/image";
 import React from "react";
 import { useTranslations } from "next-intl";
-import { auto } from "@popperjs/core";
 import SvgWave from "../../../public/images/blue-svg.svg";
+import { links } from "../../../public/Telegrams.json";
 
 const Social = () => {
   const t = useTranslations("Social");
@@ -54,67 +54,24 @@ const Social = () => {
             <h2 className="font-semibold text-2xl py-3">
               {t("join-telegram-title")}
             </h2>
-            <ul className="text-strong-azure ml-3 text-base flex flex-col space-y-3 mt-3 ">
-              <li>
-                <a
-                  href="https://t.me/runforukrainetelaviv"
-                  className="hover:underline hover:underline-offset-2"
-                >
-                  <Image
-                    src={"/images/telegram.svg"}
-                    alt={"telegram icon"}
-                    width={25}
-                    height={25}
-                    className="inline mr-2"
-                  />
-                  {t("join-telegram-israel")}
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://t.me/runforukrainelondon"
-                  className="hover:underline hover:underline-offset-2"
-                >
-                  <img
-                    src={"/images/telegram.svg"}
-                    alt={"telegram icon"}
-                    width={25}
-                    height={auto}
-                    className="inline mr-2"
-                  />
-                  {t("join-telegram-uk")}
-                </a>
-              </li>
-              <li>
-                <a
-                  href=" https://t.me/runforukrainemontreal"
-                  className="hover:underline hover:underline-offset-2"
-                >
-                  <img
-                    src={"/images/telegram.svg"}
-                    alt={"telegram icon"}
-                    width={25}
-                    height={auto}
-                    className="inline mr-2"
-                  />
-                  {t("join-telegram-mr")}
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://t.me/runforukrainetoronto"
-                  className="hover:underline hover:underline-offset-2"
-                >
-                  <Image
-                    src={"/images/telegram.svg"}
-                    alt={"telegram icon"}
-                    width={25}
-                    height={25}
-                    className="inline mr-2"
-                  />
-                  {t("join-telegram-canada")}
-                </a>
-              </li>
+            <ul className="text-strong-azure ml-3 text-base flex flex-col space-y-3 mt-3">
+              {links.map(({ href, textKey }) => (
+                <li key={href}>
+                  <a
+                    href={href}
+                    className="hover:underline hover:underline-offset-2"
+                  >
+                    <Image
+                      src="/images/telegram.svg"
+                      alt="telegram icon"
+                      width={25}
+                      height={25}
+                      className="inline mr-2"
+                    />
+                    {t(textKey)}
+                  </a>
+                </li>
+              ))}
             </ul>
           </div>
         </div>
