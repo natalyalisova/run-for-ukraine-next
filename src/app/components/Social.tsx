@@ -16,7 +16,7 @@ const Social = () => {
           sizes="100vw"
           style={{ width: "100%", height: "auto" }}
           alt="Wave background"
-          className="inner-b"
+          className="inner-b mt-[-1px]"
         />
 
         <div
@@ -29,6 +29,7 @@ const Social = () => {
               <a
                 href="https://strava.app.link/GAROuCXupyb"
                 className="text-strong-azure hover:underline hover:underline-offset-2 ml-2"
+                target="_blank"
               >
                 Strava
               </a>
@@ -60,6 +61,7 @@ const Social = () => {
                   <a
                     href={href}
                     className="hover:underline hover:underline-offset-2"
+                    target="_blank"
                   >
                     <Image
                       src="/images/telegram.svg"

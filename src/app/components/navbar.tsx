@@ -5,7 +5,6 @@ import { useLocale, useTranslations } from "next-intl";
 import { NavLinks } from "@/app/constants";
 import ResponsiveImage from "@/app/components/ResponsiveImage";
 
-
 const Navbar = () => {
   const locale = useLocale();
   const t = useTranslations("NavBar");
@@ -19,7 +18,7 @@ const Navbar = () => {
             height={94}
             alt={"Run for Ukraine Logo"}
           />
-          <span className="self-center text-2xl font-semibold whitespace-nowrap text-white hidden md:block">
+          <span className="self-center text-2xl font-semibold whitespace-nowrap text-white hidden md:block ml-3">
             #RunForUkraine
           </span>
         </a>

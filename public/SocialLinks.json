@@ -1,0 +1,19 @@
+{
+  "socialLinks": [
+    {
+      "href": "https://www.instagram.com/runforukraine?igsh=cjlxdTIxcGRjd3Nl",
+      "src": "/social-media-icons/instagram.svg",
+      "alt": "Run for Ukraine instagram"
+    },
+    {
+      "href": "https://www.facebook.com/runforukraine.united",
+      "src": "/social-media-icons/facebook.svg",
+      "alt": "Run for Ukraine facebook"
+    },
+    {
+      "href": "https://www.linkedin.com/company/runforukraine/about/",
+      "src": "/social-media-icons/linkedin.svg",
+      "alt": "Run for Ukraine linkedin"
+    }
+  ]
+}

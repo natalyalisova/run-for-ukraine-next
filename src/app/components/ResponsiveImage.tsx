@@ -33,7 +33,6 @@ const ResponsiveImage = ({ src, alt, width, height }: Props) => {
       alt={alt}
       width={isMobileDevice ? width / 2 : width}
       height={isMobileDevice ? height / 2 : height}
-      className="mr-3"
     />
   );
 };
