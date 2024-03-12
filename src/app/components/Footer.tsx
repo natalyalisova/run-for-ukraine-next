@@ -4,6 +4,7 @@ import ResponsiveImage from "@/app/components/ResponsiveImage";
 import Link from "next-intl/link";
 import { useTranslations } from "next-intl";
 import { socialLinks } from "../../../public/SocialLinks.json";
+import { navLinks } from "../../../public/NavLinksFooter.json";
 
 const Footer = () => {
   const t = useTranslations("Footer");
@@ -33,19 +34,13 @@ const Footer = () => {
 
         <div className="flex items-center justify-center mt-3">
           <ul className="uppercase space-x-10 flex text-white font-semibold">
-            <li>
-              <Link
-                href="https://www.instagram.com/runforukraine/"
-                title="Who are we"
-              >
-                {t("who-are-we")}
-              </Link>
-            </li>
-            <li>
-              <Link href="#donate" title="Donate">
-                {t("donate")}
-              </Link>
-            </li>
+            {navLinks.map(({ href, title, textKey }) => (
+              <li key={href}>
+                <Link href={href} title={title}>
+                  {t(textKey)}
+                </Link>
+              </li>
+            ))}
           </ul>
         </div>
       </div>
