@@ -124,5 +124,11 @@
     "contacts": "Contacts",
     "copyright": "©2023 RunForUkraine. All Rights Reserved.",
     "copyright-description": "The charity initiative aims to engage the international running community to support Ukraine amidst the full-scale war."
+  },
+  "AboutPage": {
+    "about-page-title": "About project #RunForUkraine"
+  },
+  "ReportsPage": {
+    "report-page-title": "Reports from our fundraising companies"
   }
 }

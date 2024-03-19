@@ -2,7 +2,7 @@ import Image from "next/image";
 import React from "react";
 import { useTranslations } from "next-intl";
 import SvgWave from "../../../public/images/blue-svg.svg";
-import { links } from "../../../public/Telegrams.json";
+import { TelegramLinks } from "@/app/constants";
 
 const Social = () => {
   const t = useTranslations("Social");
@@ -56,7 +56,7 @@ const Social = () => {
               {t("join-telegram-title")}
             </h2>
             <ul className="text-strong-azure ml-3 text-base flex flex-col space-y-3 mt-3">
-              {links.map(({ href, textKey }) => (
+              {TelegramLinks.map(({ href, textKey }) => (
                 <li key={href}>
                   <a
                     href={href}

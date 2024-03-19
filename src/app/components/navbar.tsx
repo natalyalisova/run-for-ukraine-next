@@ -25,25 +25,11 @@ const Navbar = () => {
         <div className="flex md:order-2 items-center ml-3 visible text-white underline underline-offset-2">
           {locale === "ua" && (
             <Link href="/" locale="en">
-              {/* <img
-                src="/images/ca.png"
-                alt="Flag of Canada"
-                className="h-auto max-w-xl shadow-sm"
-                width={35}
-                height={auto}
-              /> */}
               EN
             </Link>
           )}
           {locale === "en" && (
             <Link href="/" locale="ua">
-              {/* <img
-                src="/images/ua.png"
-                alt="Flag of Ukraine"
-                className="h-auto max-w-xl shadow-sm border border-blue-700"
-                width={35}
-                height={auto}
-              /> */}
               UA
             </Link>
           )}

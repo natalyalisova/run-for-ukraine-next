@@ -1,10 +1,8 @@
 import Image from "next/image";
 import React from "react";
-import ResponsiveImage from "@/app/components/ResponsiveImage";
 import Link from "next-intl/link";
 import { useTranslations } from "next-intl";
-import { socialLinks } from "../../../public/SocialLinks.json";
-import { navLinks } from "../../../public/NavLinksFooter.json";
+import { FooterNavLinks, SocialLinks } from "@/app/constants";
 
 const Footer = () => {
   const t = useTranslations("Footer");
@@ -21,7 +19,7 @@ const Footer = () => {
           />
         </div>
         <div className="flex flex-end items-center space-x-10 justify-center mt-3">
-          {socialLinks.map(({ href, src, alt }) => (
+          {SocialLinks.map(({ href, src, alt }) => (
             <Link href={href} target="_blank" key={href}>
               <Image src={src} width={30} height={30} alt={alt} />
             </Link>
@@ -34,7 +32,7 @@ const Footer = () => {
 
         <div className="flex items-center justify-center mt-3">
           <ul className="uppercase space-x-10 flex text-white font-semibold">
-            {navLinks.map(({ href, title, textKey }) => (
+            {FooterNavLinks.map(({ href, title, textKey }) => (
               <li key={href}>
                 <Link href={href} title={title}>
                   {t(textKey)}

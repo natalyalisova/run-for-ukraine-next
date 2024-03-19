@@ -11,6 +11,7 @@ import ProjectDescription from "@/app/components/ProjectDescription";
 import Gather from "@/app/components/Gather";
 import LatestNews from "@/app/components/LatestNews";
 import SvgWave from "../../../public/images/blue-svg.svg";
+import About from "@/app/components/About";
 
 const GET_AMBASSADORS = gql`
   query GetAmbassador($campaignId: String!) {
@@ -102,6 +103,7 @@ const Home = (props: { loading: boolean; data: any; error: any }) => {
       <ProjectDescription />
       <LatestNews />
       <Social />
+      <About />
       <Gather />
       <Report />
       <Gallery />

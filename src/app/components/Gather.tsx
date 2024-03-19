@@ -10,16 +10,6 @@ const Gather = () => {
   return (
     <>
       <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-2 justify-center mt-6 p-6">
-        <div className="flexCenter my-6">
-          <img
-            src="https://secondfront-cdn.nyc3.cdn.digitaloceanspaces.com/IMG_1568.JPG"
-            alt={"Amelina Olga image"}
-            width={500}
-            height={650}
-          />
-        </div>
-        <About />
-
         <div className="flexCenter my-6 text-2xl font-bold">
           <TextGradient
             text={t("RUN - EAT - DONATE - REPEAT!")}
