@@ -7,13 +7,14 @@ import { cookies } from "next/headers";
 import { Database } from "@/types/supabase";
 import Link from "next/link";
 import React from "react";
+import { UnderConstraction } from "@/app/components/UnderConstraction";
 
 const NewCampaign = async () => {
   const supabase = createServerComponentClient({ cookies });
   const {
     data: { user },
   } = await supabase.auth.getUser();
-
+  console.log(user);
   if (!user) {
     return (
       <div className="h-screen flex flex-col justify-center items-center">
@@ -35,12 +36,15 @@ const NewCampaign = async () => {
     const goal = String(formData.get("goal"));
     const user_uuid = String(user.id);
     const supabaseCamp = createServerActionClient<Database>({ cookies });
-    //   const response = await supabaseCamp
-    //     .from("campaigns")
-    //     .insert({ title, goal, user_uuid });
-    //   revalidatePath("/static");
-    // };
-    return (
+    const response = await supabaseCamp
+      .from("campaigns")
+      .insert({ title, goal, user_uuid });
+    revalidatePath("/static");
+  };
+
+  return (
+    <>
+      <UnderConstraction />
       <div className="h-screen flex flex-col mt-20 items-center">
         <div>
           Return to
@@ -52,7 +56,6 @@ const NewCampaign = async () => {
             My account
           </Link>
         </div>
-
         <div className="bg-white dark:bg-gray-900 p-8 rounded-lg shadow-md w-96 text-center">
           <form action={addFundraising} className="flex flex-col">
             <h1 className="font-semibold text-2xl py-3">
@@ -76,7 +79,7 @@ const NewCampaign = async () => {
           </form>
         </div>
       </div>
-    );
-  };
+    </>
+  );
 };
 export default NewCampaign;

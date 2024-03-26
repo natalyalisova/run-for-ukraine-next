@@ -3,6 +3,7 @@ import { User } from "@supabase/supabase-js";
 import Link from "next/link";
 import { userLinks } from "@/app/constants";
 import { UnderConstraction } from "@/app/components/UnderConstraction";
+import Date from "./date";
 
 interface UserDisplayProps {
   user: User;
@@ -13,9 +14,6 @@ export const UserPage: React.FC<UserDisplayProps> = ({
   user,
   handleLogout,
 }) => {
-  // UserDisplay JSX
-  console.log(handleLogout);
-  console.log(user);
   return (
     <>
       <UnderConstraction />
@@ -33,7 +31,8 @@ export const UserPage: React.FC<UserDisplayProps> = ({
               </p>
               <p className="text-gray-600">{user.email}</p>
               <p className="text-gray-600">
-                Joined 12.01.2024 {user.created_at}
+                <span className="mr-1">Joined</span>
+                <Date dateString={user.created_at} />
               </p>
               <p className="text-gray-600">Israel</p>
             </div>
