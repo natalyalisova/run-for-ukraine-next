@@ -1,9 +1,5 @@
 import TextGradient from "@/app/components/AnimatedTextGradient";
-import Link from "next-intl/link";
 import React from "react";
-import { useTranslations } from "next-intl";
-import Image from "next/image";
-import SvgWave from "../../../public/images/blue-svg.svg";
 
 const LatestNews = () => {
   return (

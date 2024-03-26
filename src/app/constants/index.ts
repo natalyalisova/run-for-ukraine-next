@@ -4,6 +4,8 @@ export const NavLinks = [
   { href: "/events", key: "events", text: "events" },
   { href: "/join-us", key: "join-us", text: "join-us" },
   { href: "/reports", key: "reporting", text: "reporting" },
+  { href: "/login", key: "login", text: "login" },
+
   // {
   //   href: "https://shop.secondfrontukraine.com/products/run-for-ukraine-unisex-tee",
   //   key: "shop",

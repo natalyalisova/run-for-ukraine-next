@@ -1,9 +1,8 @@
 import React from "react";
-import Link from "next-intl/link";
-import ResponsiveImage from "@/app/components/ResponsiveImage";
 import { useTranslations } from "next-intl";
 import { FooterNavLinks, SocialLinks } from "@/app/constants";
 import Link from "next/link";
+import Image from "next/image";
 
 const Footer = () => {
   const t = useTranslations("Footer");

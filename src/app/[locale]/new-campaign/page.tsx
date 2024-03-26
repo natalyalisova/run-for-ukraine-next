@@ -35,48 +35,48 @@ const NewCampaign = async () => {
     const goal = String(formData.get("goal"));
     const user_uuid = String(user.id);
     const supabaseCamp = createServerActionClient<Database>({ cookies });
-    const response = await supabaseCamp
-      .from("campaigns")
-      .insert({ title, goal, user_uuid });
-    revalidatePath("/static");
+    //   const response = await supabaseCamp
+    //     .from("campaigns")
+    //     .insert({ title, goal, user_uuid });
+    //   revalidatePath("/static");
+    // };
+    return (
+      <div className="h-screen flex flex-col mt-20 items-center">
+        <div>
+          Return to
+          <Link
+            href={"/login"}
+            className="m-2 md:bg-transparent  md:p-0 lg:inline-block lg:mt-0 text-strong-azure underline hover:text-cyan-500 mr-4"
+            aria-current="page"
+          >
+            My account
+          </Link>
+        </div>
+
+        <div className="bg-white dark:bg-gray-900 p-8 rounded-lg shadow-md w-96 text-center">
+          <form action={addFundraising} className="flex flex-col">
+            <h1 className="font-semibold text-2xl py-3">
+              My fundraising campaign
+            </h1>
+            <input
+              name="title"
+              className="border-solid border-2 rounded border-sky-500 p-2 mb-4"
+              placeholder="Title for your campaign"
+            />
+            <input
+              name="goal"
+              className="border-solid border-2 rounded border-sky-500 p-2"
+              placeholder="set a goal in $"
+            />
+            <input
+              type="submit"
+              value="Start fundraising"
+              className="mb-2 p-3 rounded-md bg-blue-600 text-white hover:bg-blue-700 focus:outline-none mt-6"
+            />
+          </form>
+        </div>
+      </div>
+    );
   };
-  return (
-    <div className="h-screen flex flex-col mt-20 items-center">
-      <div>
-        Return to
-        <Link
-          href={"/login"}
-          className="m-2 md:bg-transparent  md:p-0 lg:inline-block lg:mt-0 text-strong-azure underline hover:text-cyan-500 mr-4"
-          aria-current="page"
-        >
-          My account
-        </Link>
-      </div>
-
-      <div className="bg-white dark:bg-gray-900 p-8 rounded-lg shadow-md w-96 text-center">
-        <form action={addFundraising} className="flex flex-col">
-          <h1 className="font-semibold text-2xl py-3">
-            My fundraising campaign
-          </h1>
-          <input
-            name="title"
-            className="border-solid border-2 rounded border-sky-500 p-2 mb-4"
-            placeholder="Title for your campaign"
-          />
-          <input
-            name="goal"
-            className="border-solid border-2 rounded border-sky-500 p-2"
-            placeholder="set a goal in $"
-          />
-          <input
-            type="submit"
-            value="Start fundraising"
-            className="mb-2 p-3 rounded-md bg-blue-600 text-white hover:bg-blue-700 focus:outline-none mt-6"
-          />
-        </form>
-      </div>
-    </div>
-  );
 };
-
 export default NewCampaign;

@@ -24,32 +24,8 @@ export default function Navbar() {
           </span>
         </a>
         <div className="flex md:order-2 items-center ml-3 visible text-white underline underline-offset-2">
-          {locale === "ua" && (
-            <Link href="/" locale="en">
-              EN
-            </Link>
-          )}
-          {locale === "en" && (
-            <Link href="/" locale="ua">
-              UA
-            </Link>
-          )}
-
-          {/* <ButtonNav
-            leftIcon={faRocket as IconProp}
-            margin={"ml-3 visible"}
-            title={t("button-fundraiser-title")}
-            link={
-              "https://docs.google.com/forms/d/e/1FAIpQLSckR5nOZLGdWLlzahw-GsaPbbVaS7bUHz14KPC1VUIrSjC5Eg/viewform"
-            }
-          />
-          <ButtonNav
-            leftIcon={faCircleDollarToSlot as IconProp}
-            margin={"ml-3 visible"}
-            title={t("button-donate-title")}
-            link={"#donate"}
-          /> */}
-
+          {locale === "ua" && <Link href="/en">EN</Link>}
+          {locale === "en" && <Link href="/ua">UA</Link>}
           <button
             data-collapse-toggle="navbar-sticky"
             type="button"
@@ -91,15 +67,15 @@ export default function Navbar() {
                 </Link>
               </li>
             ))}
-            <li className="mb-4 lg:mb-0 lg:pr-2">
-              <Link
-                href="/login"
-                className=" block py-2 pl-1  pr-4 text-white rounded md:bg-transparent md:text-white md:p-0  mt-4 lg:inline-block lg:mt-0 hover:text-cyan-100 mr-4"
-                aria-current="page"
-              >
-                My account
-              </Link>
-            </li>
+            {/*<li className="mb-4 lg:mb-0 lg:pr-2">*/}
+            {/*  <Link*/}
+            {/*    href="/login"*/}
+            {/*    className=" block py-2 pl-1  pr-4 text-white rounded md:bg-transparent md:text-white md:p-0  mt-4 lg:inline-block lg:mt-0 hover:text-cyan-100 mr-4"*/}
+            {/*    aria-current="page"*/}
+            {/*  >*/}
+            {/*    My account*/}
+            {/*  </Link>*/}
+            {/*</li>*/}
           </ul>
         </div>
       </div>

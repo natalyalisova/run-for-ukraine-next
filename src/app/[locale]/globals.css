@@ -10,6 +10,11 @@
     box-sizing: border-box;
 }
 
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+}
 html {
     scroll-behavior: smooth;
     ::-webkit-scrollbar {
@@ -132,6 +137,11 @@ link {
 .bg-img {
     background-image: url("/images/yellow-fabric-bg.png");
     background-size: cover;
+}
+
+.bg-yellow-black-stripes {
+    background-image: url("/images/yellow-black-stripe.png");
+    background-size: 7%;
 }
 
 .bg-img-24-feb-24 {
