@@ -10,9 +10,9 @@ const nextConfig = {
     remotePatterns: [
       {
         protocol: "https",
-        hostname: "assets.example.com",
+        hostname: "secondfront-cdn.nyc3.cdn.digitaloceanspaces.com",
         port: "",
-        pathname: "/account123/**",
+        pathname: "/**",
       },
     ],
   },

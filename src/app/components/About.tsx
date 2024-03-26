@@ -1,5 +1,6 @@
 import React from "react";
 import { useTranslations } from "next-intl";
+import Image from "next/image";
 
 const About = () => {
   const t = useTranslations("About");
@@ -7,8 +8,10 @@ const About = () => {
   return (
     <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-2 justify-center mt-6 p-6">
       <div className="flexCenter my-6">
-        <img
-          src="https://secondfront-cdn.nyc3.cdn.digitaloceanspaces.com/IMG_1568.JPG"
+        <Image
+          src={
+            "https://secondfront-cdn.nyc3.cdn.digitaloceanspaces.com/IMG_1568.JPG"
+          }
           alt={"Amelina Olga image"}
           width={500}
           height={650}

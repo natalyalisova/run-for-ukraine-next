@@ -21,7 +21,8 @@ const LatestNews = () => {
       <div className="bg-gradient-to-b from-yellow-gold to-strong-azure">
         <div className="max-w-4xl mx-auto grid gap-3 justify-center p-6 text-start  text-bace md:text-lg ">
           <h2 className="uppercase title mx-auto max-w-2xl text-center md:mt-24">
-            The second anniversary of russia's full-scale invasion of Ukraine
+            The second anniversary of russia&apos;s full-scale invasion of
+            Ukraine
           </h2>
           <p className="text-start text-gray-700 mt-12">February 24, 2024</p>
 
