@@ -30,18 +30,6 @@ const NewCampaign = async () => {
     );
   }
 
-  const addFundraising = async (formData: FormData) => {
-    "use server";
-    const title = String(formData.get("title"));
-    const goal = String(formData.get("goal"));
-    const user_uuid = String(user.id);
-    const supabaseCamp = createServerActionClient<Database>({ cookies });
-    // const response = await supabaseCamp
-    //   .from("campaigns")
-    //   .insert({ title, goal, user_uuid });
-    // revalidatePath("/static");
-  };
-
   return (
     <>
       <UnderConstraction />
@@ -55,28 +43,6 @@ const NewCampaign = async () => {
           >
             My account
           </Link>
-        </div>
-        <div className="bg-white dark:bg-gray-900 p-8 rounded-lg shadow-md w-96 text-center">
-          <form action={addFundraising} className="flex flex-col">
-            <h1 className="font-semibold text-2xl py-3">
-              My fundraising campaign
-            </h1>
-            <input
-              name="title"
-              className="border-solid border-2 rounded border-sky-500 p-2 mb-4"
-              placeholder="Title for your campaign"
-            />
-            <input
-              name="goal"
-              className="border-solid border-2 rounded border-sky-500 p-2"
-              placeholder="set a goal in $"
-            />
-            <input
-              type="submit"
-              value="Start fundraising"
-              className="mb-2 p-3 rounded-md bg-blue-600 text-white hover:bg-blue-700 focus:outline-none mt-6"
-            />
-          </form>
         </div>
       </div>
     </>
