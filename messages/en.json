@@ -107,6 +107,7 @@
     "join-telegram-title": "Join our Telegram channels",
     "join-telegram-canada": "Toronto, Canada",
     "join-telegram-uk": "London, UK",
+    "join-telegram-mr": "Montreal, Canada",
     "join-telegram-israel": "Tel-Aviv, Israel"
   },
   "Report": {
@@ -123,5 +124,11 @@
     "contacts": "Contacts",
     "copyright": "©2023 RunForUkraine. All Rights Reserved.",
     "copyright-description": "The charity initiative aims to engage the international running community to support Ukraine amidst the full-scale war."
+  },
+  "AboutPage": {
+    "about-page-title": "About project #RunForUkraine"
+  },
+  "ReportsPage": {
+    "report-page-title": "Reports from our fundraising companies"
   }
 }

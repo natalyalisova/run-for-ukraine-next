@@ -19,13 +19,21 @@ export default function Navbar() {
             height={94}
             alt={"Run for Ukraine Logo"}
           />
-          <span className="self-center text-2xl font-semibold whitespace-nowrap text-white hidden md:block">
+          <span className="self-center text-2xl font-semibold whitespace-nowrap text-white hidden md:block ml-3">
             #RunForUkraine
           </span>
         </a>
         <div className="flex md:order-2 items-center ml-3 visible text-white underline underline-offset-2">
-          {locale === "ua" && <Link href="/en">EN</Link>}
-          {locale === "en" && <Link href="/ua">UA</Link>}
+          {locale === "ua" && (
+            <Link href="/" locale="en">
+              EN
+            </Link>
+          )}
+          {locale === "en" && (
+            <Link href="/" locale="ua">
+              UA
+            </Link>
+          )}
 
           {/* <ButtonNav
             leftIcon={faRocket as IconProp}

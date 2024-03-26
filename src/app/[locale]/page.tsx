@@ -4,7 +4,11 @@ import React, { FunctionComponent } from "react";
 import Social from "@/app/components/Social";
 import Report from "@/app/components/Report";
 import Gallery from "@/app/components/Gallery";
-import Statement from "@/app/components/Statement";
+import ProjectDescription from "@/app/components/ProjectDescription";
+import Gather from "@/app/components/Gather";
+import LatestNews from "@/app/components/LatestNews";
+import SvgWave from "../../../public/images/blue-svg.svg";
+import About from "@/app/components/About";
 import { createServerComponentClient } from "@supabase/auth-helpers-nextjs";
 import { cookies } from "next/headers";
 import { User } from "@supabase/supabase-js";
@@ -14,12 +18,44 @@ const App = async () => {
   const cookieStore = cookies();
   const supabase = createServerComponentClient({ cookies });
   const {
-    data: { user },
+   data: { user },
   } = await supabase.auth.getUser();
 
   return <Home user={user} />;
 };
 
+const Home = (props: { loading: boolean; data: any; error: any }) => {
+  const t = useTranslations("Home");
+  if (props.loading) {
+    return <div>Loading...</div>;
+  } else if (props.error) {
+    return <div>{JSON.stringify(props.error)}</div>;
+  }
+
+  return (
+    <div className="flex flex-col mt-14">
+      <div className="w-full md:my-16">
+        <div className="bg-img flexCenter flex-col py-16 ">
+          <Image
+            src={"/images/run-for-ukraine-logo-blue.png"}
+            width={150}
+            height={150}
+            alt={"Run for Ukraine Logo"}
+          />
+          <h2 className="uppercase text-strong-azure max-w-[550px] font-semibold text-center md:text-2xl leading-relaxed px-3 pt-10">
+            {t("home-on-yellow-bg-title")}
+          </h2>
+        </div>
+      </div>
+      <ProjectDescription />
+      <LatestNews />
+      <Social />
+      <About />
+      <Gather />
+      <Report />
+      <Gallery />
+    </div>
+  );
 type HomeProps = {
   user: User | null;
 };

@@ -1,5 +1,8 @@
 import React from "react";
 import { useTranslations } from "next-intl";
+import Image from "next/image";
+import May2022 from "../../../public/images/fundraiser-img-may.png";
+import Fall2022 from "../../../public/images/fundraiser-img-fall.png";
 
 const Report = () => {
   const t = useTranslations("Report");
@@ -10,13 +13,13 @@ const Report = () => {
 
       <div className="flex justify-center flex-col md:flex-row md:space-x-24 mt-10">
         <div>
-          <img src="/images/fundraiser-img-fall.png" />
+          <Image src={Fall2022} alt={"report image from fall 2022"} />
           <p className="mt-3 mb-10 md:text-2xl font-semibold">
             {t("fall-2022")}
           </p>
         </div>
         <div>
-          <img src="/images/fundraiser-img-may.png" />
+          <Image src={May2022} alt={"report image from may 2022"} />
           <p className="mt-3  mb-10  md:text-2xl font-semibold">
             {t("may-2022")}
           </p>

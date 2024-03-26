@@ -105,6 +105,7 @@
     "join-telegram-title": "Долучайся до Телеграм каналів",
     "join-telegram-canada": "Торонто, Канада",
     "join-telegram-uk": "Лондон, Великобританія",
+    "join-telegram-mr": "Монреаль, Канада",
     "join-telegram-israel": "Тель-Авів, Ізраїль"
   },
   "Report": {
@@ -121,5 +122,8 @@
     "contacts": "КОНТАКТИ",
     "copyright": "©2022-2023 RunForUkraine. ",
     "copyright-description": "Благодійна ініціатива спрямована на залучення міжнародної бігової спільноти до підтримки України в умовах повномасштабної війни."
+  },
+  "AboutPage": {
+    "about-page-title": "Про проєкт #RunForUkraine"
   }
 }
