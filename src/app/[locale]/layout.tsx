@@ -25,7 +25,7 @@ export default async function RootLayout({
     <html lang={locale}>
       <head>
         <meta property="og:site_name" content="run for Ukraine" />
-        <meta property="og:url" content="https://runforukraine.ca/" />
+        <meta property="og:url" content="https://runforukraine.org.ua/" />
         <meta property="title" content={metadata.title} />
         <meta property="og:title" content={metadata.title} />
         <meta property="content" content={metadata.content} />
@@ -66,11 +66,10 @@ export default async function RootLayout({
         />
         <title>Run For Ukraine</title>
       </head>
-      <body className="h-full">
+      <body className="flex flex-col h-screen justify-between">
         <Navbar />
-        <main>{children}</main>
+        <main className="flex-grow">{children}</main>
         <Footer />
-
         <Script
           src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.js"
           async

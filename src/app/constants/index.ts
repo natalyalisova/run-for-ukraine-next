@@ -4,6 +4,8 @@ export const NavLinks = [
   { href: "/events", key: "events", text: "events" },
   { href: "/join-us", key: "join-us", text: "join-us" },
   { href: "/reports", key: "reporting", text: "reporting" },
+  { href: "/login", key: "login", text: "login" },
+
   // {
   //   href: "https://shop.secondfrontukraine.com/products/run-for-ukraine-unisex-tee",
   //   key: "shop",
@@ -48,6 +50,24 @@ export const SocialLinks = [
     href: "https://www.linkedin.com/company/runforukraine/about/",
     src: "/social-media-icons/linkedin.svg",
     alt: "Run for Ukraine linkedin",
+  },
+];
+
+export const userLinks = [
+  {
+    href: "/new-campaign",
+    key: "new campaign",
+    text: "New campaign",
+  },
+  {
+    href: "/my-campaigns",
+    key: "my campaigns",
+    text: "My campaigns",
+  },
+  {
+    href: "/edit-my-profile",
+    key: "edit-my-profile",
+    text: "Edit profile",
   },
 ];
 

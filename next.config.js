@@ -2,11 +2,6 @@
 
 const nextConfig = {
   images: {
-    domains: [
-      "https://github.com",
-      "https://secondfront-cdn.nyc3.digitaloceanspaces.com",
-      "secondfront-cdn.nyc3.digitaloceanspaces.com",
-    ],
     remotePatterns: [
       {
         protocol: "https",

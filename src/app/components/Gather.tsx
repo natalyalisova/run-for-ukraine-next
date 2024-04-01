@@ -3,6 +3,7 @@ import React from "react";
 import { useTranslations } from "next-intl";
 import About from "@/app/components/About";
 import Team from "@/app/components/Team";
+import Link from "next/link";
 
 const Gather = () => {
   const t = useTranslations("Gather");
@@ -31,7 +32,6 @@ const Gather = () => {
           </div>
         </div>
       </div>
-      <Team />
     </>
   );
 };

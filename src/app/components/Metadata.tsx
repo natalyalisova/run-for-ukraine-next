@@ -1,7 +1,11 @@
-import { getTranslator } from "next-intl/server";
+import { getTranslations } from "next-intl/server";
 
-export async function generateMetadata({ params: { locale } }: { params: { locale: any } }) {
-  const t = await getTranslator(locale, "Metadata");
+export async function generateMetadata({
+  params: { locale },
+}: {
+  params: { locale: any };
+}) {
+  const t = await getTranslations("Metadata");
 
   return {
     title: t("title"),

@@ -1,7 +1,5 @@
 import TextGradient from "@/app/components/AnimatedTextGradient";
-import Link from "next-intl/link";
 import React from "react";
-import { useTranslations } from "next-intl";
 
 const ProjectDescription = () => {
   return (

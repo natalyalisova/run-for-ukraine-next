@@ -10,6 +10,11 @@
     box-sizing: border-box;
 }
 
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+}
 html {
     scroll-behavior: smooth;
     ::-webkit-scrollbar {
@@ -29,8 +34,11 @@ body {
 
 }
 
-
-
+link {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
 .flexCenter {
     @apply flex justify-center items-center;
 }
@@ -66,7 +74,7 @@ body {
 }
 
 .title-secondary {
-    @apply text-xl font-semibold my-2 ;
+    @apply text-xl md:text-4xl text-center font-semibold;
 }
 
 .text-small {
@@ -106,13 +114,13 @@ body {
 
 @keyframes animatedgradient {
     0% {
-        background-position: 0% 50%;
+        background-position: 0 50%;
     }
     50% {
         background-position: 100% 50%;
     }
     100% {
-        background-position: 0% 50%;
+        background-position: 0 50%;
     }
 }
 
@@ -121,9 +129,19 @@ body {
     @apply grid xl:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-10 mt-10 w-full;
 }
 
+.inputStyle{
+    @apply mb-4 w-full p-3 border bg-white text-black placeholder-gray-500 focus:outline-none focus:border-strong-azure;
+}
+
+
 .bg-img {
-    background: url("/images/yellow-fabric-bg.png");
+    background-image: url("/images/yellow-fabric-bg.png");
     background-size: cover;
+}
+
+.bg-yellow-black-stripes {
+    background-image: url("/images/yellow-black-stripe.png");
+    background-size: 7%;
 }
 
 .bg-img-24-feb-24 {
@@ -135,13 +153,13 @@ body {
 
 }
 
-.bg-img-run{
-    background: url("https://secondfront-cdn.nyc3.cdn.digitaloceanspaces.com/runforukraine2023%2Fgallery%2Frsz_120220529ukrainiansatottawarw_ta312.jpg");
-    background-size: cover;
-}
+/*.bg-img-run{*/
+/*    background-image: url("https://secondfront-cdn.nyc3.cdn.digitaloceanspaces.com/runforukraine2023%2Fgallery%2Frsz_120220529ukrainiansatottawarw_ta312.jpg");*/
+/*    background-size: cover;*/
+/*}*/
 
 .bg-img-israel{
-    background: url("/images/stend-with-israel.png");
+    background-image: url("../../../public/images/stend-with-israel.png");
     background-size: cover;
     background-repeat: no-repeat;
 

@@ -3,12 +3,14 @@ import { useTranslations } from "next-intl";
 import Social from "@/app/components/Social";
 import Report from "@/app/components/Report";
 import Gallery from "@/app/components/Gallery";
+import { UnderConstraction } from "@/app/components/UnderConstraction";
 
 const Donate = () => {
   const t = useTranslations("Gather");
 
   return (
     <div className="flex flex-col mt-28">
+      <UnderConstraction />
       <div className="text-center my-24">
         {/* <TextGradient text={t("donate-now")} /> */}
         <p className="text-xl mt-24">

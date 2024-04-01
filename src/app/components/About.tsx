@@ -23,7 +23,7 @@ const About = () => {
         id="about"
       >
         <h2 className="title uppercase">{t("about-title")}</h2>
-        <h3 className="title-secondary">{t("about-subtitle")}</h3>
+        <p className="mt-6">{t("about-subtitle")}</p>
         <p>
           {t("about-description-1")}
           <br />
