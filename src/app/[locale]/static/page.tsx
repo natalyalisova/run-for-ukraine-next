@@ -1,4 +1,4 @@
-import supabase from "../../../../utils/supabase";
+import supabase from "../../../../utils/supabase/client";
 import Post from "@/app/components/Post";
 
 export type Blog = {
