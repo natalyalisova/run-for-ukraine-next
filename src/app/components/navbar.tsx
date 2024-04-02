@@ -1,5 +1,6 @@
 "use client";
 import * as React from "react";
+import Image from "next/image";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
@@ -13,8 +14,7 @@ import Button from "@mui/material/Button";
 import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
 import AdbIcon from "@mui/icons-material/Adb";
-import { useLocale, useTranslations } from "next-intl";
-import ResponsiveImage from "@/app/components/ResponsiveImage";
+import { useLocale } from "next-intl";
 
 const pages = ["Products", "Pricing", "Blog"];
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
@@ -49,35 +49,31 @@ function Navbar() {
     <AppBar position="fixed" className="bg-strong-azure p-1 md:p-4">
       <Container maxWidth="xl" className="">
         <Toolbar disableGutters>
-          {/*<AdbIcon sx={{ display: { xs: "none", md: "flex" }, mr: 1 }} />*/}
+          <Image
+            src={"/images/Run-for-Ukraine-logo.png"}
+            width={94}
+            height={94}
+            alt={"Run for Ukraine Logo"}
+            className="hidden md:inline"
+          />
           <Typography
             variant="h6"
             noWrap
             component="a"
-            href="#app-bar-with-responsive-menu"
+            href="/"
             sx={{
               mr: 2,
+              ml: 2,
               display: { xs: "none", md: "flex" },
-              fontFamily: "monospace",
+              fontFamily: "raleway",
               fontWeight: 700,
-              letterSpacing: ".3rem",
+              letterSpacing: "",
               color: "inherit",
               textDecoration: "none",
             }}
           >
-            LOGO
+            #RunForUkraine
           </Typography>
-          <a href="/" className="flex items-center">
-            <ResponsiveImage
-              src={"/images/Run-for-Ukraine-logo.png"}
-              width={94}
-              height={94}
-              alt={"Run for Ukraine Logo"}
-            />
-            <span className="self-center text-2xl font-semibold whitespace-nowrap text-white hidden md:block ml-3">
-              #RunForUkraine
-            </span>
-          </a>
 
           <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
             <IconButton
@@ -120,7 +116,7 @@ function Navbar() {
             variant="h5"
             noWrap
             component="a"
-            href="#app-bar-with-responsive-menu"
+            href="/"
             sx={{
               mr: 2,
               display: { xs: "flex", md: "none" },
