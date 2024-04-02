@@ -111,24 +111,31 @@ function Navbar() {
               ))}
             </Menu>
           </Box>
-          <AdbIcon sx={{ display: { xs: "flex", md: "none" }, mr: 1 }} />
+          <Image
+            src={"/images/white-symbol.svg"}
+            width={24}
+            height={24}
+            alt={"Run for Ukraine Logo"}
+            className="inline md:hidden"
+          />
           <Typography
-            variant="h5"
+            variant="h6"
             noWrap
             component="a"
             href="/"
             sx={{
               mr: 2,
+              ml: 2,
               display: { xs: "flex", md: "none" },
               flexGrow: 1,
-              fontFamily: "monospace",
+              fontFamily: "raleway",
               fontWeight: 700,
-              letterSpacing: ".3rem",
+              letterSpacing: "",
               color: "inherit",
               textDecoration: "none",
             }}
           >
-            LOGO
+            #RunForUkraine
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
             {pages.map((page) => (
