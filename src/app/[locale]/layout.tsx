@@ -60,20 +60,12 @@ export default async function RootLayout({
         />
 
         <link rel="icon" href="/src/app/favicon.ico" sizes="any" />
-        <link
-          href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.css"
-          rel="stylesheet"
-        />
         <title>Run For Ukraine</title>
       </head>
       <body className="flex flex-col h-screen justify-between">
         <Navbar />
         <main className="flex-grow">{children}</main>
         <Footer />
-        <Script
-          src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.js"
-          async
-        ></Script>
         <Script src="https://kit.fontawesome.com/5721daa4dc.js" async></Script>
       </body>
     </html>
