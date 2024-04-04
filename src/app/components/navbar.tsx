@@ -9,19 +9,16 @@ import Typography from "@mui/material/Typography";
 import Menu from "@mui/material/Menu";
 import MenuIcon from "@mui/icons-material/Menu";
 import Container from "@mui/material/Container";
-import Avatar from "@mui/material/Avatar";
 import Button from "@mui/material/Button";
-import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
-import AdbIcon from "@mui/icons-material/Adb";
 import { useLocale } from "next-intl";
+import Link from "next/link";
+import { NavLinks } from "@/app/constants";
 
 const pages = ["Products", "Pricing", "Blog"];
-const settings = ["Profile", "Account", "Dashboard", "Logout"];
 
 function Navbar() {
   const locale = useLocale();
-  // const t = useTranslations("NavBar");
 
   const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(
     null,
@@ -109,6 +106,18 @@ function Navbar() {
                   <Typography textAlign="center">{page}</Typography>
                 </MenuItem>
               ))}
+
+              {/*{NavLinks.map((link) => (*/}
+              {/*  <li className="mb-4 lg:mb-0 lg:pr-2" key={link.key}>*/}
+              {/*    <Link*/}
+              {/*      href={link.href}*/}
+              {/*      className=" block py-2 pl-1  pr-4 text-white rounded md:bg-transparent md:text-white md:p-0  mt-4 lg:inline-block lg:mt-0 hover:text-cyan-100 mr-4"*/}
+              {/*      aria-current="page"*/}
+              {/*    >*/}
+              {/*      {t(link.text)}*/}
+              {/*    </Link>*/}
+              {/*  </li>*/}
+              {/*))}*/}
             </Menu>
           </Box>
           <Image
@@ -148,35 +157,12 @@ function Navbar() {
               </Button>
             ))}
           </Box>
-
-          <Box sx={{ flexGrow: 0 }}>
-            <Tooltip title="Open settings">
-              <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
-              </IconButton>
-            </Tooltip>
-            <Menu
-              sx={{ mt: "45px" }}
-              id="menu-appbar"
-              anchorEl={anchorElUser}
-              anchorOrigin={{
-                vertical: "top",
-                horizontal: "right",
-              }}
-              keepMounted
-              transformOrigin={{
-                vertical: "top",
-                horizontal: "right",
-              }}
-              open={Boolean(anchorElUser)}
-              onClose={handleCloseUserMenu}
-            >
-              {settings.map((setting) => (
-                <MenuItem key={setting} onClick={handleCloseUserMenu}>
-                  <Typography textAlign="center">{setting}</Typography>
-                </MenuItem>
-              ))}
-            </Menu>
+          <Box
+            sx={{ flexGrow: 0 }}
+            className="text-white underline underline-offset-2"
+          >
+            {locale === "ua" && <Link href="/en">EN</Link>}
+            {locale === "en" && <Link href="/ua">UA</Link>}
           </Box>
         </Toolbar>
       </Container>

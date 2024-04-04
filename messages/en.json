@@ -31,7 +31,7 @@
     "register": "Register",
     "donate": "Donate"
   },
-  "NavBar": {
+  "NavBarLinks": {
     "button-donate-title": "Donate",
     "button-fundraiser-title": "Start a fundraising fund",
     "fundraiser": "Fundraiser",
