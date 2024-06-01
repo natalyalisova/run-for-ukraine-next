@@ -45,6 +45,23 @@
   },
   "DonateWidget": {
   },
+  "ProjectDescription": {
+    "title": "#RunForUkraine: United by a Shared Goal — Support Ukraine",
+    "description-1": "The",
+    "description-2": "initiative aims to support Ukrainian defenders by raising funds for defense supplies, medical equipment, vehicles, and military clothing. Our mission is to equip those who bravely fight for our freedom in Ukraine with essential resources.",
+    "description-3": "Founded shortly after the full-scale invasion by Russia in March 2022, our community is dedicated to aiding Ukraine and its Armed Forces.",
+    "description-4": "By running together, we strive to hasten our victory and proudly raise the Ukrainian flag in global sports arenas once more."
+  },
+  "LatestNews": {
+    "title": "Latest news and events",
+    "image-title": "Two years of full scale war",
+    "article-title": "The second anniversary of russia&apos;s full-scale invasion of Ukraine",
+    "date": "February 24, 2024",
+    "description-1": "On February 24, 2024, in the Tel Aviv Port, the #RunForUkraine Tel-Aviv event brought together hearts united by a common goal. Timed to the second commemorate of russia’s full-scale invasion of Ukraine, this run showcased unwavering support, deep solidarity, and a determined fight for freedom and democracy. Despite the rain and wind, not just individuals, but entire families joined the run, making it a true act of spirit and unity.",
+    "description-2": " This run is more than just a sport. It’s our voice in the fight for peace and justice. Every step sends a message to the world that the war in Ukraine continues, we remember, and we support each other. Our strength lies in our unity, which brings us closer to victory.",
+    "description-3": "has become a symbol of unshakeable faith in a better future, where peace and freedom are the core values for all nations. This event reminded everyone present of the importance of democratic values, and of passing on ideals of dignity and courage to the younger generation. Thank you to everyone who joined and runs with #RunForUkraine",
+    "description-4": "Together we will win!"
+  },
   "WidgetDonateForm": {
     "SELECT-AMOUNT-TO-DONATE": "SELECT AMOUNT TO DONATE"
   },
@@ -125,6 +142,32 @@
     "contacts": "Contacts",
     "copyright": "©2023 RunForUkraine. All Rights Reserved.",
     "copyright-description": "The charity initiative aims to engage the international running community to support Ukraine amidst the full-scale war."
+  },
+  "Team": {
+    "Amelina-Olga": "Amelina Olga",
+    "Founder": "Founder & Team Leader",
+    "Dmytro-Lishchynskyi": "Lishchynskyi Dmytro",
+    "Runner": "Runner",
+    "Nataliia-Lisova": "Lisova Nataliia",
+    "programming":"Web development & UI/UX Design ",
+    "Roman-Dzhura": "Dzhura Roman",
+    "Raif-Max": "Raif Max",
+    "Merch": "Merch Leader & runner",
+    "Katya-Fishilevich": "Fishilevich Katya",
+    "Runner-Photographer": "Runner & Photographer",
+    "Dmytro-Kirichevsky": "Kirichevsky Dmytro",
+    "Anna-Luk": "Luk Anna",
+    "Social-media": "Social media",
+    "Semen-Yuriev": "Yuriev Semen",
+    "Borys-Mikhlin": "Mikhlin Borys",
+    "Pukovetska-Olga": "Pukovetska Olga",
+    "Designer-runner": "UI Designer & runner",
+    "Alyona-Novgorodskaya": "Novgorodskaya Alyona",
+    "Media": "Media",
+    "Kate-Sench": "Sench Kate",
+    "Photographer-runner": "Photographer & runner",
+    "Pavlo-Lisovyi": "Lisovyi Pavlo",
+    "consulting": "Adviser"
   },
   "AboutPage": {
     "about-page-title": "About project #RunForUkraine"

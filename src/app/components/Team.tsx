@@ -3,7 +3,7 @@ import { useTranslations } from "next-intl";
 import { TeamMembers } from "@/app/constants";
 
 const Team = () => {
-  const t = useTranslations("About");
+  const t = useTranslations("Team");
   return (
     <div className=" mx-auto grid grid-cols-1 md:grid-cols-3 gap-2 justify-center p-6">
       {TeamMembers.map((item) => (
@@ -16,8 +16,8 @@ const Team = () => {
             />
           )}
           <div className="text-center mt-2">
-            <h3 className="text-lg font-semibold">{item.title}</h3>
-            <p>{item.body}</p>
+            <h3 className="text-lg font-semibold">{t(item.title)}</h3>
+            <p>{t(item.body)}</p>
           </div>
         </div>
       ))}

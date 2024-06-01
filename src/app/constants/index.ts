@@ -76,15 +76,15 @@ export const FooterNavLinks = [
 export const TeamMembers = [
   {
     id: 1,
-    title: "Amelina Olga ",
-    body: "Founder & Team Leader",
+    title: "Amelina-Olga",
+    body: "Founder",
     imageUrl:
       "https://secondfront-cdn.nyc3.cdn.digitaloceanspaces.com/IMG_1568.JPG",
     docs: "https://instagram.com/amelina.olya?igshid=NzZlODBkYWE4Ng==",
   },
   {
     id: 2,
-    title: "Dmytro Lishchynskyi",
+    title: "Dmytro-Lishchynskyi",
     body: "Runner",
     imageUrl:
       "https://secondfront-cdn.nyc3.cdn.digitaloceanspaces.com/IMG_4481.JPG",
@@ -92,8 +92,8 @@ export const TeamMembers = [
   },
   {
     id: 3,
-    title: "Nataliia Lisova",
-    body: "Web development & UI/UX Design ",
+    title: "Nataliia-Lisova",
+    body: "programming",
     imageUrl:
       "https://secondfront-cdn.nyc3.cdn.digitaloceanspaces.com/nl-avatar.png",
     docs: "https://www.linkedin.com/in/nlisova/",
@@ -101,81 +101,81 @@ export const TeamMembers = [
 
   {
     id: 4,
-    title: "Roman Dzhura",
+    title: "Roman-Dzhura",
     body: "Runner",
     imageUrl: "/images/Roma.png",
     docs: "https://instagram.com/dzhu.rar?utm_source=qr&igshid=MzNlNGNkZWQ4Mg%3D%3D",
   },
   {
     id: 5,
-    title: "Raif Max",
-    body: "Merch Leader & runner",
+    title: "Raif-Max",
+    body: "Merch",
     imageUrl: "/images/Raif-Max.png",
     docs: "https://www.instagram.com/mnkzzz/",
   },
   {
     id: 6,
-    title: "Katya Fishilevich",
-    body: "Runner & Photographer",
+    title: "Katya-Fishilevich",
+    body: "Runner-Photographer",
     imageUrl: "/images/Kate.png",
     docs: "https://instagram.com/fishilevich.katya?igshid=MzMyNGUyNmU2YQ==",
   },
   {
     id: 7,
-    title: "Dmytro Kirichevsky",
+    title: "Dmytro-Kirichevsky",
     body: "Runner",
     imageUrl: "",
     docs: "",
   },
   {
     id: 8,
-    title: "Anna Luk",
-    body: "Social media",
+    title: "Anna-Luk",
+    body: "Social-media",
     imageUrl: "",
     docs: "",
   },
   {
     id: 9,
-    title: "Semen Yuriev",
+    title: "Semen-Yuriev",
     body: "Runner",
     imageUrl: "",
     docs: "",
   },
   {
     id: 10,
-    title: "Borys Mikhlin",
+    title: "Borys-Mikhlin",
     body: "Runner",
     imageUrl: "",
     docs: "",
   },
   {
     id: 11,
-    title: "Pukovetska Olga",
-    body: "Designer & runner",
+    title: "Pukovetska-Olga",
+    body: "Designer-runner",
     imageUrl: "",
     docs: "",
   },
   {
     id: 12,
-    title: "Alyona Novgorodskaya",
+    title: "Alyona-Novgorodskaya",
     body: "Media",
     imageUrl: "",
     docs: "",
   },
   {
     id: 13,
-    title: "Kate Sench",
-    body: "Photographer & runner",
+    title: "Kate-Sench",
+    body: "Photographer-runner",
     imageUrl: "",
     docs: "",
   },
   {
     id: 14,
-    title: "Pavlo Lisovyi",
-    body: "consulting web development",
+    title: "Pavlo-Lisovyi",
+    body: "consulting",
     imageUrl: "",
     docs: "",
   },
 ];
 
-// export const campaignCode = "2FUA-RFUA2023";
+export const campaignCode = "2FUA-RFUA2023";
