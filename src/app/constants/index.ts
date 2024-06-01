@@ -178,4 +178,4 @@ export const TeamMembers = [
   },
 ];
 
-// export const campaignCode = "2FUA-RFUA2023";
+export const campaignCode = "2FUA-RFUA2023";
