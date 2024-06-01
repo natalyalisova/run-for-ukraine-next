@@ -5,7 +5,6 @@ const config: Config = {
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
-    "./node_modules/flowbite-react/**/*.js",
     "./pages/**/*.{ts,tsx}",
     "./public/**/*.html",
   ],
@@ -19,8 +18,13 @@ const config: Config = {
       boxShadow: {
         menu: "0px 159px 95px rgba(13,12,34,0.01), 0px 71px 71px rgba(13,12,34,0.02), 0px 18px 39px rgba(13,12,34,0.02), 0px 0px 0px rgba(13,12,34,0.02)",
       },
+
       screens: {
-        xs: "400px",
+        sm: "600px",
+        md: "900px",
+        lg: "1024px",
+        xl: "1280px",
+        "2xl": "1536px",
       },
       maxWidth: {
         "10xl": "1680px",
@@ -41,6 +45,6 @@ const config: Config = {
       },
     },
   },
-  plugins: [require("flowbite/plugin"), require("tailwindcss-inner-border")],
+  plugins: [require("tailwindcss-inner-border")],
 };
 export default config;
