@@ -1,12 +1,11 @@
 import React from "react";
 import "./globals.css";
 import Script from "next/script";
-import { notFound } from "next/navigation";
 import Navbar from "@/app/components/navbar";
 import Footer from "@/app/components/Footer";
 import { generateMetadata } from "@/app/components/Metadata";
-
-const locales = ["en", "ua"];
+import { getMessages } from "next-intl/server";
+import { NextIntlClientProvider } from "next-intl";
 
 export default async function RootLayout({
   children,
@@ -15,11 +14,11 @@ export default async function RootLayout({
   children: React.ReactNode;
   params: any;
 }) {
-  // Validate that the incoming `locale` parameter is valid
-  const isValidLocale = locales.some((cur) => cur === locale);
-  if (!isValidLocale) notFound();
+  // const isValidLocale = locales.some((cur) => cur === locale);
+  // if (!isValidLocale) notFound();
 
   const metadata = await generateMetadata({ params: { locale } });
+  const messages = await getMessages();
 
   return (
     <html lang={locale}>
@@ -63,9 +62,11 @@ export default async function RootLayout({
         <title>Run For Ukraine</title>
       </head>
       <body className="flex flex-col h-screen justify-between">
-        <Navbar />
-        <main className="flex-grow">{children}</main>
-        <Footer />
+        <NextIntlClientProvider messages={messages}>
+          <Navbar />
+          <main className="flex-grow">{children}</main>
+          <Footer />
+        </NextIntlClientProvider>
         <Script src="https://kit.fontawesome.com/5721daa4dc.js" async></Script>
       </body>
     </html>

@@ -13,9 +13,6 @@ export const NavLinks = [
   // },
 ];
 
-//   href: "https://secondfrontukraine.com/events/runs", old events
-//     key: "events",
-
 export const TelegramLinks = [
   {
     href: "https://t.me/runforukrainetelaviv",
