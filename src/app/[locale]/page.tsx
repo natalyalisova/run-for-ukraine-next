@@ -11,6 +11,7 @@ import About from "@/app/components/About";
 import { createServerComponentClient } from "@supabase/auth-helpers-nextjs";
 import { cookies } from "next/headers";
 import { User } from "@supabase/supabase-js";
+import Team from "@/app/components/Team";
 
 type HomeProps = {
   user: User | null;
@@ -55,6 +56,7 @@ const Home: FunctionComponent<HomeProps> = ({ user }) => {
       <LatestNews />
       <Social />
       <About />
+      <Team />
       <Gather />
       <Report />
       <Gallery />

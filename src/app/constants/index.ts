@@ -116,7 +116,7 @@ export const TeamMembers = [
   {
     id: 6,
     title: "Katya Fishilevich",
-    body: "Runner",
+    body: "Runner & Photographer",
     imageUrl: "/images/Kate.png",
     docs: "https://instagram.com/fishilevich.katya?igshid=MzMyNGUyNmU2YQ==",
   },
@@ -150,8 +150,8 @@ export const TeamMembers = [
   },
   {
     id: 11,
-    title: "Yevhenia Tatarenko",
-    body: "Social media",
+    title: "Pukovetska Olga",
+    body: "Designer & runner",
     imageUrl: "",
     docs: "",
   },
@@ -163,19 +163,19 @@ export const TeamMembers = [
     docs: "",
   },
   {
-    id: 12,
+    id: 13,
     title: "Kate Sench",
     body: "Photographer & runner",
     imageUrl: "",
     docs: "",
   },
   {
-    id: 12,
-    title: "Taras Yanchynskyy",
+    id: 14,
+    title: "Pavlo Lisovyi",
     body: "consulting web development",
     imageUrl: "",
     docs: "",
   },
 ];
 
-export const campaignCode = "2FUA-RFUA2023";
+// export const campaignCode = "2FUA-RFUA2023";
