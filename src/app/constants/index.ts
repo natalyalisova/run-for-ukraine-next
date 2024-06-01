@@ -22,14 +22,6 @@ export const TelegramLinks = [
     href: "https://t.me/runforukrainelondon",
     textKey: "join-telegram-uk",
   },
-  {
-    href: "https://t.me/runforukrainemontreal",
-    textKey: "join-telegram-mr",
-  },
-  {
-    href: "https://t.me/runforukrainetoronto",
-    textKey: "join-telegram-canada",
-  },
 ];
 
 export const SocialLinks = [
