@@ -1,50 +1,39 @@
 import TextGradient from "@/app/components/AnimatedTextGradient";
 import React from "react";
+import { useTranslations } from "next-intl";
 
 const LatestNews = () => {
+  const t = useTranslations("LatestNews");
   return (
     <div className="text-center  mt-12 md:mt-24 border-b border-strong-azure">
       <div className="mx-auto mb-12">
-        <TextGradient text={"Latest news and events"} />
+        <TextGradient text={t("title")} />
         <div className="mt-4 h-1 w-64 bg-yellow-gold mx-auto mb-3"></div>
       </div>
 
       <div className="bg-img-24-feb-24 flexCenter flex-col py-48 px-6">
         <h2 className="uppercase title max-w-xl mx-auto text-white">
-          Two years of war
+          {t("image-title")}
         </h2>
       </div>
       <div className="bg-gradient-to-b from-yellow-gold to-strong-azure">
         <div className="max-w-4xl mx-auto grid gap-3 justify-center p-6 text-start  text-bace md:text-lg ">
           <h2 className="uppercase title mx-auto max-w-2xl text-center md:mt-24">
-            The second anniversary of russia&apos;s full-scale invasion of
-            Ukraine
+            {t("article-title")}
           </h2>
-          <p className="text-start text-gray-700 mt-12">February 24, 2024</p>
+          <p className="text-start text-gray-700 mt-12">{t("date")}</p>
 
-          <p className="inline mt-3">
-            On February 24, 2024, in the Tel Aviv Port, the #RunForUkraine
-            Tel-Aviv event brought together hearts united by a common goal.
-            Timed to the second commemorate of russia’s full-scale invasion of
-            Ukraine, this run showcased unwavering support, deep solidarity, and
-            a determined fight for freedom and democracy. Despite the rain and
-            wind, not just individuals, but entire families joined the run,
-            making it a true act of spirit and unity.
-          </p>
-          <img src="/images/24-feb-team.jpg" />
+          <p className="inline mt-3">{t("description-1")}</p>
+          <img
+            src="/images/24-feb-team.jpg"
+            alt="runners team with bunner in support to Ukraine"
+          />
+          <p className="mt-3">{t("description-2")}</p>
           <p className="mt-3">
-            This run is more than just a sport. It’s our voice in the fight for
-            peace and justice. Every step sends a message to the world that the
-            war in Ukraine continues, we remember, and we support each other.
-            Our strength lies in our unity, which brings us closer to victory.
-          </p>
-          <p className="mt-3">
-            #RunForUkraine has become a symbol of unshakeable faith in a better
-            future, where peace and freedom are the core values for all nations.
-            This event reminded everyone present of the importance of democratic
-            values, and of passing on ideals of dignity and courage to the
-            younger generation. Thank you to everyone who joined and runs with
-            #RUNFORUKRAINE 🏃‍♀️🏃🏻🇺🇦 Together we will win!
+            <span className="font-semibold text-strong-azure mx-1">
+              #RunForUkraine
+            </span>
+            {t("description-3")} 🏃‍️🏃🏻🇺🇦 {t("description-4")}
           </p>
         </div>
         <div className="news-gallery gap-3 p-5 justify-center ">
