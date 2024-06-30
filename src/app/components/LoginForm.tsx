@@ -63,7 +63,7 @@ export const LoginForm: React.FC<LoginFormProps> = ({
         {/*How to register*/}
         <div className="my-12 text-center max-w-screen-sm">
           <TextGradient
-            text={"I want to become a part of #RunForUktaine team"}
+            text={"I want to become a part of #RunForUkraine team"}
           />
           <div className="mt-4 h-1 w-64 bg-yellow-gold mx-auto mb-6"></div>
           <div className="md:mx-auto">
