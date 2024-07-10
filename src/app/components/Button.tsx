@@ -6,7 +6,7 @@ type Props = {
   title: string;
   leftIcon?: IconProp | null;
   rightIcon?: IconProp | null;
-  handleClick?: MouseEventHandler;
+  handleClick?: MouseEventHandler<HTMLButtonElement>;
   isSubmitting?: boolean;
   type?: "button" | "submit";
   icon?: string;
