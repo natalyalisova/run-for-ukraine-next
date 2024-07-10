@@ -16,18 +16,13 @@ import {
   TextField,
 } from "@mui/material";
 import { countries } from "@/app/constants/country-list";
+import { useRouter } from "next/navigation";
 
 export const RegistrationForRunForm = () => {
   const [distance, setDistance] = React.useState("");
   const [donation, setDonation] = React.useState("40");
   const [phone, setPhone] = React.useState("+972");
-  //
-  // useEffect(() => {
-  //   setDistance("");
-  //   setDonation("");
-  //   setPhone("+972");
-  // }, []);
-  //
+
   const handleDistance = (event: SelectChangeEvent) => {
     setDistance(event.target.value as string);
   };
@@ -38,6 +33,12 @@ export const RegistrationForRunForm = () => {
 
   const handlePhone = (newValue: any) => {
     setPhone(newValue);
+  };
+
+  const router = useRouter();
+
+  const handleRegistration = () => {
+    router.push("/independence-payment");
   };
 
   return (
@@ -175,7 +176,10 @@ export const RegistrationForRunForm = () => {
                 placeholder="City"
                 className="inputStyle rounded-md p-3"
               />
-              <button className="w-full mt-6 p-3 rounded-md bg-strong-azure text-yellow-gold hover:bg-blue-600 focus:outline-none">
+              <button
+                onClick={() => router.push("/independence-payment")}
+                className="w-full mt-6 p-3 rounded-md bg-strong-azure text-yellow-gold hover:bg-blue-600 focus:outline-none"
+              >
                 Register
               </button>
             </form>
