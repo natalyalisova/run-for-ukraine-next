@@ -130,7 +130,7 @@ link {
 }
 
 .inputStyle{
-    @apply mb-4 w-full p-3 border bg-white text-black placeholder-gray-500 focus:outline-none focus:border-strong-azure;
+    @apply mb-4 w-full border border-gray-300 bg-white text-black placeholder-gray-600 focus:outline-none focus:border-strong-azure focus:border-2;
 }
 
 
