@@ -9,6 +9,8 @@ import Select, { SelectChangeEvent } from "@mui/material/Select";
 import { MuiTelInput } from "mui-tel-input";
 import {
   Autocomplete,
+  Checkbox,
+  FormControlLabel,
   InputAdornment,
   OutlinedInput,
   TextField,
@@ -19,23 +21,25 @@ export const RegistrationForRunForm = () => {
   const [distance, setDistance] = React.useState("");
   const [donation, setDonation] = React.useState("40");
   const [phone, setPhone] = React.useState("+972");
-
-  useEffect(() => {
-    setDistance("");
-    setPhone("+972");
-    setDonation("");
-  }, []);
+  //
+  // useEffect(() => {
+  //   setDistance("");
+  //   setDonation("");
+  //   setPhone("+972");
+  // }, []);
+  //
   const handleDistance = (event: SelectChangeEvent) => {
     setDistance(event.target.value as string);
+  };
+
+  const handleDonation = (event: SelectChangeEvent) => {
+    setDonation(event.target.value as string);
   };
 
   const handlePhone = (newValue: any) => {
     setPhone(newValue);
   };
 
-  const handleDonation = (event: SelectChangeEvent) => {
-    setDistance(event.target.value as string);
-  };
   return (
     <>
       <main className="flex items-center p-6 flex-col">
@@ -51,7 +55,7 @@ export const RegistrationForRunForm = () => {
               <input
                 type="text"
                 name="name"
-                placeholder="Name on your race bib number"
+                placeholder="Name"
                 className="inputStyle rounded-md p-3"
               />
               <input
@@ -77,6 +81,11 @@ export const RegistrationForRunForm = () => {
                 </Select>
               </FormControl>
 
+              <div className="my-6 flex items-center justify-items-start ">
+                <FormControlLabel control={<Checkbox />} label="" />
+                <span>I'll run offline in Tel Aviv</span>
+              </div>
+
               <FormControl fullWidth className="mt-2">
                 <InputLabel id="donation-select-label">
                   Donation from $40
@@ -85,17 +94,16 @@ export const RegistrationForRunForm = () => {
                   labelId="donation-select-label"
                   id="donation-simple-select"
                   value={donation}
-                  label="Distance"
+                  label="Donation"
                   onChange={handleDonation}
                 >
-                  <MenuItem value={40}>40</MenuItem>
-                  <MenuItem value={50}>50</MenuItem>
-                  <MenuItem value={75}>75</MenuItem>
-                  <MenuItem value={100}>100</MenuItem>
-                  <MenuItem value={100}>200</MenuItem>
+                  <MenuItem value={40}>$ 40</MenuItem>
+                  <MenuItem value={50}>$ 50</MenuItem>
+                  <MenuItem value={75}>$ 75</MenuItem>
+                  <MenuItem value={100}>$ 100</MenuItem>
+                  <MenuItem value={100}>$ 200</MenuItem>
                 </Select>
               </FormControl>
-
               <p className="text-left px-2 py-3">
                 Delivery details of the certificate at the end of the race:
               </p>
@@ -117,7 +125,6 @@ export const RegistrationForRunForm = () => {
                 placeholder="Address"
                 className="inputStyle rounded-md p-3"
               />
-
               <Autocomplete
                 id="country-select-demo"
                 sx={{ width: 300 }}
