@@ -1,6 +1,5 @@
 import React from "react";
 import { useTranslations } from "next-intl";
-import TextGradient from "@/app/components/AnimatedTextGradient";
 import LatestNews from "@/app/components/LatestNews";
 
 const Events = () => {
