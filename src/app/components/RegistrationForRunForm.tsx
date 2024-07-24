@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect } from "react";
+import React from "react";
 import TextGradient from "@/app/components/AnimatedTextGradient";
 import Box from "@mui/material/Box";
 import InputLabel from "@mui/material/InputLabel";
@@ -11,29 +11,25 @@ import {
   Autocomplete,
   Checkbox,
   FormControlLabel,
-  InputAdornment,
-  OutlinedInput,
   TextField,
 } from "@mui/material";
 import { countries } from "@/app/constants/country-list";
 import { useRouter } from "next/navigation";
 
 export const RegistrationForRunForm = () => {
-  const [distance, setDistance] = React.useState("");
-  const [donation, setDonation] = React.useState("40");
+  const [donation, setDonation] = React.useState("150");
   const [phone, setPhone] = React.useState("+972");
-
-  const handleDistance = (event: SelectChangeEvent) => {
-    setDistance(event.target.value as string);
-  };
 
   const handleDonation = (event: SelectChangeEvent) => {
     setDonation(event.target.value as string);
   };
 
-  const handlePhone = (newValue: any) => {
-    setPhone(newValue);
-  };
+  // const handlePhone = (newValue: any) => {
+  //   setPhone(newValue);
+  // };
+  // const handleDistance = (event: SelectChangeEvent) => {
+  //   setDistance(event.target.value as string);
+  // };
 
   const router = useRouter();
 
@@ -45,7 +41,7 @@ export const RegistrationForRunForm = () => {
     <>
       <main className="flex items-center p-6 flex-col">
         <div className="my-12 text-center max-w-screen-md">
-          <TextGradient text={"Registration for a race"} />
+          <TextGradient text={"Registration for an Online race"} />
           <div className="mt-4 h-1 w-64 bg-yellow-gold mx-auto mb-6"></div>
           <div className="md:mx-auto">
             <p className="text-small md:text-base">
@@ -65,31 +61,26 @@ export const RegistrationForRunForm = () => {
                 placeholder="Email"
                 className="inputStyle rounded-md p-3"
               />
-              <FormControl fullWidth>
-                <InputLabel id="distance-select-label">Distance</InputLabel>
-                <Select
-                  labelId="distance-select-label"
-                  id="distance-select"
-                  value={distance}
-                  label="Distance"
-                  onChange={handleDistance}
-                >
-                  <MenuItem value={2}>2 km</MenuItem>
-                  <MenuItem value={5}>5 km</MenuItem>
-                  <MenuItem value={10}>10 km</MenuItem>
-                  <MenuItem value={21}> 21.0975 km</MenuItem>
-                  <MenuItem value={42}>42.195 km</MenuItem>
-                </Select>
-              </FormControl>
-
-              <div className="my-6 flex items-center justify-items-start ">
-                <FormControlLabel control={<Checkbox />} label="" />
-                <span>I'll run offline in Tel Aviv</span>
-              </div>
+              {/*<FormControl fullWidth>*/}
+              {/*  <InputLabel id="distance-select-label">Distance</InputLabel>*/}
+              {/*  <Select*/}
+              {/*    labelId="distance-select-label"*/}
+              {/*    id="distance-select"*/}
+              {/*    value={distance}*/}
+              {/*    label="Distance"*/}
+              {/*    onChange={handleDistance}*/}
+              {/*  >*/}
+              {/*    <MenuItem value={2}>2 km</MenuItem>*/}
+              {/*    <MenuItem value={5}>5 km</MenuItem>*/}
+              {/*    <MenuItem value={10}>10 km</MenuItem>*/}
+              {/*    <MenuItem value={21}> 21.0975 km</MenuItem>*/}
+              {/*    <MenuItem value={42}>42.195 km</MenuItem>*/}
+              {/*  </Select>*/}
+              {/*</FormControl>*/}
 
               <FormControl fullWidth className="mt-2">
                 <InputLabel id="donation-select-label">
-                  Donation from $40
+                  Donate from &#8372; 150
                 </InputLabel>
                 <Select
                   labelId="donation-select-label"
@@ -98,32 +89,24 @@ export const RegistrationForRunForm = () => {
                   label="Donation"
                   onChange={handleDonation}
                 >
-                  <MenuItem value={40}>$ 40</MenuItem>
-                  <MenuItem value={50}>$ 50</MenuItem>
-                  <MenuItem value={75}>$ 75</MenuItem>
-                  <MenuItem value={100}>$ 100</MenuItem>
-                  <MenuItem value={100}>$ 200</MenuItem>
+                  <MenuItem value={40}>&#8372; 150</MenuItem>
+                  <MenuItem value={50}>&#8372; 300</MenuItem>
+                  <MenuItem value={75}>&#8372; 500</MenuItem>
+                  <MenuItem value={100}>&#8372; 1000</MenuItem>
+                  <MenuItem value={100}>&#8372; 2000</MenuItem>
                 </Select>
               </FormControl>
-              <p className="text-left px-2 py-3">
-                Delivery details of the certificate at the end of the race:
-              </p>
+
               <input
                 type="text"
                 name="firstName"
                 placeholder="First Name"
-                className="inputStyle rounded-md p-3"
+                className="inputStyle rounded-md p-3 mt-3"
               />
               <input
                 type="text"
                 name="lastName"
                 placeholder="Last Name"
-                className="inputStyle rounded-md p-3"
-              />
-              <input
-                type="text"
-                name="address"
-                placeholder="Address"
                 className="inputStyle rounded-md p-3"
               />
               <Autocomplete
@@ -159,23 +142,11 @@ export const RegistrationForRunForm = () => {
                   />
                 )}
               />
-              <MuiTelInput
-                value={phone}
-                onChange={handlePhone}
-                className="inputStyle rounded-md"
-              />
-              <input
-                type="number"
-                name="zipcode"
-                placeholder="Zip Code"
-                className="inputStyle rounded-md p-3"
-              />
-              <input
-                type="text"
-                name="city"
-                placeholder="City"
-                className="inputStyle rounded-md p-3"
-              />
+              {/*<MuiTelInput*/}
+              {/*  value={phone}*/}
+              {/*  onChange={handlePhone}*/}
+              {/*  className="inputStyle rounded-md"*/}
+              {/*/>*/}
               <button
                 onClick={() => router.push("/independence-payment")}
                 className="w-full mt-6 p-3 rounded-md bg-strong-azure text-yellow-gold hover:bg-blue-600 focus:outline-none"
