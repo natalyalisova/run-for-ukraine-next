@@ -1,12 +1,12 @@
 import { UnderConstraction } from "../../components/UnderConstraction";
 import React from "react";
-import RegistrationForRunForm from "@/app/components/RegistrationForRunForm";
+import RegistrationForRunTLVForm from "@/app/components/RegistrationForRunTLVForm";
 
 export default function RegistrationForRun() {
   return (
     <>
       <UnderConstraction />
-      <RegistrationForRunForm />
+      <RegistrationForRunTLVForm />
     </>
   );
 }

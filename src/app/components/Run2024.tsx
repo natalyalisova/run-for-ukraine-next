@@ -68,7 +68,7 @@ const Run2024 = () => {
                   Cancel
                 </button>
                 <button
-                  onClick={() => router.push("/register-online-2024")}
+                  onClick={() => router.push("/register-tlv-2024")}
                   className="w-full mt-6 p-3 rounded-md bg-strong-azure text-yellow-gold hover:bg-blue-600 focus:outline-none"
                 >
                   Register in Tel Aviv
