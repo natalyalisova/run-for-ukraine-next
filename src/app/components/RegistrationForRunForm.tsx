@@ -1,12 +1,19 @@
 "use client";
-
 import { useState, FormEvent } from "react";
-import { supabase } from "../../lib/supabaseCliet";
+import { supabase } from "@/lib/supabaseCliet";
+import TextGradient from "@/app/components/AnimatedTextGradient";
+import FormControl from "@mui/material/FormControl";
+import InputLabel from "@mui/material/InputLabel";
+import Select from "@mui/material/Select";
+import MenuItem from "@mui/material/MenuItem";
+import Link from "next/link";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faChevronLeft } from "@fortawesome/free-solid-svg-icons";
 
 const RegistrationForRunForm = () => {
   const [email, setEmail] = useState<string>("");
   const [name, setName] = useState<string>("");
-  const [donation, setDonation] = useState<string>("");
+  const [donation, setDonation] = useState<string>("150");
   const [error, setError] = useState<string | null>(null);
   const [message, setMessage] = useState<string>("");
 
@@ -26,211 +33,103 @@ const RegistrationForRunForm = () => {
     }
 
     if (existingRegistration) {
-      setError("Email is already registered for the race");
+      setError("This Email is already registered for the race");
       return;
     }
 
-    // Register the new user
-    const { data, error } = await supabase
+    const { error } = await supabase
       .from("race_registrations_online")
       .insert([{ email, name, donation: parseInt(donation) }]);
 
     if (error) setError(error.message);
-    else setMessage("Registration successful!");
+    else {
+      setMessage("Registration successful!");
+      window.open(
+        "https://send.monobank.ua/jar/3o9J76qxHe",
+        "_blank",
+        "noopener,noreferrer",
+      );
+    }
   };
 
   return (
-    <form onSubmit={handleRegister}>
-      <div>
-        <label>Name:</label>
-        <input
-          type="text"
-          value={name}
-          onChange={(e) => setName(e.target.value)}
-          required
-        />
+    <main className="flex items-center p-6 flex-col">
+      <Link
+        href={"/run-independence-2024"}
+        className="underline underline-offset-4 text-strong-azure mr-auto"
+      >
+        <FontAwesomeIcon icon={faChevronLeft} style={{ color: "#0057b8" }} />
+        <span className="ml-2">Return</span>
+      </Link>
+      <div className="my-12 text-center max-w-screen-md">
+        <TextGradient text={"Registration for an Online race"} />
+        <div className="mt-4 h-1 w-64 bg-yellow-gold mx-auto mb-6"></div>
+        <div className="md:mx-auto">
+          <p className="text-small md:text-base">
+            This race dedicated to the 33rd anniversary of Ukraine's
+            independence
+          </p>
+          <form onSubmit={handleRegister} className="mt-12 mx-auto md:w-96">
+            <div>
+              <input
+                type="text"
+                value={name}
+                name="name"
+                placeholder="Name"
+                className="inputStyle rounded-md p-3"
+                onChange={(e) => setName(e.target.value)}
+                required
+              />
+            </div>
+            <div>
+              <input
+                type="email"
+                value={email}
+                name="email"
+                placeholder="Email"
+                className="inputStyle rounded-md p-3"
+                onChange={(e) => setEmail(e.target.value)}
+                required
+              />
+            </div>
+            <div>
+              <FormControl fullWidth className="mt-2">
+                <InputLabel id="donation-select-label">
+                  Donate from &#8372; 150
+                </InputLabel>
+                <Select
+                  labelId="donation-select-label"
+                  id="donation-simple-select"
+                  value={donation}
+                  label="Donation"
+                  onChange={(e) => setDonation(e.target.value)}
+                >
+                  <MenuItem value={150}>&#8372; 150</MenuItem>
+                  <MenuItem value={300}>&#8372; 300</MenuItem>
+                  <MenuItem value={500}>&#8372; 500</MenuItem>
+                  <MenuItem value={1000}>&#8372; 1000</MenuItem>
+                  <MenuItem value={2000}>&#8372; 2000</MenuItem>
+                </Select>
+              </FormControl>
+            </div>
+
+            {error && <p>{error}</p>}
+            {message && <p>{message}</p>}
+            <p className="text-start font-bold mt-2">
+              Be sure to add your email address in the payment comment in next
+              step!
+            </p>
+            <button
+              type="submit"
+              className="w-full mt-6 p-3 rounded-md bg-strong-azure text-yellow-gold hover:bg-blue-600 focus:outline-none"
+            >
+              Register
+            </button>
+          </form>
+        </div>
       </div>
-      <div>
-        <label>Donation:</label>
-        <input
-          type="number"
-          value={donation}
-          onChange={(e) => setDonation(e.target.value)}
-          required
-        />
-      </div>
-      <div>
-        <label>Email:</label>
-        <input
-          type="email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          required
-        />
-      </div>
-      {error && <p>{error}</p>}
-      {message && <p>{message}</p>}
-      <button type="submit">Register</button>
-    </form>
+    </main>
   );
 };
 
 export default RegistrationForRunForm;
-
-// import TextGradient from "@/app/components/AnimatedTextGradient";
-// import Box from "@mui/material/Box";
-// import InputLabel from "@mui/material/InputLabel";
-// import MenuItem from "@mui/material/MenuItem";
-// import FormControl from "@mui/material/FormControl";
-// import Select, { SelectChangeEvent } from "@mui/material/Select";
-// import {
-//   Autocomplete,
-//   TextField,
-// } from "@mui/material";
-// import { countries } from "@/app/constants/country-list";
-// import { useRouter } from "next/navigation";
-//
-// export const RegistrationForRunForm = () => {
-//   const [donation, setDonation] = React.useState("150");
-//   const [phone, setPhone] = React.useState("+972");
-//
-//   const handleDonation = (event: SelectChangeEvent) => {
-//     setDonation(event.target.value as string);
-//   };
-//
-//   // const handlePhone = (newValue: any) => {
-//   //   setPhone(newValue);
-//   // };
-//   // const handleDistance = (event: SelectChangeEvent) => {
-//   //   setDistance(event.target.value as string);
-//   // };
-//
-//   const router = useRouter();
-//
-//   const handleRegistration = () => {
-//     router.push("/independence-payment");
-//   };
-//
-//   return (
-//     <>
-//       <main className="flex items-center p-6 flex-col">
-//         <div className="my-12 text-center max-w-screen-md">
-//           <TextGradient text={"Registration for an Online race"} />
-//           <div className="mt-4 h-1 w-64 bg-yellow-gold mx-auto mb-6"></div>
-//           <div className="md:mx-auto">
-//             <p className="text-small md:text-base">
-//               This race dedicated to the 33rd anniversary of Ukraine's
-//               independence
-//             </p>
-//             <form className="mt-12 mx-auto md:w-96">
-//               <input
-//                 type="text"
-//                 name="name"
-//                 placeholder="Name"
-//                 className="inputStyle rounded-md p-3"
-//               />
-//               <input
-//                 type="email"
-//                 name="email"
-//                 placeholder="Email"
-//                 className="inputStyle rounded-md p-3"
-//               />
-//               {/*<FormControl fullWidth>*/}
-//               {/*  <InputLabel id="distance-select-label">Distance</InputLabel>*/}
-//               {/*  <Select*/}
-//               {/*    labelId="distance-select-label"*/}
-//               {/*    id="distance-select"*/}
-//               {/*    value={distance}*/}
-//               {/*    label="Distance"*/}
-//               {/*    onChange={handleDistance}*/}
-//               {/*  >*/}
-//               {/*    <MenuItem value={2}>2 km</MenuItem>*/}
-//               {/*    <MenuItem value={5}>5 km</MenuItem>*/}
-//               {/*    <MenuItem value={10}>10 km</MenuItem>*/}
-//               {/*    <MenuItem value={21}> 21.0975 km</MenuItem>*/}
-//               {/*    <MenuItem value={42}>42.195 km</MenuItem>*/}
-//               {/*  </Select>*/}
-//               {/*</FormControl>*/}
-//
-//               <FormControl fullWidth className="mt-2">
-//                 <InputLabel id="donation-select-label">
-//                   Donate from &#8372; 150
-//                 </InputLabel>
-//                 <Select
-//                   labelId="donation-select-label"
-//                   id="donation-simple-select"
-//                   value={donation}
-//                   label="Donation"
-//                   onChange={handleDonation}
-//                 >
-//                   <MenuItem value={40}>&#8372; 150</MenuItem>
-//                   <MenuItem value={50}>&#8372; 300</MenuItem>
-//                   <MenuItem value={75}>&#8372; 500</MenuItem>
-//                   <MenuItem value={100}>&#8372; 1000</MenuItem>
-//                   <MenuItem value={100}>&#8372; 2000</MenuItem>
-//                 </Select>
-//               </FormControl>
-//
-//               <input
-//                 type="text"
-//                 name="firstName"
-//                 placeholder="First Name"
-//                 className="inputStyle rounded-md p-3 mt-3"
-//               />
-//               <input
-//                 type="text"
-//                 name="lastName"
-//                 placeholder="Last Name"
-//                 className="inputStyle rounded-md p-3"
-//               />
-//               <Autocomplete
-//                 id="country-select-demo"
-//                 sx={{ width: 300 }}
-//                 options={countries}
-//                 autoHighlight
-//                 getOptionLabel={(option) => option.label}
-//                 renderOption={(props, option) => (
-//                   <Box
-//                     component="li"
-//                     sx={{ "& > img": { mr: 2, flexShrink: 0 } }}
-//                     {...props}
-//                   >
-//                     <img
-//                       loading="lazy"
-//                       width="20"
-//                       srcSet={`https://flagcdn.com/w40/${option.code.toLowerCase()}.png 2x`}
-//                       src={`https://flagcdn.com/w20/${option.code.toLowerCase()}.png`}
-//                       alt=""
-//                     />
-//                     {option.label} ({option.code}) +{option.phone}
-//                   </Box>
-//                 )}
-//                 renderInput={(params) => (
-//                   <TextField
-//                     {...params}
-//                     label="Choose a country"
-//                     inputProps={{
-//                       ...params.inputProps,
-//                       autoComplete: "new-password", // disable autocomplete and autofill
-//                     }}
-//                   />
-//                 )}
-//               />
-//               {/*<MuiTelInput*/}
-//               {/*  value={phone}*/}
-//               {/*  onChange={handlePhone}*/}
-//               {/*  className="inputStyle rounded-md"*/}
-//               {/*/>*/}
-//               <button
-//                 onClick={() => router.push("/independence-payment")}
-//                 className="w-full mt-6 p-3 rounded-md bg-strong-azure text-yellow-gold hover:bg-blue-600 focus:outline-none"
-//               >
-//                 Register
-//               </button>
-//             </form>
-//           </div>
-//         </div>
-//       </main>
-//     </>
-//   );
-// };
