@@ -9,6 +9,7 @@ import MenuItem from "@mui/material/MenuItem";
 import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronLeft } from "@fortawesome/free-solid-svg-icons";
+import { useRouter } from "next/navigation";
 
 const RegistrationForRunTLVForm = () => {
   const [email, setEmail] = useState<string>("");
@@ -17,6 +18,7 @@ const RegistrationForRunTLVForm = () => {
   const [error, setError] = useState<string | null>(null);
   const [message, setMessage] = useState<string>("");
 
+  const router = useRouter();
   const handleRegister = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
@@ -43,7 +45,7 @@ const RegistrationForRunTLVForm = () => {
 
     if (error) setError(error.message);
     else {
-      setMessage("Registration successful!");
+      router.push("/registration-tlv-successful");
       window.open(
         "https://send.monobank.ua/jar/3o9J76qxHe",
         "_blank",

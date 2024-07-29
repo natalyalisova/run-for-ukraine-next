@@ -1,12 +1,9 @@
 import React from "react";
-import { useTranslations } from "next-intl";
 import Run2024 from "@/app/components/Run2024";
 import TextGradient from "@/app/components/AnimatedTextGradient";
-import About from "@/app/components/About";
 import Image from "next/image";
 
 const Independence2024 = () => {
-  const t = useTranslations("Gather");
 
   return (
     <div className="mt-20 md:mt-36">
