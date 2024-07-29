@@ -18,7 +18,7 @@ const RegistrationOnlineSuccessful = () => {
         Please make sure to check your email for further instructions and
         updates as we get closer to the event date.
       </p>
-      <p>
+      <p className="mt-2">
         <span className="font-semibold mr-2">Date:</span>🗓️ Run between 10th of
         Aug and 10th of Sep 2024
       </p>
@@ -32,7 +32,7 @@ const RegistrationOnlineSuccessful = () => {
         If you have any questions, feel free to contact our support team at
         <a
           href="mailto:runforukraineil@gmail.com"
-          className="text-strong-azure font-semibold"
+          className="text-strong-azure font-semibold ml-1"
         >
           runforukraineil@gmail.com
         </a>

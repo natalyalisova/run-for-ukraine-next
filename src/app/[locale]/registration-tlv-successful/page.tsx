@@ -33,7 +33,7 @@ const RegistrationTLVSuccessful = () => {
         If you have any questions, feel free to contact our support team at
         <a
           href="mailto:runforukraineil@gmail.com"
-          className="text-strong-azure font-semibold"
+          className="text-strong-azure font-semibold ml-1"
         >
           runforukraineil@gmail.com
         </a>

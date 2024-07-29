@@ -16,6 +16,7 @@ const RegistrationForRunTLVForm = () => {
   const [name, setName] = useState<string>("");
   const [distance, setDistance] = useState<string>("");
   const [donation, setDonation] = useState<string>("150");
+  const [isChecked, setIsChecked] = useState<boolean>(false);
   const [error, setError] = useState<string | null>(null);
   const [message, setMessage] = useState<string>("");
 
@@ -152,6 +153,7 @@ const RegistrationForRunTLVForm = () => {
                   type="checkbox"
                   className="before:content[''] peer relative h-5 w-5 cursor-pointer appearance-none rounded-md border border-blue-gray-200 transition-all before:absolute before:top-2/4 before:left-2/4 before:block before:h-12 before:w-12 before:-translate-y-2/4 before:-translate-x-2/4 before:rounded-full before:bg-blue-gray-500 before:opacity-0 before:transition-opacity checked:border-gray-900 checked:bg-gray-900 checked:before:bg-gray-900 hover:before:opacity-10"
                   id="check"
+                  onChange={() => setIsChecked(!isChecked)}
                 />
                 <span className="absolute text-white transition-opacity opacity-0 pointer-events-none top-2/4 left-2/4 -translate-y-2/4 -translate-x-2/4 peer-checked:opacity-100">
                   <svg
@@ -173,7 +175,7 @@ const RegistrationForRunTLVForm = () => {
               <p className="mt-px font-light text-black cursor-pointer select-none text-left pt-2 text-small md:text-base">
                 By clicking 'Register' you agree to the Run For Ukraine{" "}
                 <Link
-                  href="/terms-n-conditions"
+                  href={"/terms-n-conditions"}
                   target="_blank"
                   className="text-gray-700 rounded underline-offset-1 underline md:bg-transparent hover:text-strong-azure mr-2"
                   aria-current="page"
@@ -182,7 +184,7 @@ const RegistrationForRunTLVForm = () => {
                 </Link>
                 and
                 <Link
-                  href="/cookies-privacy-policy"
+                  href={"/cookies-privacy-policy"}
                   target="_blank"
                   className=" text-gray-700 underline underline-offset-1 rounded md:bg-transparent hover:text-strong-azure ml-1"
                   aria-current="page"
@@ -200,7 +202,8 @@ const RegistrationForRunTLVForm = () => {
             </p>
             <button
               type="submit"
-              className="w-full mt-6 p-3 rounded-md bg-strong-azure text-yellow-gold hover:bg-blue-600 focus:outline-none"
+              disabled={!email || !name || !distance || !donation || !isChecked}
+              className="w-full mt-6 p-3 rounded-md bg-strong-azure text-yellow-gold hover:bg-blue-600 disabled:bg-neutral-400 disabled:text-white focus:outline-none"
             >
               Register
             </button>
