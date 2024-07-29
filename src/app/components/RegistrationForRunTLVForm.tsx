@@ -14,6 +14,7 @@ import { useRouter } from "next/navigation";
 const RegistrationForRunTLVForm = () => {
   const [email, setEmail] = useState<string>("");
   const [name, setName] = useState<string>("");
+  const [distance, setDistance] = useState<string>("");
   const [donation, setDonation] = useState<string>("150");
   const [error, setError] = useState<string | null>(null);
   const [message, setMessage] = useState<string>("");
@@ -41,7 +42,7 @@ const RegistrationForRunTLVForm = () => {
 
     const { error } = await supabase
       .from("race_registrations_tlv")
-      .insert([{ email, name, donation: parseInt(donation) }]);
+      .insert([{ email, name, distance, donation: parseInt(donation) }]);
 
     if (error) setError(error.message);
     else {
@@ -93,6 +94,19 @@ const RegistrationForRunTLVForm = () => {
                 onChange={(e) => setEmail(e.target.value)}
                 required
               />
+              <FormControl fullWidth className="mb-6">
+                <InputLabel id="distance-select-label">Distance</InputLabel>
+                <Select
+                  labelId="distance-select-label"
+                  id="distance-simple-select"
+                  value={distance}
+                  label="Distance"
+                  onChange={(e) => setDistance(e.target.value)}
+                >
+                  <MenuItem value={3}>3 km</MenuItem>
+                  <MenuItem value={5}> 5 km</MenuItem>
+                </Select>
+              </FormControl>
             </div>
             <div>
               <p className="text-start">
@@ -131,7 +145,7 @@ const RegistrationForRunTLVForm = () => {
             </div>
             <div className="inline-flex items-start">
               <label
-                className="relative flex items-center p-2 rounded-full cursor-pointer"
+                className="relative flex items-center mt-1 p-2 rounded-full cursor-pointer"
                 htmlFor="check"
               >
                 <input
