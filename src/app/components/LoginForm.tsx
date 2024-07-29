@@ -28,7 +28,6 @@ export const LoginForm: React.FC<LoginFormProps> = ({
   // LoginForm JSX
   return (
     <>
-      {" "}
       <UnderConstraction />
       <main className=" mt-24 md:mt-[150px] h-screen flex items-center p-6 flex-col">
         {/*LogIn form*/}
@@ -102,7 +101,7 @@ export const LoginForm: React.FC<LoginFormProps> = ({
               <p className="mt-px font-light text-black cursor-pointer select-none text-left pt-2 text-small md:text-base">
                 By clicking 'Sign Up' you agree to the Run For Ukraine{" "}
                 <Link
-                  href="/terms-n-conditions"
+                  href={"/terms-n-conditions"}
                   target="_blank"
                   className="text-gray-700 rounded underline-offset-1 underline md:bg-transparent hover:text-strong-azure mr-2"
                   aria-current="page"
@@ -111,7 +110,7 @@ export const LoginForm: React.FC<LoginFormProps> = ({
                 </Link>
                 and
                 <Link
-                  href="/cookies-privacy-policy"
+                  href={"/cookies-privacy-policy"}
                   target="_blank"
                   className=" text-gray-700 underline underline-offset-1 rounded md:bg-transparent hover:text-strong-azure ml-1"
                   aria-current="page"

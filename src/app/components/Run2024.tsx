@@ -11,11 +11,10 @@ import { useRouter } from "next/navigation";
 const Run2024 = () => {
   const router = useRouter();
   return (
-    <div className="text-center md:my-12">
-      <div className="flex items-center p-6 flex-col">
-        <div className="justify-start py-3 max-w-[1024px]">
-          <TextGradient text={"Register for a run"} />
-
+    <div className="text-center">
+      <div className="flex items-center flex-col">
+        <div className="justify-start max-w-[1024px]">
+          <h2 className="title text-strong-azure">Register for a run</h2>
           <div className="mt-6">
             <Accordion>
               <AccordionSummary
@@ -37,14 +36,11 @@ const Run2024 = () => {
                 </p>
               </AccordionDetails>
               <AccordionActions>
-                <button className="w-full mt-6 p-3 rounded-md bg-white text-strong-azure hover:bg-blue-50 focus:outline-none">
-                  Cancel
-                </button>
                 <button
                   onClick={() => router.push("/register-online-2024")}
                   className="w-full mt-6 p-3 rounded-md bg-strong-azure text-yellow-gold hover:bg-blue-600 focus:outline-none"
                 >
-                  Register for online
+                  Run online
                 </button>
               </AccordionActions>
             </Accordion>
@@ -64,14 +60,11 @@ const Run2024 = () => {
                 <p>🏃 Distance: 3 km, 5 km</p>
               </AccordionDetails>
               <AccordionActions>
-                <button className="w-full mt-6 p-3 rounded-md bg-white text-strong-azure hover:bg-blue-50 focus:outline-none">
-                  Cancel
-                </button>
                 <button
-                  onClick={() => router.push("/register-online-2024")}
+                  onClick={() => router.push("/register-tlv-2024")}
                   className="w-full mt-6 p-3 rounded-md bg-strong-azure text-yellow-gold hover:bg-blue-600 focus:outline-none"
                 >
-                  Register in Tel Aviv
+                  Run in Tel Aviv
                 </button>
               </AccordionActions>
             </Accordion>
