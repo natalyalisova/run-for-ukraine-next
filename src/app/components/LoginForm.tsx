@@ -28,7 +28,6 @@ export const LoginForm: React.FC<LoginFormProps> = ({
   // LoginForm JSX
   return (
     <>
-      {" "}
       <UnderConstraction />
       <main className=" mt-24 md:mt-[150px] h-screen flex items-center p-6 flex-col">
         {/*LogIn form*/}

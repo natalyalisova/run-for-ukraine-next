@@ -3,7 +3,7 @@ import React from "react";
 
 const CookiesPrivacyPolicy = () => {
   return (
-    <div className="flex flex-col mt-6 md:mt-12 mb-24  max-w-screen-sm mx-auto p-6">
+    <div className="flex flex-col mt-20 md:mt-52 mb-24  max-w-screen-sm mx-auto p-6">
       <h1 className="title-secondary">Cookies Privacy Policy</h1>
       <div className="mt-4 h-1 w-64 bg-yellow-gold mx-auto mb-6"></div>
       <p>
