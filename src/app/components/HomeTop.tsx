@@ -35,15 +35,13 @@ const HomeTop = () => {
         <div className="rounded-xl max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 justify-center p-6 md:bg-white/50 mt-6">
           <div className="flex  flex-col text-base md:text-lg">
             <p className="mb-3">
-              <b>#RunForUkraine</b> unites runners and athletes around the world
-              to support the Armed Forces of Ukraine.
+              <b>#RunForUkraine</b> {t("home-top-text-left-1")}
             </p>
             <p>
-              <b>Our goal</b> is to raise funds through running fundraising for
-              the needs of the Ukrainian military.
+              <b>{t("home-top-text-left-2")}</b> {t("home-top-text-left-3")}
             </p>
             <Button
-              title={"Donate"}
+              title={t("donate")}
               handleClick={handleButtonClick}
               isSubmitting={true}
               rightIcon={faCircleDollarToSlot}
@@ -51,16 +49,14 @@ const HomeTop = () => {
           </div>
 
           <div className="flex justify-center flex-col text-base md:text-lg ">
-            <p className="font-bold">
-              You can also become an ambassador of #RunForUkraine:
-            </p>
+            <p className="font-bold">{t("home-top-text-right-1")}</p>
             <p className="mt-2">
               <FontAwesomeIcon
                 icon={faCheck}
                 style={{ color: "#0057b8" }}
                 className="mr-4"
               />
-              Join our community and share your achievements and stories:
+              {t("home-top-text-right-2")}
               <Link
                 href={
                   "https://www.instagram.com/runforukraine?igsh=cjlxdTIxcGRjd3Nl"
@@ -86,6 +82,7 @@ const HomeTop = () => {
               >
                 Strava Club
               </Link>
+              .
             </p>
             <p className="mt-2">
               <FontAwesomeIcon
@@ -93,9 +90,7 @@ const HomeTop = () => {
                 style={{ color: "#0057b8" }}
                 className="mr-4"
               />
-              Run with the 🇺🇦 flag to remind international and local races every
-              day in your social media networks, that the war in Ukraine
-              continues
+              {t("home-top-text-right-3")}
             </p>
             <p className="mt-2">
               <FontAwesomeIcon
@@ -103,8 +98,15 @@ const HomeTop = () => {
                 style={{ color: "#0057b8" }}
                 className="mr-4"
               />
-              Become an organizer charity runs #RunForUkraine in your city. For
-              this contact us at
+              {t("home-top-text-right-4")}
+            </p>
+            <p className="mt-2">
+              <FontAwesomeIcon
+                icon={faCheck}
+                style={{ color: "#0057b8" }}
+                className="mr-4"
+              />
+              {t("home-top-text-right-5")}
               <a
                 href="mailto:runforukraineil@gmail.com"
                 className="text-strong-azure font-semibold ml-1 underline underline-offset-2"
