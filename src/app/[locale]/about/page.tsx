@@ -14,9 +14,7 @@ const AboutPage = () => {
         <div className="mt-4 h-1 w-64 bg-yellow-gold mx-auto mb-3"></div>
       </div>
       <About />
-      <div className="flex flex-col mt-14">
-        <Team />
-      </div>
+      <Team />
     </div>
   );
 };

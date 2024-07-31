@@ -31,8 +31,8 @@ const Button = ({
     <button
       type={type || "submit"}
       disabled={!isSubmitting}
-      className={`flexCenter gap-3 px-4 py-3 w-full md:mx-auto p-3 rounded-md hover:bg-blue-600 focus:outline-none my-6 bg-strong-azure
-            ${textColor || "text-yellow-gold"} 
+      className={`flexCenter gap-3 px-20 py-3 w-full text-xl md:mx-auto p-3 rounded-md hover:bg-blue-600 focus:outline-none my-6 bg-strong-azure
+            ${textColor || "text-yellow-gold font-semibold"} 
              ${margin || "mh-1"} 
             ${!isSubmitting ? "bg-black/50" : bgColor || "bg-strong-azure"}
             `}

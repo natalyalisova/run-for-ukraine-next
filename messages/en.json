@@ -5,7 +5,7 @@
     "content": "#RunForUkraine - Our goal is to collectively run 6992km and raise funds for radios that will help the Ukrainian Army to reach its goals."
   },
   "Home": {
-    "home-on-yellow-bg-title": "#RunForUkraine is a global community that unites runners and athletes from all over the world to support and help Ukraine and the Ukrainian military.",
+
     "Register for a run": "Register for a run",
     "goal": "Goal",
     "Collect-to-date": "Collect to date:",
@@ -27,6 +27,7 @@
     "button-fundraiser-title": "Start a fundraising fund"
   },
   "HomeTop": {
+    "home-on-yellow-bg-title": "Let's run together to our victory!",
     "our-goal": "Our goal is to collectively run 6992km and raise funds for the purchase of tactical radios for our defenders in Ukraine.",
     "register": "Register",
     "donate": "Donate"
