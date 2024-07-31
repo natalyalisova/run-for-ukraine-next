@@ -2,11 +2,24 @@ import React from "react";
 import { useTranslations } from "next-intl";
 import { TeamMembers } from "@/app/constants";
 
+type TeamMember = {
+  id: number;
+  title: string;
+  body: string;
+  imageUrl?: string;
+};
+const shuffleArray = (array: TeamMember[]): TeamMember[] => {
+  return array.sort(() => Math.random() - 0.5);
+};
+
 const Team = () => {
   const t = useTranslations("Team");
+
+  // Shuffle TeamMembers to display in random order
+  const shuffledTeamMembers = shuffleArray([...TeamMembers]);
   return (
     <div className=" mx-auto grid grid-cols-1 md:grid-cols-3 gap-2 justify-center p-6">
-      {TeamMembers.map((item) => (
+      {shuffledTeamMembers.map((item) => (
         <div key={item.id} className="p-2 m-3">
           {item.imageUrl && (
             <img

@@ -176,6 +176,13 @@ export const TeamMembers = [
     imageUrl: "",
     docs: "",
   },
+  {
+    id: 15,
+    title: "Anton-Masalov",
+    body: "Identity-designer",
+    imageUrl: "",
+    docs: "",
+  },
 ];
 
 export const campaignCode = "2FUA-RFUA2023";
