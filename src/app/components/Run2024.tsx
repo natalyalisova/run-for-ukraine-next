@@ -1,6 +1,5 @@
 "use client";
 import React from "react";
-import TextGradient from "@/app/components/AnimatedTextGradient";
 import Accordion from "@mui/material/Accordion";
 import AccordionActions from "@mui/material/AccordionActions";
 import AccordionSummary from "@mui/material/AccordionSummary";

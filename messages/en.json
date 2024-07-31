@@ -5,7 +5,6 @@
     "content": "#RunForUkraine - Our goal is to collectively run 6992km and raise funds for radios that will help the Ukrainian Army to reach its goals."
   },
   "Home": {
-    "home-on-yellow-bg-title": "#RunForUkraine is a global community that unites runners and athletes from all over the world to support and help Ukraine and the Ukrainian military.",
     "Register for a run": "Register for a run",
     "goal": "Goal",
     "Collect-to-date": "Collect to date:",
@@ -27,8 +26,15 @@
     "button-fundraiser-title": "Start a fundraising fund"
   },
   "HomeTop": {
-    "our-goal": "Our goal is to collectively run 6992km and raise funds for the purchase of tactical radios for our defenders in Ukraine.",
-    "register": "Register",
+    "home-on-yellow-bg-title": "Let's run together to our victory!",
+    "home-top-text-left-1": "unites runners and athletes around the world to support the Armed Forces of Ukraine.",
+    "home-top-text-left-2": "Our goal",
+    "home-top-text-left-3": "is to raise funds through running fundraising for the needs of the Ukrainian military.",
+    "home-top-text-right-1": "You can also become an ambassador of #RunForUkraine:",
+    "home-top-text-right-2": "Join our community and share your achievements and stories:",
+    "home-top-text-right-3": "Run with the \uD83C\uDDFA\uD83C\uDDE6 flag to remind international and local races",
+    "home-top-text-right-4": "Every day in your social media networks, that the war in Ukraine continues",
+    "home-top-text-right-5": "Become an organizer charity runs #RunForUkraine in your city. For this contact us at",
     "donate": "Donate"
   },
   "NavBarLinks": {
@@ -149,7 +155,7 @@
     "Dmytro-Lishchynskyi": "Lishchynskyi Dmytro",
     "Runner": "Runner",
     "Nataliia-Lisova": "Lisova Nataliia",
-    "programming":"Web development & UI/UX Design ",
+    "programming": "Web development & UI/UX Design ",
     "Roman-Dzhura": "Dzhura Roman",
     "Raif-Max": "Raif Max",
     "Merch": "Merch Leader & runner",
