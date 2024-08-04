@@ -137,7 +137,17 @@ link {
 .bg-img {
     background-image: url("/images/yellow-fabric-bg.png");
     background-size: cover;
+    background-position: center;
 }
+
+
+.bg-runners {
+    background-image: url("https://mzeawjitgciqwretgwlc.supabase.co/storage/v1/object/public/supabase-run-for-ukraine/files/IMG_4445%201.png?t=2024-08-04T10%3A31%3A06.733Z"
+    );
+    background-size: cover;
+    background-position: center;
+}
+
 
 .bg-yellow-black-stripes {
     background-image: url("/images/yellow-black-stripe.png");

@@ -21,7 +21,7 @@ const HomeTop = () => {
   };
 
   return (
-    <div className="w-full md:my-16">
+    <div className="w-full md:mt-16">
       <div className="bg-img flexCenter flex-col py-14">
         <Image
           src={"/images/run-for-ukraine-logo-blue.png"}

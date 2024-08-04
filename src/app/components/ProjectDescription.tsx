@@ -1,26 +1,16 @@
-import TextGradient from "@/app/components/AnimatedTextGradient";
 import React from "react";
 import { useTranslations } from "next-intl";
 
 const ProjectDescription = () => {
   const t = useTranslations("ProjectDescription");
   return (
-    <div className="max-w-4xl mx-auto grid grid-cols-1 text-center py-4 gap-y-6 mt-12 md:mt-1">
-      <div>
-        <TextGradient text={t("title")} />
-        <div className="mt-4 h-1 w-64 bg-yellow-gold mx-auto mb-3"></div>
-      </div>
-
-      <div className="text-start place-self-center text-bace md:text-lg mt-2 px-6">
-        <p className="inline text-bace md:text-lg mt-3">
-          {t("description-1")}
-          <span className="font-semibold text-strong-azure mx-1">
-            #RunForUkraine
-          </span>
-          {t("description-2")}
-        </p>
-        <p className="mt-3">{t("description-3")}</p>
-        <p className="mt-3">{t("description-4")}</p>
+    <div className="bg-runners flexCenter flex-col">
+      <div className="mx-auto grid grid-cols-1 text-center pt-6 gap-y-6 mt-8 md:mt-8 px-3">
+        <h1 className="font-semibold text-4xl text-white"> {t("title")}</h1>
+        <p className="text-xl  text-white">{t("description-1")}</p>
+        <div className="w-screen bg-yellow-gold place-self-center text-bace text-center md:text-lg mt-[700px] p-6">
+          <p className="inline text-xl mt-3">{t("description-2")}</p>
+        </div>
       </div>
     </div>
   );

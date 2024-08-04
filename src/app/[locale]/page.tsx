@@ -5,7 +5,6 @@ import Report from "@/app/components/Report";
 import Gallery from "@/app/components/Gallery";
 import ProjectDescription from "@/app/components/ProjectDescription";
 import Gather from "@/app/components/Gather";
-import LatestNews from "@/app/components/LatestNews";
 import { createServerComponentClient } from "@supabase/auth-helpers-nextjs";
 import { cookies } from "next/headers";
 import { User } from "@supabase/supabase-js";
@@ -32,7 +31,6 @@ const Home: FunctionComponent<HomeProps> = ({ user }) => {
     <div className="flex flex-col mt-14">
       <HomeTop />
       <ProjectDescription />
-      <LatestNews />
       <Social />
       <Gather />
       <Report />
