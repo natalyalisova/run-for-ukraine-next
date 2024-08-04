@@ -29,7 +29,7 @@ const HomeTop = () => {
           height={120}
           alt={"Run for Ukraine Logo"}
         />
-        <h2 className="uppercase text-strong-azure max-w-[550px] font-bold text-center text-2xl md:text-4xl leading-relaxed px-3 pt-10 pb-4">
+        <h2 className="uppercase text-strong-azure max-w-[850px] font-bold text-center text-2xl md:text-4xl leading-relaxed px-3 pt-10 pb-4">
           {t("home-on-yellow-bg-title")}
         </h2>
         <div className="rounded-xl max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 justify-center p-6 md:bg-white/50 mt-6">
