@@ -54,7 +54,31 @@
   "ProjectDescription": {
     "title": "Running = Donating",
     "description-1": "has already become a habit for the runners of #RunForUkraine.",
-    "description-2": "Every step you take and every donation you make are crucial for Ukraine's victory."
+    "description-2": "Every step you take and every donation you make are crucial for Ukraine's victory!"
+  },
+  "Independence": {
+    "title": "Independence Charity #RunForUkraine 2024",
+    "description-1": "Friends!",
+    "description-2": "We are glad to invite you to a charity run for the Independence Day of Ukraine. This is a great opportunity to unite, to once again draw the attention of others to the war that is being waged against Russia against Ukraine. Together, we will be able to help our military, thanks to whom we and our relatives have the opportunity to wake up every day in a free, indomitable Ukraine.",
+    "description-3": "Funds collected during the race will be transferred to the collection for the Armed Forces of Ukraine"
+  },
+  "Run2024": {
+    "title": "Register for a run",
+    "sub-title-1": "Online",
+    "sub-title-2": "In Tel Aviv",
+    "description-1": "Run between 10th of Aug and 10th of Sep 2024",
+    "description-2": "Run anywhere",
+    "description-3": "Donate from",
+    "description-4": "Any distance",
+    "description-5": "Run in support of Ukraine on August 24, 2024, anywhere in the world.",
+    "description-6": "Run on August 24, 2024",
+    "description-7": "Tel Aviv Port,",
+    "description-10": "Square",
+    "description-8": "Donate from ",
+    "description-9": "Distance: 3 km, 5 km",
+    "description-11": "Start at 7:00 AM",
+    "button-1": "Run online",
+    "button-2": "Run in Tel Aviv"
   },
   "LatestNews": {
     "title": "Latest news and events",
