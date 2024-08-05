@@ -39,6 +39,7 @@ const JoinUsPage = () => {
               scrolling="no"
               src="https://www.strava.com/clubs/1123141/latest-rides/214252ff5b5c952649075a008151320e8d2b11b8?show_rides=false"
               width="100%"
+              title="Strava"
             ></iframe>
             <iframe
               frameBorder="0"
@@ -46,6 +47,7 @@ const JoinUsPage = () => {
               scrolling="no"
               src="https://www.strava.com/clubs/1123141/latest-rides/214252ff5b5c952649075a008151320e8d2b11b8?show_rides=true"
               width="100%"
+              title="Strava"
             ></iframe>
           </div>
         </div>
