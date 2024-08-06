@@ -15,6 +15,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { useRouter } from "next/navigation";
 import TermsNConditions from "@/app/components/TermsNConditions";
+import { useTranslations } from "next-intl";
 
 const RegistrationForRunTLVForm = () => {
   const [email, setEmail] = useState<string>("");
@@ -24,6 +25,8 @@ const RegistrationForRunTLVForm = () => {
   const [isChecked, setIsChecked] = useState<boolean>(false);
   const [error, setError] = useState<string | null>(null);
   const [message, setMessage] = useState<string>("");
+
+  const t = useTranslations("RegistrationForRunTLVForm");
 
   const router = useRouter();
   const handleRegister = async (e: FormEvent<HTMLFormElement>) => {
@@ -68,10 +71,10 @@ const RegistrationForRunTLVForm = () => {
         className="underline underline-offset-4 text-strong-azure mr-auto"
       >
         <FontAwesomeIcon icon={faChevronLeft} style={{ color: "#0057b8" }} />
-        <span className="ml-2">Return</span>
+        <span className="ml-2">{t("return")}</span>
       </Link>
       <div className="my-12 text-center max-w-screen-md">
-        <TextGradient text={"Registration for a race in Tel Aviv"} />
+        <TextGradient text={t("title")} />
         <div className="mt-4 h-1 w-64 bg-yellow-gold mx-auto mb-6"></div>
         <div className="max-w-3xl text-start md:mx-auto text-small md:text-lg">
           <p className="mt-2">
@@ -80,8 +83,7 @@ const RegistrationForRunTLVForm = () => {
               style={{ color: "#0057b8" }}
               className="mr-4"
             />
-            After registration, within a few days, you will receive a
-            confirmation letter to the e-mail address you specified.
+            {t("description-1")}
           </p>
           <p className="mt-2">
             <FontAwesomeIcon
@@ -89,8 +91,7 @@ const RegistrationForRunTLVForm = () => {
               style={{ color: "#0057b8" }}
               className="mr-4"
             />
-            The starting number will be available from 6:15 to 7:00 at the start
-            of the run.
+            {t("description-2")}
           </p>
           <p className="mt-2">
             <FontAwesomeIcon
@@ -98,8 +99,9 @@ const RegistrationForRunTLVForm = () => {
               style={{ color: "#0057b8" }}
               className="mr-4"
             />
-            Wear the legendary #RunForUkraine t-shirts (you can also buy them at
-            the start).
+            {t("description-3")}
+            <span className="font-bold mx-1">#RunForUkraine </span>
+            {t("description-4")}
           </p>
           <p className="mt-2">
             <FontAwesomeIcon
@@ -107,7 +109,8 @@ const RegistrationForRunTLVForm = () => {
               style={{ color: "#0057b8" }}
               className="mr-4"
             />
-            Take the flags with you 🇺🇦, put on the 💛💙 uniform.
+            {t("description-5")} 🇺🇦, {t("description-6")} 💛💙{" "}
+            {t("description-7")}
           </p>
           <p className="mt-2">
             <FontAwesomeIcon
@@ -115,8 +118,8 @@ const RegistrationForRunTLVForm = () => {
               style={{ color: "#0057b8" }}
               className="mr-4"
             />
-            Each participant at the finish line will receive our branded pin
-            #RunForUkraine
+            {t("description-8")}
+            <span className="font-bold mx-1">#RunForUkraine</span>
           </p>
           <form onSubmit={handleRegister} className="mt-12  max-w-3xl">
             <div className="md:w-96">
@@ -124,7 +127,7 @@ const RegistrationForRunTLVForm = () => {
                 type="text"
                 value={name}
                 name="name"
-                placeholder="Name"
+                placeholder={t("name")}
                 className="inputStyle rounded-md p-3"
                 onChange={(e) => setName(e.target.value)}
                 required
@@ -133,7 +136,7 @@ const RegistrationForRunTLVForm = () => {
                 type="email"
                 value={email}
                 name="email"
-                placeholder="Email"
+                placeholder={t("email")}
                 className="inputStyle rounded-md p-3"
                 onChange={(e) => setEmail(e.target.value)}
                 required
@@ -144,19 +147,16 @@ const RegistrationForRunTLVForm = () => {
                   labelId="distance-select-label"
                   id="distance-simple-select"
                   value={distance}
-                  label="Distance"
+                  label={t("distance")}
                   onChange={(e) => setDistance(e.target.value)}
                 >
-                  <MenuItem value={3}>3 km</MenuItem>
-                  <MenuItem value={5}> 5 km</MenuItem>
+                  <MenuItem value={3}>3 {t("km")}</MenuItem>
+                  <MenuItem value={5}> 5 {t("km")}</MenuItem>
                 </Select>
               </FormControl>
             </div>
 
-            <p className="text-start">
-              One Israeli Shekel (ILS) is approximately equivalent to 11
-              Ukrainian Hryvnias (UAH)
-            </p>
+            <p className="text-start">{t("description-9")}</p>
             <div className="md:w-96">
               <Link
                 href={
@@ -170,7 +170,7 @@ const RegistrationForRunTLVForm = () => {
               </Link>
               <FormControl fullWidth className="mt-6">
                 <InputLabel id="donation-select-label">
-                  Donate from &#8362; 100
+                  {t("description-10")} &#8362; 100
                 </InputLabel>
                 <Select
                   labelId="donation-select-label"
@@ -199,8 +199,7 @@ const RegistrationForRunTLVForm = () => {
                 style={{ color: "#0057b8" }}
                 className="mr-4"
               />
-              Be sure to add your email address in the payment comment in next
-              step!
+              {t("description-11")}
             </p>
             <div className="md:w-96 mx-auto">
               <button
@@ -210,7 +209,7 @@ const RegistrationForRunTLVForm = () => {
                 }
                 className="w-full mt-6 p-3 rounded-md bg-strong-azure text-yellow-gold hover:bg-blue-600 disabled:bg-neutral-400 disabled:text-white focus:outline-none"
               >
-                Register
+                {t("register")}
               </button>
             </div>
           </form>
