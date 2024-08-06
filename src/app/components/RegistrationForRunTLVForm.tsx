@@ -172,7 +172,7 @@ const RegistrationForRunTLVForm = () => {
                   </svg>
                 </span>
               </label>
-              <p className="mt-px font-light text-black cursor-pointer select-none text-left pt-2 text-small md:text-base">
+              <p className="mt-1 font-light text-black cursor-pointer select-none text-left pl-2 pt-2 text-small md:text-base">
                 By clicking 'Register' you agree to the Run For Ukraine{" "}
                 <Link
                   href={"/terms-n-conditions"}

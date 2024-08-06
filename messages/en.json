@@ -96,6 +96,28 @@
     "button-1": "Run online",
     "button-2": "Run in Tel Aviv"
   },
+  "RegistrationForRunOnlineForm": {
+    "title": "Registration for an Online race",
+    "return": "Return",
+    "description-1":"After registration, within a few days you will receive your starting number to the e-mail address you provided.",
+    "description-2":"Print your racing number in A5 format.",
+    "description-3":"Take photos and videos, tag the page",
+    "description-4":"and use the hashtag",
+    "description-10": "in your social networks.",
+    "description-5": "Name",
+    "description-6": "Email",
+    "description-7": "One United States Dollar (USD) is approximately equivalent to 41 Ukrainian Hryvnias (UAH)",
+    "description-8": "Donate from",
+    "description-9": "Be sure to add your email address in comment to the payment in next step! So we could confirm your donation.",
+    "register": "Register"
+  },
+  "TermsNConditions": {
+    "description-1": "By clicking 'Register' you agree to the Run For Ukraine",
+    "description-2": "Terms and Conditions",
+    "description-3": "and",
+    "description-4": "Cookies & Privacy Policy",
+    "description-5": "."
+  },
   "LatestNews": {
     "title": "Latest news and events",
     "image-title": "Two years of full scale war",
