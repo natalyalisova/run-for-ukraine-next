@@ -9,6 +9,7 @@ import { createServerComponentClient } from "@supabase/auth-helpers-nextjs";
 import { cookies } from "next/headers";
 import { User } from "@supabase/supabase-js";
 import HomeTop from "@/app/components/HomeTop";
+import Independence from "@/app/components/Independence";
 
 type HomeProps = {
   user: User | null;
@@ -31,6 +32,7 @@ const Home: FunctionComponent<HomeProps> = ({ user }) => {
     <div className="flex flex-col mt-14">
       <HomeTop />
       <ProjectDescription />
+      {/*<Independence />*/}
       <Social />
       <Gather />
       <Report />
