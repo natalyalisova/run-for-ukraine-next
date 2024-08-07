@@ -70,15 +70,13 @@ export const userLinks = [
 
 export const FooterNavLinks = [
   {
-    href: "/about",
-    title: "Who are we",
-    textKey: "who-are-we",
-  },
-  {
-    href: "/donate",
-    title: "Donate",
+    href: "https://send.monobank.ua/jar/3o9J76qxHe",
     textKey: "donate",
+    title: "donate",
   },
+  { href: "/about", textKey: "about", title: "about" },
+  { href: "/events", textKey: "events", title: "events" },
+  { href: "/join-us", textKey: "join-us", title: "join-us" },
 ];
 
 export const TeamMembers = [

@@ -253,7 +253,14 @@
     "who-are-we": "ХТО МИ Є",
     "donate": "ДОНАТИ",
     "contacts": "КОНТАКТИ",
-    "copyright": "©2022-2023 RunForUkraine. ",
+    "about": "Про проект",
+    "events": "Події",
+    "join-us": "Контакти",
+    "reporting": "Звіт",
+    "join-telegram-uk": "RunForUkraine Лондон, Великобританія",
+    "join-telegram-wroclaw": "RunForUkraine Вроцлав, Польща",
+    "join-telegram-israel": "RunForUkraine Тель-Авів, Ізраїль",
+    "copyright": "©2022-2023 RunForUkraine",
     "copyright-description": "Благодійна ініціатива спрямована на залучення міжнародної бігової спільноти до підтримки України в умовах повномасштабної війни."
   },
   "AboutPage": {
