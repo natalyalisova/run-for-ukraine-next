@@ -1,10 +1,14 @@
 export const NavLinks = [
-  { href: "/donate", key: "donate", text: "donate" },
+  {
+    href: "https://send.monobank.ua/jar/3o9J76qxHe",
+    key: "donate",
+    text: "donate",
+  },
   { href: "/about", key: "about", text: "about" },
   { href: "/events", key: "events", text: "events" },
   { href: "/join-us", key: "join-us", text: "join-us" },
-  { href: "/reports", key: "reporting", text: "reporting" },
-  { href: "/login", key: "login", text: "login" },
+  // { href: "/reports", key: "reporting", text: "reporting" },
+  // { href: "/login", key: "login", text: "login" },
 
   // {
   //   href: "https://shop.secondfrontukraine.com/products/run-for-ukraine-unisex-tee",
@@ -17,6 +21,10 @@ export const TelegramLinks = [
   {
     href: "https://t.me/runforukrainetelaviv",
     textKey: "join-telegram-israel",
+  },
+  {
+    href: "https://t.me/wroclawrunforukraine",
+    textKey: "join-telegram-wroclaw",
   },
   {
     href: "https://t.me/runforukrainelondon",

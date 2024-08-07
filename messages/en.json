@@ -44,7 +44,7 @@
     "donate": "Donate",
     "about": "About",
     "events": "Events",
-    "join-us": "Join us",
+    "join-us": "Contacts",
     "reporting": "Reporting",
     "login": "My account",
     "shop": "Shop"
@@ -210,9 +210,10 @@
     "join-our-run-club": "Join our run club on",
     "join-telegram-title": "Join our Telegram channels",
     "join-telegram-canada": "Toronto, Canada",
-    "join-telegram-uk": "London, UK",
+    "join-telegram-uk": "RunForUkraine London, UK",
     "join-telegram-mr": "Montreal, Canada",
-    "join-telegram-israel": "Tel-Aviv, Israel"
+    "join-telegram-wroclaw": "RunForUkraine Wroclaw, Poland",
+    "join-telegram-israel": "RunForUkraine Tel-Aviv, Israel"
   },
   "Report": {
     "PREVIOUS-FUNDRAISERS": "PREVIOUS FUNDRAISERS",

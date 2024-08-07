@@ -40,10 +40,10 @@
   "NavBarLinks": {
     "button-donate-title": "Допомогти",
     "button-fundraiser-title": "Розпочати збір",
-    "donate": "Збір",
+    "donate": "Задонатити",
     "about": "Про проект",
     "events": "Події",
-    "join-us": "Долучайся",
+    "join-us": "Контакти",
     "reporting": "Звіт",
     "login": "Власний кабінет",
     "shop": "Mерч"
@@ -208,9 +208,10 @@
     "join-our-run-club": "Долучайся до клубу на",
     "join-telegram-title": "Долучайся до Телеграм каналів",
     "join-telegram-canada": "Торонто, Канада",
-    "join-telegram-uk": "Лондон, Великобританія",
+    "join-telegram-uk": "RunForUkraine Лондон, Великобританія",
     "join-telegram-mr": "Монреаль, Канада",
-    "join-telegram-israel": "Тель-Авів, Ізраїль"
+    "join-telegram-wroclaw": "RunForUkraine Вроцлав, Польща",
+    "join-telegram-israel": "RunForUkraine Тель-Авів, Ізраїль"
   },
   "Report": {
     "PREVIOUS-FUNDRAISERS": "МИНУЛІ ЗБОРИ",
