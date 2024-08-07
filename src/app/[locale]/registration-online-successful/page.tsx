@@ -1,5 +1,7 @@
 import React from "react";
 import Link from "next/link";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCircleExclamation } from "@fortawesome/free-solid-svg-icons";
 
 const RegistrationOnlineSuccessful = () => {
   return (
@@ -14,7 +16,12 @@ const RegistrationOnlineSuccessful = () => {
         registration.
       </p>
 
-      <p className="mt-2">
+      <p className="mt-2 font-semibold">
+        <FontAwesomeIcon
+          icon={faCircleExclamation}
+          style={{ color: "#0057b8" }}
+          className="mr-4"
+        />{" "}
         Please make sure to check your email for further instructions and
         updates as we get closer to the event date.
       </p>
