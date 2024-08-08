@@ -55,6 +55,8 @@ const HomeTop = () => {
                 icon={faCheck}
                 style={{ color: "#0057b8" }}
                 className="mr-4"
+                width={25}
+                height={25}
               />
               {t("home-top-text-right-2")}
               <Link
@@ -89,6 +91,8 @@ const HomeTop = () => {
                 icon={faCheck}
                 style={{ color: "#0057b8" }}
                 className="mr-4"
+                width={25}
+                height={25}
               />
               {t("home-top-text-right-3")}
             </p>
@@ -97,6 +101,8 @@ const HomeTop = () => {
                 icon={faCheck}
                 style={{ color: "#0057b8" }}
                 className="mr-4"
+                width={25}
+                height={25}
               />
               {t("home-top-text-right-4")}
             </p>
@@ -105,6 +111,8 @@ const HomeTop = () => {
                 icon={faCheck}
                 style={{ color: "#0057b8" }}
                 className="mr-4"
+                width={25}
+                height={25}
               />
               {t("home-top-text-right-5")}
               <a
