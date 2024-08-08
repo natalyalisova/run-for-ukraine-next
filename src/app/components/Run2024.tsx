@@ -22,7 +22,7 @@ const Run2024 = () => {
                 expandIcon={<ExpandMoreIcon />}
                 aria-controls="panel3-content"
                 id="panel3-header"
-                className="text-xl text-strong-azure"
+                className="text-xl text-strong-azure font-semibold"
               >
                 {t("sub-title-1")}
               </AccordionSummary>
@@ -47,14 +47,14 @@ const Run2024 = () => {
                 expandIcon={<ExpandMoreIcon />}
                 aria-controls="panel3-content"
                 id="panel3-header"
-                className="text-xl text-strong-azure"
+                className="text-xl text-strong-azure font-semibold"
               >
                 {t("sub-title-2")}
               </AccordionSummary>
               <AccordionDetails className="text-start">
                 <p>🗓️ {t("description-6")} </p>
                 <p>
-                  📍 {t("description-7")} I❤️TLV {t("description-10")}
+                  📍 {t("description-7")} I ❤️ TLV {t("description-10")}
                 </p>
                 <p>⏰ {t("description-11")} Старт: 7:00 AM </p>
                 <p>✅ {t("description-8")} &#8362; 100 (NIS)</p>
