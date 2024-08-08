@@ -150,7 +150,7 @@ link {
 
 
 .bg-yellow-black-stripes {
-    background-image: url("../../../public/images/yellow-black-stripe.png");
+    background-image: url("/images/yellow-black-stripe.png");
     background-size: 7%;
 }
 

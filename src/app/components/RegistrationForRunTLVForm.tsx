@@ -70,10 +70,15 @@ const RegistrationForRunTLVForm = () => {
         href={"/run-independence-2024"}
         className="underline underline-offset-4 text-strong-azure mr-auto"
       >
-        <FontAwesomeIcon icon={faChevronLeft} style={{ color: "#0057b8" }} />
+        <FontAwesomeIcon
+          icon={faChevronLeft}
+          style={{ color: "#0057b8" }}
+          width={25}
+          height={25}
+        />
         <span className="ml-2">{t("return")}</span>
       </Link>
-      <div className="my-12 text-center max-w-screen-md">
+      <div className="text-center max-w-screen-md mt-4">
         <TextGradient text={t("title")} />
         <div className="mt-4 h-1 w-64 bg-yellow-gold mx-auto mb-6"></div>
         <div className="max-w-3xl text-start md:mx-auto text-small md:text-lg">
@@ -82,6 +87,8 @@ const RegistrationForRunTLVForm = () => {
               icon={faCheck}
               style={{ color: "#0057b8" }}
               className="mr-4"
+              width={25}
+              height={25}
             />
             {t("description-1")}
           </p>
@@ -90,6 +97,8 @@ const RegistrationForRunTLVForm = () => {
               icon={faCheck}
               style={{ color: "#0057b8" }}
               className="mr-4"
+              width={25}
+              height={25}
             />
             {t("description-2")}
           </p>
@@ -98,6 +107,8 @@ const RegistrationForRunTLVForm = () => {
               icon={faCheck}
               style={{ color: "#0057b8" }}
               className="mr-4"
+              width={25}
+              height={25}
             />
             {t("description-3")}
             <span className="font-bold mx-1">#RunForUkraine </span>
@@ -108,6 +119,8 @@ const RegistrationForRunTLVForm = () => {
               icon={faCheck}
               style={{ color: "#0057b8" }}
               className="mr-4"
+              width={25}
+              height={25}
             />
             {t("description-5")} 🇺🇦, {t("description-6")} 💛💙{" "}
             {t("description-7")}
@@ -117,6 +130,8 @@ const RegistrationForRunTLVForm = () => {
               icon={faCheck}
               style={{ color: "#0057b8" }}
               className="mr-4"
+              width={25}
+              height={25}
             />
             {t("description-8")}
             <span className="font-bold mx-1">#RunForUkraine</span>

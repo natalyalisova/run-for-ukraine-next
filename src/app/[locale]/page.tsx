@@ -35,7 +35,7 @@ const Home: FunctionComponent<HomeProps> = ({ user }) => {
       <ProjectDescription />
       <Social />
       <Gather />
-      <Report />
+      {/*<Report />*/}
       {/*<Gallery />*/}
     </div>
   );

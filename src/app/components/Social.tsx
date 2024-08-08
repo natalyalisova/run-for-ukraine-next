@@ -57,7 +57,7 @@ const Social = () => {
             <h2 className="font-semibold text-2xl py-3">
               {t("join-telegram-title")}
             </h2>
-            <ul className="text-strong-azure ml-3 text-base flex flex-col space-y-3 mt-3">
+            <ul className="text-strong-azure ml-3 text-lg font-semibold flex flex-col space-y-3 mt-3">
               {TelegramLinks.map(({ href, textKey }) => (
                 <li key={href}>
                   <a

@@ -26,7 +26,7 @@ const Team = () => {
               <img
                 src={item.imageUrl}
                 alt="slides"
-                className="rounded-full border-4 w-[250px] h-[250px] object-cover  border-strong-azure/50 shadow-md shadow-blue-500/50 "
+                className="rounded-full border-4 w-[200px] h-[200px] object-cover  border-strong-azure/50 shadow-md shadow-blue-500/50 mx-auto"
               />
             )}
             <div className="text-center mt-2">
