@@ -135,7 +135,7 @@ link {
 
 
 .bg-img {
-    background-image: url("/images/yellow-fabric-bg.png");
+    background-image: url("../../../public/images/yellow-fabric-bg.png");
     background-size: cover;
     background-position: center;
 }
@@ -150,23 +150,25 @@ link {
 
 
 .bg-yellow-black-stripes {
-    background-image: url("/images/yellow-black-stripe.png");
+    background-image: url("../../../public/images/yellow-black-stripe.png");
     background-size: 7%;
+}
+
+.bg-img-24-aug-24 {
+    background-image: url("https://secondfront-cdn.nyc3.cdn.digitaloceanspaces.com/IMG_4517.JPG") ;
+    background-size: cover;
+    background-position: center;
 }
 
 .bg-img-24-feb-24 {
     background: linear-gradient(rgba(0, 0, 0, 0.5),
-    rgba(0, 0, 0, 0.5)),url("/images/24-feb-cover.jpg");
+    rgba(0, 0, 0, 0.5)),url("../../../public/images/24-feb-cover.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 
 }
 
-/*.bg-img-run{*/
-/*    background-image: url("https://secondfront-cdn.nyc3.cdn.digitaloceanspaces.com/runforukraine2023%2Fgallery%2Frsz_120220529ukrainiansatottawarw_ta312.jpg");*/
-/*    background-size: cover;*/
-/*}*/
 
 .bg-img-israel{
     background-image: url("../../../public/images/stend-with-israel.png");

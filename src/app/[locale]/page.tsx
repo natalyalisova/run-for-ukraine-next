@@ -31,8 +31,8 @@ const Home: FunctionComponent<HomeProps> = ({ user }) => {
   return (
     <div className="flex flex-col mt-14">
       <HomeTop />
+      <Independence />
       <ProjectDescription />
-      {/*<Independence />*/}
       <Social />
       <Gather />
       <Report />

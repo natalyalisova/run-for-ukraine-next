@@ -1,6 +1,5 @@
 import TextGradient from "@/app/components/AnimatedTextGradient";
 import Run2024 from "@/app/components/Run2024";
-import Image from "next/image";
 import React from "react";
 import { useTranslations } from "next-intl";
 import Link from "next/link";
@@ -9,12 +8,12 @@ const Independence = () => {
   const t = useTranslations("Independence");
   return (
     <>
-      <div className="text-center md:my-12">
-        <div className="flex items-center p-6 flex-col">
-          <div className="justify-start py-3 max-w-[1024px]">
+      <div className="text-center md:pt-16">
+        <div className="flex items-center p-6 flex-col rounded-xl max-w-6xl mx-auto">
+          <div className="justify-start py-3 max-w-[1024px] mt-4">
             <TextGradient text={t("title")} />
           </div>
-          <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-2 justify-center">
+          <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 justify-center">
             <div className="flex justify-start text-start flex-col text-base md:text-lg mt-10">
               <p className="mt-2">
                 {t("description-1")}
@@ -98,16 +97,7 @@ const Independence = () => {
           </div>
         </div>
       </div>
-      <div className="flexCenter p-6">
-        <Image
-          src={
-            "https://secondfront-cdn.nyc3.cdn.digitaloceanspaces.com/IMG_4517.JPG"
-          }
-          alt={"Run for Ukraine team image"}
-          width={1100}
-          height={750}
-        />
-      </div>
+      {/*<div className="flexCenter pt-[250px] bg-img-24-aug-24 mb-6"></div>*/}
     </>
   );
 };

@@ -36,7 +36,7 @@ const Run2024 = () => {
               <AccordionActions>
                 <button
                   onClick={() => router.push("/register-online-2024")}
-                  className="w-full mt-6 p-3 rounded-md bg-strong-azure text-yellow-gold hover:bg-blue-600 focus:outline-none"
+                  className="w-full mt-6 p-3 rounded-md text-xl font-semibold bg-strong-azure text-yellow-gold hover:bg-blue-600 focus:outline-none"
                 >
                   {t("button-1")}
                 </button>
@@ -63,7 +63,7 @@ const Run2024 = () => {
               <AccordionActions>
                 <button
                   onClick={() => router.push("/register-tlv-2024")}
-                  className="w-full mt-6 p-3 rounded-md bg-strong-azure text-yellow-gold hover:bg-blue-600 focus:outline-none"
+                  className="w-full mt-6 p-3 rounded-md bg-strong-azure text-xl font-semibold text-yellow-gold hover:bg-blue-600 focus:outline-none"
                 >
                   {t("button-2")}
                 </button>
