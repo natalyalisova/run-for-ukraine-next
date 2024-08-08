@@ -287,5 +287,20 @@
     "description-4": "We look forward to seeing you at the starting line!",
     "description-5":"Best regards, The #RunForUkraine Team",
     "button-1":"Go to main page"
+  },
+  "RegistrationOnlineSuccessful": {
+    "title": "You have registered for the online race!",
+    "description-1": "  We have received your registration request for the Independence Charity #RunForUkraine 2024. When we receive confirmation of your payment, we will contact you via the e-mail address you provided during registration.",
+    "description-2": "Please make sure to check your email for further instructions and updates as we get closer to the event date!",
+    "date-1": "Date:",
+    "date-2": "Run between 10th of Aug and 10th of Sep 2024",
+    "location-1": "Location:",
+    "location-2": "Run anywhere",
+    "distance-1": "Distance:",
+    "distance-2": "Any distance",
+    "description-3": "If you have any questions, feel free to contact our support team at",
+    "description-4": "We wish you an easy distance, a good mood and a great result!",
+    "description-5": "Best regards, The #RunForUkraine Team",
+    "button-1": "Go to main page"
   }
 }
