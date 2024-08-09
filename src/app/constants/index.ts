@@ -109,7 +109,8 @@ export const TeamMembers = [
     id: 4,
     title: "Roman-Dzhura",
     body: "Runner",
-    imageUrl: "/images/Roma.png",
+    imageUrl:
+      "https://mzeawjitgciqwretgwlc.supabase.co/storage/v1/object/public/supabase-run-for-ukraine/files/Roman-Dzhura.jpg",
     docs: "https://instagram.com/dzhu.rar?utm_source=qr&igshid=MzNlNGNkZWQ4Mg%3D%3D",
   },
   {
@@ -130,21 +131,24 @@ export const TeamMembers = [
     id: 7,
     title: "Dmytro-Kirichevsky",
     body: "Dmytro-Kirichevsky-2",
-    imageUrl: "/images/avatar-default.svg",
+    imageUrl:
+      "https://mzeawjitgciqwretgwlc.supabase.co/storage/v1/object/public/supabase-run-for-ukraine/files/Dmytro-Kirichevsky.jpeg?t=2024-08-09T13%3A58%3A03.038Z",
     docs: "",
   },
   {
     id: 8,
     title: "Anna-Luk",
     body: "Social-media",
-    imageUrl: "/images/avatar-default.svg",
+    imageUrl:
+      "https://mzeawjitgciqwretgwlc.supabase.co/storage/v1/object/public/supabase-run-for-ukraine/files/Anna-Luk.jpg?t=2024-08-09T14%3A07%3A22.003Z",
     docs: "",
   },
   {
     id: 9,
     title: "Semen-Yuriev",
     body: "Runner",
-    imageUrl: "/images/avatar-default.svg",
+    imageUrl:
+      "https://mzeawjitgciqwretgwlc.supabase.co/storage/v1/object/public/supabase-run-for-ukraine/files/Semen-Yuriev.jpg?t=2024-08-09T14%3A03%3A12.983Z",
     docs: "",
   },
   {
@@ -158,7 +162,8 @@ export const TeamMembers = [
     id: 11,
     title: "Pukovetska-Olga",
     body: "Designer-runner",
-    imageUrl: "/images/avatar-default.svg",
+    imageUrl:
+      "https://mzeawjitgciqwretgwlc.supabase.co/storage/v1/object/public/supabase-run-for-ukraine/files/Pukovetska-Olga.jpg?t=2024-08-09T14%3A01%3A31.656Z",
     docs: "",
   },
   {
@@ -172,7 +177,8 @@ export const TeamMembers = [
     id: 13,
     title: "Kate-Sench",
     body: "Photographer-runner",
-    imageUrl: "/images/avatar-default.svg",
+    imageUrl:
+      "https://mzeawjitgciqwretgwlc.supabase.co/storage/v1/object/public/supabase-run-for-ukraine/files/Kate-Sench.jpg?t=2024-08-09T14%3A08%3A43.587Z",
     docs: "",
   },
   {
@@ -187,7 +193,8 @@ export const TeamMembers = [
     id: 15,
     title: "Anton-Masalov",
     body: "Identity-designer",
-    imageUrl: "/images/avatar-default.svg",
+    imageUrl:
+      "https://mzeawjitgciqwretgwlc.supabase.co/storage/v1/object/public/supabase-run-for-ukraine/files/Anton-Masalov.jpg?t=2024-08-09T14%3A10%3A12.648Z",
     docs: "",
   },
 ];

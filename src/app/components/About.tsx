@@ -36,6 +36,15 @@ const About = () => {
           <br />
           {t("about-description-4")}
         </p>
+        <p className="mt-6">
+          {t("about-description-5")}:
+          <a
+            href="mailto:runforukraineil@gmail.com"
+            className="text-strong-azure font-semibold ml-1"
+          >
+            runforukraineil@gmail.com
+          </a>
+        </p>
       </div>
     </div>
   );
