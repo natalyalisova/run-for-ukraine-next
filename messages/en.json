@@ -109,7 +109,8 @@
     "description-7": "One United States Dollar (USD) is approximately equivalent to 41 Ukrainian Hryvnias (UAH)",
     "description-8": "Donate from",
     "description-9": "Be sure to add your email address in comment to the payment in next step! So we could confirm your donation.",
-    "register": "Register"
+    "register": "Register",
+    "existing-email": "This Email is already registered for the race!"
   },
   "RegistrationForRunTLVForm": {
     "title": "Registration for a race in Tel Aviv",
@@ -129,7 +130,8 @@
     "description-9": "One New Israeli Shekel (NIS) is approximately equivalent to 11 Ukrainian Hryvnias (UAH)",
     "description-10": "Donate from",
     "description-11": "Be sure to add your email address in the payment comment in next step!",
-    "register": "Register"
+    "register": "Register",
+    "existing-email": "This Email is already registered for the race!"
   },
   "TermsNConditions": {
     "description-1": "By clicking 'Register' you agree to the Run For Ukraine",

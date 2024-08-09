@@ -27,12 +27,18 @@ const RegistrationForRunOnlineForm = () => {
 
   const t = useTranslations("RegistrationForRunOnlineForm");
 
-  const router = useRouter();
+  const [existingRegistration, setExistingRegistration] =
+    useState<boolean>(false);
+
   const handleRegister = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
+    // Reset error and existing registration status before new submission attempt
+    setError(null);
+    setExistingRegistration(false);
+
     // Check for email duplication
-    const { data: existingRegistration, error: fetchError } = await supabase
+    const { data, error: fetchError } = await supabase
       .from("race_registrations_online")
       .select("email")
       .eq("email", email)
@@ -43,17 +49,19 @@ const RegistrationForRunOnlineForm = () => {
       return;
     }
 
-    if (existingRegistration) {
+    if (data) {
+      setExistingRegistration(true);
       setError("This Email is already registered for the race");
       return;
     }
 
-    const { error } = await supabase
+    const { error: insertError } = await supabase
       .from("race_registrations_online")
       .insert([{ email, name, donation: parseInt(donation) }]);
 
-    if (error) setError(error.message);
-    else {
+    if (insertError) {
+      setError(insertError.message);
+    } else {
       router.push("/registration-online-successful");
       window.open(
         "https://send.monobank.ua/jar/3o9J76qxHe",
@@ -63,6 +71,7 @@ const RegistrationForRunOnlineForm = () => {
     }
   };
 
+  const router = useRouter();
   return (
     <main className="flex items-center p-6 flex-col">
       <Link
@@ -134,16 +143,28 @@ const RegistrationForRunOnlineForm = () => {
                 onChange={(e) => setName(e.target.value)}
                 required
               />
-
               <input
                 type="email"
                 value={email}
                 name="email"
                 placeholder={t("description-6")}
-                className="inputStyle rounded-md p-3"
-                onChange={(e) => setEmail(e.target.value)}
+                className={`mb-4 w-full bg-white text-black placeholder-gray-600 focus:outline-none focus:border-strong-azure focus:border-2 rounded-md p-3 ${
+                  existingRegistration
+                    ? "border-2 border-rose-600"
+                    : "border border-gray-300"
+                }`}
+                onChange={(e) => {
+                  setEmail(e.target.value);
+                  setExistingRegistration(false);
+                  setError(null); // Reset error on email change
+                }}
                 required
               />
+              {existingRegistration && (
+                <p className="text-red-600 font-bold mb-4">
+                  {t("existing-email")}
+                </p>
+              )}
             </div>
             <div>
               <div className="mb-2">
