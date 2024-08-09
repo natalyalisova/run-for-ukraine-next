@@ -67,12 +67,11 @@ const RegistrationForRunTLVForm = () => {
 
     if (error) setError(error.message);
     else {
+      const donationAmount = parseInt(donation);
+      const monobankUrl = `https://send.monobank.ua/jar/3o9J76qxHe?amount=${donationAmount}`;
+
       router.push("/registration-tlv-successful");
-      window.open(
-        "https://send.monobank.ua/jar/3o9J76qxHe",
-        "_blank",
-        "noopener,noreferrer",
-      );
+      window.open(monobankUrl, "_blank", "noopener,noreferrer");
     }
   };
 
@@ -219,11 +218,13 @@ const RegistrationForRunTLVForm = () => {
                   label="Donation"
                   onChange={(e) => setDonation(e.target.value)}
                 >
-                  <MenuItem value={100}>&#8362; 100 (&#8372; 1100)</MenuItem>
-                  <MenuItem value={200}>&#8362; 200 (&#8372; 2200)</MenuItem>
-                  <MenuItem value={300}>&#8362; 300 (&#8372; 3300)</MenuItem>
-                  <MenuItem value={500}>&#8362; 500 (&#8372; 5500)</MenuItem>
-                  <MenuItem value={100}>&#8362; 1000 (&#8372; 11000)</MenuItem>
+                  <MenuItem value={1100}>&#8362; 100 (&#8372; 1100)</MenuItem>
+                  <MenuItem value={2200}>&#8362; 200 (&#8372; 2200)</MenuItem>
+                  <MenuItem value={3300}>&#8362; 300 (&#8372; 3300)</MenuItem>
+                  <MenuItem value={5500}>&#8362; 500 (&#8372; 5500)</MenuItem>
+                  <MenuItem value={11000}>
+                    &#8362; 1000 (&#8372; 11000)
+                  </MenuItem>
                 </Select>
               </FormControl>
             </div>
