@@ -12,7 +12,7 @@ export default async function RootLayout({
   params: { locale },
 }: {
   children: React.ReactNode;
-  params: any;
+  params: { locale: string };
 }) {
   // const isValidLocale = locales.some((cur) => cur === locale);
   // if (!isValidLocale) notFound();
@@ -63,7 +63,7 @@ export default async function RootLayout({
       </head>
       <body className="flex flex-col h-screen justify-between">
         <NextIntlClientProvider messages={messages}>
-          <Navbar />
+          <Navbar locale={locale} />
           <main className="flex-grow">{children}</main>
           <Footer />
         </NextIntlClientProvider>

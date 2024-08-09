@@ -14,9 +14,10 @@ import { useLocale, useTranslations } from "next-intl";
 import Link from "next/link";
 import { NavLinks } from "@/app/constants";
 import { useState } from "react";
+import * as React from "react";
 
-function Navbar() {
-  const locale = useLocale();
+const Navbar = ({ locale }: { locale: string }) => {
+  // const locale = useLocale();
   const t = useTranslations("NavBarLinks");
 
   const [anchorElNav, setAnchorElNav] = useState<null | HTMLElement>(null);
@@ -99,7 +100,7 @@ function Navbar() {
               {NavLinks.map((link) => (
                 <MenuItem key={link.key} onClick={handleCloseNavMenu}>
                   <Typography textAlign="center">
-                    <Link href={link.href}>{t(link.text)}</Link>
+                    <Link href={`/${locale}${link.href}`}>{t(link.text)}</Link>
                   </Typography>
                 </MenuItem>
               ))}
@@ -153,6 +154,6 @@ function Navbar() {
       </Container>
     </AppBar>
   );
-}
+};
 
 export default Navbar;
