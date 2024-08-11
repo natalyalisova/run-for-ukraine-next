@@ -97,6 +97,16 @@ const Navbar = ({ locale }: { locale: string }) => {
                 display: { xs: "block", md: "none" },
               }}
             >
+              <MenuItem onClick={handleCloseNavMenu}>
+                <Typography textAlign="center">
+                  <Link
+                    target="_blank"
+                    href={"https://send.monobank.ua/jar/3o9J76qxHe"}
+                  >
+                    {t("donate")}
+                  </Link>
+                </Typography>
+              </MenuItem>
               {NavLinks.map((link) => (
                 <MenuItem key={link.key} onClick={handleCloseNavMenu}>
                   <Typography textAlign="center">
@@ -133,13 +143,25 @@ const Navbar = ({ locale }: { locale: string }) => {
             #RunForUkraine
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
+            <Button
+              key={"donate"}
+              onClick={handleCloseNavMenu}
+              sx={{ my: 2, color: "white", display: "block" }}
+            >
+              <Link
+                href={"https://send.monobank.ua/jar/3o9J76qxHe"}
+                target="_blank"
+              >
+                {t("donate")}
+              </Link>
+            </Button>
             {NavLinks.map((link) => (
               <Button
                 key={link.key}
                 onClick={handleCloseNavMenu}
                 sx={{ my: 2, color: "white", display: "block" }}
               >
-                <Link href={link.href}>{t(link.text)}</Link>
+                <Link href={`/${locale}${link.href}`}>{t(link.text)}</Link>
               </Button>
             ))}
           </Box>

@@ -1,9 +1,4 @@
 export const NavLinks = [
-  {
-    href: "https://send.monobank.ua/jar/3o9J76qxHe",
-    key: "donate",
-    text: "donate",
-  },
   { href: "/about", key: "about", text: "about" },
   { href: "/events", key: "events", text: "events" },
   { href: "/join-us", key: "join-us", text: "join-us" },
