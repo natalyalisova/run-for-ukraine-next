@@ -231,7 +231,7 @@ const RegistrationForRunOnlineForm = () => {
               />
             </div>
 
-            <div className="md:w-96 mx-auto">
+            <div className="md:w-96 mx-auto opacity-0">
               <button
                 type="submit"
                 disabled={!email || !name || !donation || !isChecked}
