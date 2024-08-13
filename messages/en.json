@@ -110,6 +110,7 @@
     "description-8": "Donate from",
     "description-9": "Be sure to add your email address in comment to the payment in next step! So we could confirm your donation.",
     "register": "Register",
+    "donate": "Donate",
     "existing-email": "This Email is already registered for the race!"
   },
   "RegistrationForRunTLVForm": {

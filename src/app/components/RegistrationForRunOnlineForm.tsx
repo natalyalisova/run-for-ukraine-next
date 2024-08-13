@@ -11,11 +11,13 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faCheck,
   faChevronLeft,
+  faCircleDollarToSlot,
   faCircleExclamation,
 } from "@fortawesome/free-solid-svg-icons";
 import { useRouter } from "next/navigation";
 import { useTranslations } from "next-intl";
 import TermsNConditions from "@/app/components/TermsNConditions";
+import Button from "@/app/components/Button";
 
 const RegistrationForRunOnlineForm = () => {
   const [email, setEmail] = useState<string>("");
@@ -62,11 +64,17 @@ const RegistrationForRunOnlineForm = () => {
     if (insertError) {
       setError(insertError.message);
     } else {
-      const donationAmount = parseInt(donation);
-      const monobankUrl = `https://send.monobank.ua/jar/3o9J76qxHe?amount=${donationAmount}`;
-      window.open(monobankUrl, "_blank", "noopener,noreferrer");
+      // const donationAmount = parseInt(donation);
+      // const monobankUrl = `https://send.monobank.ua/jar/3o9J76qxHe?amount=${donationAmount}`;
+      // window.open(monobankUrl, "_blank", "noopener,noreferrer");
       router.push("/registration-online-successful");
     }
+  };
+
+  const handleButtonClick = () => {
+    const donationAmount = parseInt(donation);
+    const monobankUrl = `https://send.monobank.ua/jar/3o9J76qxHe?amount=${donationAmount}`;
+    window.open(monobankUrl, "_blank", "noopener,noreferrer");
   };
 
   const router = useRouter();
@@ -215,10 +223,19 @@ const RegistrationForRunOnlineForm = () => {
               {t("description-9")}
             </p>
             <div className="md:w-96 mx-auto">
+              <Button
+                title={t("donate")}
+                handleClick={handleButtonClick}
+                isSubmitting={true}
+                rightIcon={faCircleDollarToSlot}
+              />
+            </div>
+
+            <div className="md:w-96 mx-auto">
               <button
                 type="submit"
                 disabled={!email || !name || !donation || !isChecked}
-                className="w-full mt-6 p-3 rounded-md bg-strong-azure text-yellow-gold disabled:bg-neutral-400 disabled:text-white  hover:bg-blue-600 focus:outline-none"
+                className="w-full p-3 rounded-md bg-strong-azure text-yellow-gold disabled:bg-neutral-400 disabled:text-white  hover:bg-blue-600 focus:outline-none"
               >
                 {t("register")}
               </button>
