@@ -63,10 +63,9 @@ const RegistrationForRunOnlineForm = () => {
       setError(insertError.message);
     } else {
       const donationAmount = parseInt(donation);
-      const monobankUrl = "https://send.monobank.ua/jar/3o9J76qxHe";
-
-      router.push("/registration-online-successful");
+      const monobankUrl = `https://send.monobank.ua/jar/3o9J76qxHe?amount=${donationAmount}`;
       window.open(monobankUrl, "_blank", "noopener,noreferrer");
+      router.push("/registration-online-successful");
     }
   };
 
