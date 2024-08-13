@@ -11,11 +11,13 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faCheck,
   faChevronLeft,
+  faCircleDollarToSlot,
   faCircleExclamation,
 } from "@fortawesome/free-solid-svg-icons";
 import { useRouter } from "next/navigation";
 import TermsNConditions from "@/app/components/TermsNConditions";
 import { useTranslations } from "next-intl";
+import Button from "@/app/components/Button";
 
 const RegistrationForRunTLVForm = () => {
   const [email, setEmail] = useState<string>("");
@@ -67,12 +69,14 @@ const RegistrationForRunTLVForm = () => {
 
     if (error) setError(error.message);
     else {
-      const donationAmount = parseInt(donation);
-      const monobankUrl = "https://send.monobank.ua/jar/3o9J76qxHe";
-
       router.push("/registration-tlv-successful");
-      window.open(monobankUrl, "_blank", "noopener,noreferrer");
     }
+  };
+
+  const handleButtonClick = () => {
+    const donationAmount = parseInt(donation);
+    const monobankUrl = `https://send.monobank.ua/jar/3o9J76qxHe?amount=${donationAmount}`;
+    window.open(monobankUrl, "_blank", "noopener,noreferrer");
   };
 
   return (
@@ -243,12 +247,21 @@ const RegistrationForRunTLVForm = () => {
               {t("description-11")}
             </p>
             <div className="md:w-96 mx-auto">
+              <Button
+                title={t("register")}
+                handleClick={handleButtonClick}
+                isSubmitting={true}
+                rightIcon={faCircleDollarToSlot}
+              />
+            </div>
+
+            <div className="md:w-96 mx-auto opacity-0">
               <button
                 type="submit"
                 disabled={
                   !email || !name || !distance || !donation || !isChecked
                 }
-                className="w-full mt-6 p-3 rounded-md bg-strong-azure text-yellow-gold hover:bg-blue-600 disabled:bg-neutral-400 disabled:text-white focus:outline-none"
+                className="w-full p-3 rounded-md bg-strong-azure text-yellow-gold hover:bg-blue-600 disabled:bg-neutral-400 disabled:text-white focus:outline-none"
               >
                 {t("register")}
               </button>
