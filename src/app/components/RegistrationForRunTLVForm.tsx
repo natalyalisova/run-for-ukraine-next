@@ -41,7 +41,7 @@ const RegistrationForRunTLVForm = () => {
 
     // Check for email duplication
     const { data, error: fetchError } = await supabase
-      .from("race_registrations_online")
+      .from("race_registrations_tlv")
       .select("email")
       .eq("email", email)
       .maybeSingle();
@@ -68,7 +68,7 @@ const RegistrationForRunTLVForm = () => {
     if (error) setError(error.message);
     else {
       const donationAmount = parseInt(donation);
-      const monobankUrl = `https://send.monobank.ua/jar/3o9J76qxHe?amount=${donationAmount}`;
+      const monobankUrl = "https://send.monobank.ua/jar/3o9J76qxHe";
 
       router.push("/registration-tlv-successful");
       window.open(monobankUrl, "_blank", "noopener,noreferrer");
