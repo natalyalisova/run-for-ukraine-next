@@ -97,7 +97,7 @@
     "button-2": "Run in Tel Aviv"
   },
   "RegistrationForRunOnlineForm": {
-    "title": "Registration for an Online race",
+    "title": "Registration for an Online run",
     "return": "Return",
     "description-1":"After registration, within a few days you will receive your starting number to the e-mail address you provided.",
     "description-2":"Print your racing number in A5 format.",
@@ -111,10 +111,10 @@
     "description-9": "Be sure to add your email address in comment to the payment in next step! So we could confirm your donation.",
     "register": "Register",
     "donate": "Donate",
-    "existing-email": "This Email is already registered for the race!"
+    "existing-email": "This Email is already registered for the run!"
   },
   "RegistrationForRunTLVForm": {
-    "title": "Registration for a race in Tel Aviv",
+    "title": "Registration for a run in Tel Aviv",
     "return": "Return",
     "description-1": "After registration, within a few days, you will receive a confirmation letter to the e-mail address you specified.",
     "description-2": "The starting number will be available from 6:15 to 7:00 at the start of the run.",
@@ -132,7 +132,7 @@
     "description-10": "Donate from",
     "description-11": "Be sure to add your email address in the payment comment in next step!",
     "register": "Register",
-    "existing-email": "This Email is already registered for the race!"
+    "existing-email": "This Email is already registered for the ran!"
   },
   "TermsNConditions": {
     "description-1": "By clicking 'Register' you agree to the Run For Ukraine",
@@ -278,7 +278,7 @@
   },
 
   "RegistrationTLVSuccessful": {
-    "title": "You have registered for the Tel Aviv race!",
+    "title": "You have registered for the Tel Aviv run!",
     "description-1": "We have received your registration request for the Independence Charity #RunForUkraine 2024. When we receive confirmation of your payment, we will contact you via the e-mail address you provided during registration within few days.",
     "description-2": "Please make sure to check your email for further instructions and updates as we get closer to the event date!",
     "date-1": "Date:",
@@ -294,7 +294,7 @@
     "button-1":"Go to main page"
   },
   "RegistrationOnlineSuccessful": {
-    "title": "You have registered for the online race!",
+    "title": "You have registered for the online run!",
     "description-1": "  We have received your registration request for the Independence Charity #RunForUkraine 2024. When we receive confirmation of your payment, we will contact you via the e-mail address you provided during registration.",
     "description-2": "Please make sure to check your email for further instructions and updates as we get closer to the event date!",
     "date-1": "Date:",
