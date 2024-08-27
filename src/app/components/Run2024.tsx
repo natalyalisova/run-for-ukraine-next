@@ -25,7 +25,6 @@ const Run2024 = () => {
             <p>📍 {t("description-2")}</p>
             <p>✅ {t("description-3")} &#8372; 150 (UAH)</p>
             <p>🏃 {t("description-4")} </p>
-            <p className="mt-3">{t("description-5")}</p>
             <button
               onClick={() => router.push("/register-online-2024")}
               className="w-full mt-6 p-3 rounded-md text-xl font-semibold bg-strong-azure text-yellow-gold hover:bg-blue-600 focus:outline-none"
