@@ -21,7 +21,7 @@ const Run2024 = () => {
               {" "}
               {t("sub-title-1")}
             </h2>
-            <p>🗓️ {t("description-1")}</p>
+            <p className="font-semibold">🗓️ {t("description-1")}</p>
             <p>📍 {t("description-2")}</p>
             <p>✅ {t("description-3")} &#8372; 150 (UAH)</p>
             <p>🏃 {t("description-4")} </p>

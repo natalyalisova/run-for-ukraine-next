@@ -82,7 +82,7 @@
     "title": "Register for a run",
     "sub-title-1": "Online",
     "sub-title-2": "In Tel Aviv",
-    "description-1": "Run between 10th of Aug and 10th of Sep 2024",
+    "description-1": "Run between 10th of Aug and 30th of Sep 2024",
     "description-2": "Run anywhere",
     "description-3": "Donate from",
     "description-4": "Any distance",
@@ -93,7 +93,7 @@
     "description-8": "Donate from ",
     "description-9": "Distance: 3 km, 5 km",
     "description-11": "Start at 7:00 AM",
-    "button-1": "Run online",
+    "button-1": "Submit",
     "button-2": "Run in Tel Aviv"
   },
   "RegistrationForRunOnlineForm": {
@@ -298,7 +298,7 @@
     "description-1": "  We have received your registration request for the Independence Charity #RunForUkraine 2024. When we receive confirmation of your payment, we will contact you via the e-mail address you provided during registration.",
     "description-2": "Please make sure to check your email for further instructions and updates as we get closer to the event date!",
     "date-1": "Date:",
-    "date-2": "Run between 10th of Aug and 10th of Sep 2024",
+    "date-2": "Run between 10th of Aug and 30th of Sep 2024",
     "location-1": "Location:",
     "location-2": "Run anywhere",
     "distance-1": "Distance:",
