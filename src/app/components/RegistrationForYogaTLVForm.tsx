@@ -2,10 +2,6 @@
 import React, { useState, FormEvent } from "react";
 import { supabase } from "@/lib/supabaseCliet";
 import TextGradient from "@/app/components/AnimatedTextGradient";
-import FormControl from "@mui/material/FormControl";
-import InputLabel from "@mui/material/InputLabel";
-import Select from "@mui/material/Select";
-import MenuItem from "@mui/material/MenuItem";
 import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -19,13 +15,15 @@ import TermsNConditions from "@/app/components/TermsNConditions";
 import { useTranslations } from "next-intl";
 import Button from "@/app/components/Button";
 import { TextField } from "@mui/material";
+import { MuiTelInput } from "mui-tel-input";
 
 const RegistrationForYogaTLVForm = () => {
   const [name, setName] = useState<string>("");
   const [phone, setPhone] = useState<string>("");
   const [email, setEmail] = useState<string>("");
-  const [date, setDate] = useState<string>("");
-  const [donation, setDonation] = useState<string>("770");
+  const [comment, setComment] = useState<string>("");
+  const [date, setDate] = useState<string>("17.11.2024");
+  const [donation, setDonation] = useState<string>("550");
   const [isChecked, setIsChecked] = useState<boolean>(false);
   const [error, setError] = useState<string | null>(null);
   const [message, setMessage] = useState<string>("");
@@ -33,6 +31,12 @@ const RegistrationForYogaTLVForm = () => {
   const t = useTranslations("RegistrationForRunTLVForm");
 
   const router = useRouter();
+  const handlePhoneChange = (newPhone: string) => {
+    setPhone(newPhone);
+  };
+  let isDisabled =
+    !email || !name || !date || !phone || !donation || !isChecked;
+
   const [existingRegistration, setExistingRegistration] =
     useState<boolean>(false);
 
@@ -45,7 +49,7 @@ const RegistrationForYogaTLVForm = () => {
 
     // Check for email duplication
     const { data, error: fetchError } = await supabase
-      .from("race_registrations_tlv")
+      .from("yoga_registrations_tlv")
       .select("email")
       .eq("email", email)
       .maybeSingle();
@@ -66,12 +70,14 @@ const RegistrationForYogaTLVForm = () => {
     }
 
     const { error } = await supabase
-      .from("race_registrations_tlv")
-      .insert([{ email, name, date, donation: parseInt(donation) }]);
+      .from("yoga_registrations_tlv")
+      .insert([
+        { email, name, phone, comment, date, donation: parseInt(donation) },
+      ]);
 
     if (error) setError(error.message);
     else {
-      router.push("/registration-tlv-successful");
+      router.push("/registration-yoga-tlv-successful");
     }
   };
 
@@ -107,6 +113,16 @@ const RegistrationForYogaTLVForm = () => {
               width={25}
               height={25}
             />
+            Коли: 🗓️ 17 листопада ⏰ 19:00
+          </p>
+          <p className="mt-2">
+            <FontAwesomeIcon
+              icon={faCheck}
+              style={{ color: "#0057b8" }}
+              className="mr-4"
+              width={25}
+              height={25}
+            />
             {t("description-1")}
           </p>
           <form onSubmit={handleRegister} className="mt-12  max-w-3xl">
@@ -120,21 +136,18 @@ const RegistrationForYogaTLVForm = () => {
                 onChange={(e) => setName(e.target.value)}
                 required
               />
-              <input
-                type="text"
+              <MuiTelInput
                 value={phone}
-                name="phone"
-                placeholder={"050-xxx-xx-xx"}
-                className="inputStyle rounded-md p-3"
-                onChange={(e) => setPhone(e.target.value)}
-                required
+                onChange={handlePhoneChange}
+                defaultCountry="IL"
+                className="w-96"
               />
               <input
                 type="email"
                 value={email}
                 name="email"
                 placeholder={t("email")}
-                className={`mb-4 w-full bg-white text-black placeholder-gray-600 focus:outline-none focus:border-strong-azure focus:border-2 rounded-md p-3 ${
+                className={`my-4 w-full bg-white text-black placeholder-gray-600 focus:outline-none focus:border-strong-azure focus:border-2 rounded-md p-3 ${
                   existingRegistration
                     ? "border-2 border-rose-600"
                     : "border border-gray-300"
@@ -153,36 +166,40 @@ const RegistrationForYogaTLVForm = () => {
               )}
             </div>
             <p className="text-start mb-2">
-              Вкажіть чи є проблеми: з серцево-судинною системою, тиском,
-              цукровий діабет, епілепсія, асма, заміна суглобу, вагітність,
-              захворювання пов'язані із ШКТ. Чи є у вас інші медичні обмеження,
-              операції або травми, які слід враховувати при фізичних
-              навантаженнях ?
+              Будь ласка, повідомте, чи маєте ви спеціальні показання при
+              наявності таких станів: захворювання серцево-судинної системи,
+              підвищений артеріальний тиск, цукровий діабет, епілепсія, астма,
+              заміна суглобів, вагітність, а також захворювання, пов’язані з
+              шлунково-кишковим трактом. Чи є у вас інші медичні обмеження,
+              перенесені операції або травми, які необхідно враховувати при
+              фізичних навантаженнях?
             </p>
 
             <TextField
               id="outlined-multiline-static"
               label="Additional information"
               multiline
+              value={comment}
               rows={4}
-              className="inputStyle rounded-md md:w-96"
+              className="inputStyle rounded-md md:w-120"
+              onChange={(e) => setComment(e.target.value)}
             />
-            <div className="md:w-96">
-              <FormControl fullWidth className="mb-6">
-                <InputLabel id="date-select-label">Оберіть дату</InputLabel>
-                <Select
-                  labelId="date-select-label"
-                  id="date-simple-select"
-                  value={date}
-                  label={t("date")}
-                  onChange={(e) => setDate(e.target.value)}
-                >
-                  <MenuItem value={"17/11/2024"}>17/11/2024 </MenuItem>
-                  <MenuItem value={"24/11/2024"}>24/11/2024</MenuItem>
-                  <MenuItem value={"01/12/2024"}>01/12/2024</MenuItem>
-                </Select>
-              </FormControl>
-            </div>
+            {/*<div className="md:w-96">*/}
+            {/*  <FormControl fullWidth className="mb-6">*/}
+            {/*    <InputLabel id="date-select-label">Оберіть дату</InputLabel>*/}
+            {/*    <Select*/}
+            {/*      labelId="date-select-label"*/}
+            {/*      id="date-simple-select"*/}
+            {/*      value={date}*/}
+            {/*      label={t("date")}*/}
+            {/*      onChange={(e) => setDate(e.target.value)}*/}
+            {/*    >*/}
+            {/*      <MenuItem value={"17/11/2024"}>17/11/2024 </MenuItem>*/}
+            {/*      <MenuItem value={"24/11/2024"}>24/11/2024</MenuItem>*/}
+            {/*      <MenuItem value={"01/12/2024"}>01/12/2024</MenuItem>*/}
+            {/*    </Select>*/}
+            {/*  </FormControl>*/}
+            {/*</div>*/}
 
             <p className="text-start">{t("description-9")}</p>
             <div>
@@ -196,12 +213,12 @@ const RegistrationForYogaTLVForm = () => {
               >
                 &#8362; 1 &cong; &#8372; 11
               </Link>
-              <div className="text-center flex flex-row  items-center">
+              <div className="text-center flex flex-row  items-center mt-2">
                 <input
                   type="text"
                   value={donation}
                   name="donation"
-                  placeholder={"770"}
+                  placeholder={"550"}
                   className="inputStyle rounded-md p-3 md:w-96"
                   onChange={(e) => setDonation(e.target.value)}
                   required
@@ -221,25 +238,16 @@ const RegistrationForYogaTLVForm = () => {
                 style={{ color: "#0057b8" }}
                 className="mr-4"
               />
-              {t("description-11")}
+              Обов’язково додайте своє ім'я або електронну адресу в коментарі до
+              платежу на наступному кроці!
             </p>
             <div className="md:w-96 mx-auto">
               <Button
                 title={t("register")}
-                handleClick={handleButtonClick}
-                isSubmitting={true}
-                rightIcon={faCircleDollarToSlot}
-              />
-            </div>
-
-            <div className="md:w-96 mx-auto opacity-0">
-              <button
                 type="submit"
-                disabled={!email || !name || !date || !donation || !isChecked}
-                className="w-full p-3 rounded-md bg-strong-azure text-yellow-gold hover:bg-blue-600 disabled:bg-neutral-400 disabled:text-white focus:outline-none"
-              >
-                {t("register")}
-              </button>
+                handleClick={handleButtonClick}
+                isDisabled={isDisabled}
+              />
             </div>
           </form>
         </div>

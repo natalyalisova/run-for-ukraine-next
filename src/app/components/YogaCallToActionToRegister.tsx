@@ -12,12 +12,15 @@ const YogaCallToActionToRegister = () => {
         <div className="justify-start max-w-[1024px]">
           <h2 className="title text-strong-azure"> Заняття группі</h2>
           <div className="mt-6 text-start">
-            <p className="font-semibold">🗓 Щонеділі</p>
+            <p className="font-semibold">
+              🗓 17 листопада 2024 19:00 (тривалість заняття 60хв.)
+            </p>
             <p>
               📍 Український культурний центр, Yirmeyahu St 22, Tel Aviv-Yafo
             </p>
-            <p>✅ {t("description-3")} &#8362; 70 (NIS)</p>
-            <p>🧘🧘‍♀️🧘🏻‍♀️🧘🏻‍♂️ 60 хв</p>
+            <p className="font-semibold">❗️Реєстрація обовʼязкова.</p>
+            <p>✅ Донат від &#8362; 50 (NIS)</p>
+            <p>🧘‍♀️🧘🏻 Група включає в себе 16 людей на одному занятті.</p>
             <button
               onClick={() => router.push("/register-yoga-tlv")}
               className="w-full mt-6 p-3 rounded-md text-xl font-semibold bg-strong-azure text-yellow-gold hover:bg-blue-600 focus:outline-none"
