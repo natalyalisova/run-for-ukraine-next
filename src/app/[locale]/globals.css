@@ -135,7 +135,7 @@ link {
 
 
 .bg-img {
-    background-image: url("/images/yellow-fabric-bg.png");
+    background-image: url("https://mzeawjitgciqwretgwlc.supabase.co/storage/v1/object/public/supabase-run-for-ukraine/files/yellow-fabric-bg.png?t=2024-11-07T12%3A34%3A55.255Z");
     background-size: cover;
     background-position: center;
 }
@@ -150,7 +150,7 @@ link {
 
 
 .bg-yellow-black-stripes {
-    background-image: url("/images/yellow-black-stripe.png");
+    background-image: url("../../../public/images/yellow-black-stripe.png");
     background-size: 7%;
 }
 
@@ -162,11 +162,10 @@ link {
 
 .bg-img-24-feb-24 {
     background: linear-gradient(rgba(0, 0, 0, 0.5),
-    rgba(0, 0, 0, 0.5)),url("../../../public/images/24-feb-cover.jpg");
+    rgba(0, 0, 0, 0.5)),url("https://mzeawjitgciqwretgwlc.supabase.co/storage/v1/object/public/supabase-run-for-ukraine/files/24-feb-cover.jpg?t=2024-11-07T12%3A23%3A46.160Z");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-
 }
 
 

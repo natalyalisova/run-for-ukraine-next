@@ -13,7 +13,7 @@ const Independence = () => {
           <div className="justify-start py-3 max-w-[1024px] mt-4">
             <TextGradient text={t("title")} />
           </div>
-          <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 justify-center">
+          <div className="max-w-6xl mx-auto grid grid-cols-1 gap-10 justify-center">
             <div className="flex justify-start text-start flex-col text-base md:text-lg mt-10">
               <p className="mt-2">
                 {t("description-1")}
@@ -91,9 +91,9 @@ const Independence = () => {
               </p>
               <p className="mt-4">{t("description-20")} ✊🇺🇦</p>
             </div>
-            <div className="flexCenter my-6">
-              <Run2024 />;
-            </div>
+            {/*<div className="flexCenter my-6">*/}
+            {/*  <Run2024 />;*/}
+            {/*</div>*/}
           </div>
         </div>
       </div>

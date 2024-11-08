@@ -122,14 +122,7 @@ export const TeamMembers = [
     imageUrl: "/images/Kate.png",
     docs: "https://instagram.com/fishilevich.katya?igshid=MzMyNGUyNmU2YQ==",
   },
-  {
-    id: 7,
-    title: "Dmytro-Kirichevsky",
-    body: "Dmytro-Kirichevsky-2",
-    imageUrl:
-      "https://mzeawjitgciqwretgwlc.supabase.co/storage/v1/object/public/supabase-run-for-ukraine/files/Dmytro-Kirichevsky.jpeg?t=2024-08-09T13%3A58%3A03.038Z",
-    docs: "",
-  },
+
   {
     id: 8,
     title: "Anna-Luk",
