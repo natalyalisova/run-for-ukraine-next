@@ -10,6 +10,7 @@ import { cookies } from "next/headers";
 import { User } from "@supabase/supabase-js";
 import HomeTop from "@/app/components/HomeTop";
 import Independence from "@/app/components/Independence";
+import RegistrationForYoga from "@/app/components/RegistrationForYoga";
 
 type HomeProps = {
   user: User | null;
@@ -31,12 +32,10 @@ const Home: FunctionComponent<HomeProps> = ({ user }) => {
   return (
     <div className="flex flex-col mt-14">
       <HomeTop />
-      <Independence />
+      <RegistrationForYoga />
       <ProjectDescription />
       <Social />
       <Gather />
-      {/*<Report />*/}
-      {/*<Gallery />*/}
     </div>
   );
 };
