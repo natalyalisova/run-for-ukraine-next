@@ -7,16 +7,16 @@ import { useTranslations } from "next-intl";
 const RegistrationTLVSuccessful = () => {
   const t = useTranslations("RegistrationTLVSuccessful");
   return (
-    <div className=" <flex flex-col max-w-screen-sm mx-auto my-20 md:mt-52 p-6">
-      <h2 className="text-xl md:text-4xl font-semibold text-start">
-        Ви успішно зареєструвалися на йогу
+    <div className=" <flex flex-col max-w-screen-md mx-auto my-20 md:mt-52 p-6">
+      <h2 className="text-xl md:text-4xl font-semibold text-center">
+        Дякуємо, ви успішно зареєструвалися на йогу!
       </h2>
-
-      <p className="mt-12">
-        <span className="font-semibold mr-2">{t("date-1")}</span>🗓️17 листопада
-        2024 о 19:00
+      <h2 className="text-xl md:text-4xl font-semibold text-center">🧘‍♀️🧘🏻🇺🇦</h2>
+      <p className="mt-12 text-lg">
+        <span className="font-semibold mr-2">Чкаємо на вас: </span>🗓️ 17
+        листопада 2024, о 19:00
       </p>
-      <p>
+      <p className="text-lg">
         <Link
           href="https://maps.app.goo.gl/Zm3ovjnUvNM33kzc9"
           target="_blank"
@@ -27,7 +27,7 @@ const RegistrationTLVSuccessful = () => {
         </Link>
       </p>
 
-      <p className="mt-2">
+      <p className="mt-2 text-lg">
         {t("description-3")}
         <a
           href="mailto:runforukraineil@gmail.com"
@@ -35,13 +35,13 @@ const RegistrationTLVSuccessful = () => {
         >
           runforukraineil@gmail.com
         </a>
-        . {t("description-4")}
+        .
       </p>
-      <p className="my-4">{t("description-5")}</p>
+      <p className="my-4 text-lg">{t("description-5")}</p>
       <div className="flex content-center justify-center">
         <Link
           href={"/"}
-          className="mt-6 p-3 rounded-md bg-white outline outline-2 outline-strong-azure text-strong-azure font-semibold hover:bg-blue-50 focus:outline-none"
+          className="mt-6 p-3 rounded-md bg-white text-lg outline outline-2 outline-strong-azure text-strong-azure font-semibold hover:bg-blue-50 focus:outline-none"
         >
           {t("button-1")}
         </Link>
