@@ -42,13 +42,15 @@ const Navbar = ({ locale }: { locale: string }) => {
     <AppBar position="fixed" className="bg-strong-azure p-1 md:p-4">
       <Container maxWidth="xl" className="">
         <Toolbar disableGutters>
-          <Image
-            src={"/images/Run-for-Ukraine-logo.png"}
-            width={94}
-            height={94}
-            alt={"Run for Ukraine Logo"}
-            className="hidden md:inline"
-          />
+          <Link href="/">
+            <Image
+              src={"/images/Run-for-Ukraine-logo.png"}
+              width={94}
+              height={94}
+              alt={"Run for Ukraine Logo"}
+              className="hidden md:inline"
+            />
+          </Link>
           <Typography
             variant="h6"
             noWrap
@@ -116,13 +118,15 @@ const Navbar = ({ locale }: { locale: string }) => {
               ))}
             </Menu>
           </Box>
-          <Image
-            src={"/images/white-symbol.svg"}
-            width={24}
-            height={24}
-            alt={"Run for Ukraine Logo"}
-            className="inline md:hidden"
-          />
+          <Link href="/">
+            <Image
+              src={"/images/white-symbol.svg"}
+              width={24}
+              height={24}
+              alt={"Run for Ukraine Logo"}
+              className="inline md:hidden"
+            />
+          </Link>
           <Typography
             variant="h6"
             noWrap
