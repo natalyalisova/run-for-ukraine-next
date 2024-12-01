@@ -21,7 +21,7 @@ const YogaCallToActionToRegister = () => {
             <p className="font-semibold mb-2">❗️Реєстрація обов'язкова</p>
             <p className="mb-2">✅ Донат від &#8362; 50 (NIS)</p>
             <p className="mb-2">
-              🧘‍♀️🧘🏻 Група включає в себе 16 людей на одному занятті.
+              🧘‍♀️🧘🏻 Група включає в себе 15 людей на одному занятті.
             </p>
             {/*<button className="w-full mt-6 p-3 rounded-md text-xl font-semibold bg-gray-500 text-white focus:outline-none">*/}
             {/*  {t("button-1")}*/}
