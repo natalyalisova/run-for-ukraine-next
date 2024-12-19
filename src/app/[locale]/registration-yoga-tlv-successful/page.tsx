@@ -1,7 +1,5 @@
 import React from "react";
 import Link from "next/link";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCircleExclamation } from "@fortawesome/free-solid-svg-icons";
 import { useTranslations } from "next-intl";
 
 const RegistrationTLVSuccessful = () => {
@@ -13,7 +11,7 @@ const RegistrationTLVSuccessful = () => {
       </h2>
       <h2 className="text-xl md:text-4xl font-semibold text-center">🧘‍♀️🧘🏻🇺🇦</h2>
       <p className="mt-12 text-lg">
-        <span className="font-semibold mr-2">Чкаємо на вас: </span>🗓️ 8 грудня
+        <span className="font-semibold mr-2">Чкаємо на вас: </span>🗓️ 22 грудня
         2024, о 19:00
       </p>
       <p className="text-lg">
