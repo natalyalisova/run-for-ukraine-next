@@ -20,7 +20,7 @@ const RegistrationForYogaTLVForm = () => {
   const [phone, setPhone] = useState<string>("");
   const [email, setEmail] = useState<string>("");
   const [comment, setComment] = useState<string>("");
-  const [date, setDate] = useState<string>("13.01.2025");
+  const [date, setDate] = useState<string>("27.01.2025");
   const [donation, setDonation] = useState<string>("550");
   const [isChecked, setIsChecked] = useState<boolean>(false);
   const [error, setError] = useState<string | null>(null);
