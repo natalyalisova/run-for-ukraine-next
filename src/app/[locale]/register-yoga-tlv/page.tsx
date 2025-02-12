@@ -7,10 +7,9 @@ export default function RegistrationForRun() {
       <div className="mt-16 md:mt-[150px]"></div>
 
       <main className="flex items-center p-6 flex-col">
-        <p className="font-semibold mb-2">❗️Реєстрацію закрито</p>
+        {/*<p className="font-semibold mb-2">❗️Реєстрацію закрито</p>*/}
+        <RegistrationForYogaTLVForm />
       </main>
-
-      {/*<RegistrationForYogaTLVForm />*/}
     </>
   );
 }
