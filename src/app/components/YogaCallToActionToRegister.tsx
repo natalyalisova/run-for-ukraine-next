@@ -12,7 +12,7 @@ const YogaCallToActionToRegister = () => {
         <div className="justify-start max-w-[1024px]  text-lg">
           <div className="mt-6 text-start">
             {/*<p className="font-semibold mb-2">❗️Реєстрацію закрито</p>*/}
-            <p className="font-semibold mb-2">🗓 26 лютого 2025 (середа)</p>
+            <p className="font-semibold mb-2">🗓 24 березня 2025 (понеділок)</p>
             <p className="font-semibold mb-2">
               🕢 19:00 (тривалість заняття 60хв.)
             </p>

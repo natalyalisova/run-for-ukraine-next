@@ -11,8 +11,8 @@ const RegistrationTLVSuccessful = () => {
       </h2>
       <h2 className="text-xl md:text-4xl font-semibold text-center">🧘‍♀️🧘🏻🇺🇦</h2>
       <p className="mt-12 text-lg">
-        <span className="font-semibold mr-2">Чкаємо на вас: </span>🗓️ 26 лютого
-        2025 (середа), о 19:00
+        <span className="font-semibold mr-2">Чкаємо на вас: </span>🗓️ 24 березня
+        2025 (понеділок), о 19:00
       </p>
       <p className="text-lg">
         <Link
