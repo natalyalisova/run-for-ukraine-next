@@ -9,7 +9,7 @@ const RegistrationForYoga = () => {
   const t = useTranslations("RegistrationForYoga");
   return (
     <>
-      <div className="text-center md:pt-16">
+      {/* <div className="text-center md:pt-16">
         <div className="flex items-center p-6 flex-col rounded-xl max-w-6xl mx-auto">
           <div className="justify-start py-3 max-w-[1024px] mt-4">
             <TextGradient text={t("title")} />
@@ -33,8 +33,8 @@ const RegistrationForYoga = () => {
             </div>
           </div>
         </div>
-      </div>
-      {/*<div className="flexCenter pt-[250px] bg-img-24-aug-24 mb-6"></div>*/}
+      </div> */}
+      <div className="flexCenter pt-[250px] bg-img-24-aug-24 mb-6"></div>
     </>
   );
 };
